@@ -37,7 +37,7 @@
             "ALT, PRINT, exec, screenshot region swappy" # Screenshot region then edit
 
             "$mod, V, exec, clipboard" # Clipboard picker with wofi
-            "$shiftMod, E, exec, ${pkgs.wofi-emoji}/bin/wofi-emoji" # Emoji picker with wofi
+            "$shiftMod, E, exec, emojimenu" # Emoji picker with wofi
             "$mod,F2, exec, night-shift" # Toggle night shift
             "$mod,F3, exec, night-shift" # Toggle night shift
         ] ++ (builtins.concatLists (builtins.genList (i:

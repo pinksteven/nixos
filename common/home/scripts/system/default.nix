@@ -99,10 +99,20 @@ let
       fi
     '';
 
+    emojimenu = pkgs.writeShellScriptBin "emojimenu"
+    # bash
+    ''
+      if pgrep wofi; then
+      	pkill wofi
+      else
+      	${pkgs.wofi-emoji}/bin/wofi-emoji
+      fi
+    '';
+
   lock = pkgs.writeShellScriptBin "lock"
     # bash
     ''
       ${pkgs.hyprlock}/bin/hyprlock
     '';
 
-in { home.packages = [ menu powermenu lock quickmenu ]; }
+in { home.packages = [ menu powermenu lock quickmenu emojimenu ]; }
