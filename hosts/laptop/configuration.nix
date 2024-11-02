@@ -5,6 +5,7 @@
         ../../common/nixos/audio.nix
         ../../common/nixos/auto-upgrade.nix
         ../../common/nixos/bluetooth.nix
+        ../../common/nixos/docker.nix
         ../../common/nixos/fonts.nix
         ../../common/nixos/fprint.nix
         ../../common/nixos/greetd.nix
@@ -22,9 +23,6 @@
         ./variables.nix
 
         ../../themes/stylix/pinixk.nix
-
-        # Steam doesn't work through home-manager bc openGL
-        ../../common/home/programs/steam
     ];
     home-manager.users."${config.var.username}" = import ./home.nix;
 

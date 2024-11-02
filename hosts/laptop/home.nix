@@ -37,6 +37,9 @@
             clapper
             vscode
             easyeffects
+            distrobox
+            boxbuddy
+            syncthing
 
             zip
             unzip
