@@ -2,9 +2,9 @@
 
 {
     virtualisation.docker = {
-        rootless.enable = true;
-        rootless.setSocketVariable = true;
+        enable = true;
         enableOnBoot = true;
         storageDriver = "btrfs";
     };
+    users.users.${config.var.username}.extraGroups = [ "docker" ];
 }
