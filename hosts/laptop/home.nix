@@ -38,7 +38,6 @@
             vscode
             easyeffects
             distrobox
-            boxbuddy
             syncthing
 
             zip
