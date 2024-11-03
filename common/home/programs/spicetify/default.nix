@@ -9,13 +9,13 @@ in {
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [ "spotify" ];
 
-  stylix.targets.spicetify.enable = false;
+  stylix.targets.spicetify.enable = true;
 
   programs.spicetify = {
     enable = true;
-    theme = lib.mkForce spicePkgs.themes.text;
+    #theme = spicePkgs.themes.dribbblish;
 
-    colorScheme = "custom";
+    #colorScheme = "custom";
 
     customColorScheme = {
       button = accent;
@@ -24,13 +24,16 @@ in {
     };
 
     enabledExtensions = with spicePkgs.extensions; [
-      playlistIcons
-      lastfm
-      historyShortcut
-      hidePodcasts
-      adblock
+      bookmark
       fullAppDisplay
+      keyboardShortcut
       shuffle
+
+      playlistIcons
+      history
+      betterGenres
+      lastfm
+      hidePodcasts
     ];
   };
 }
