@@ -65,6 +65,7 @@
 
             # Steam.
             "float, class:(steam)"
+            "plugin:hyprbars:nobar, class:(steam)"
             "float, class:^()$, title:^(Steam - Self Updater)$"
             "size 400 600, class:^(steam)$, title:^(Friends List)$"
             "move 100%-w-30 100%-w-75, class:^(steam)$, title:^(Friends List)$"
