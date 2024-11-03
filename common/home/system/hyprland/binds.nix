@@ -9,6 +9,7 @@
             "$ctrl ALT, T, exec, ${pkgs.kitty}/bin/kitty" # Kitty
             "$mod, F, exec, ${pkgs.xfce.thunar}/bin/thunar" # Thunar
             "$mod, B, exec, ${pkgs.firefox}/bin/firefox" # Firefox
+            "$mod ,XF86AudioMute, exec, spotify" # Spotify
             "$mod, L, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock
             "$ctrl ALT, Delete, exec, powermenu" # Powermenu
             "$mod, SPACE, exec, menu" # Launcher
@@ -31,6 +32,12 @@
             "$mod, right, workspace, r+1" # Move to next workspace
             "$mod, left, workspace, r-1" # Move to previous workspace
 
+            "$mod SHIFT, right, movetoworkspace, r+1"# Move with window to next workspace
+            "$mod SHIFT, left, movetoworkspace, r+1"# Move with window to previous workspace
+
+            "$mod $ctrl, right, movetoworkspacesilent, r+1"# Move window to next workspace
+            "$mod $ctrl, left, movetoworkspacesilent, r+1"# Move window to previous workspace
+
             "$mod, PRINT, exec, screenshot window" # Screenshot window
             ",PRINT, exec, screenshot monitor" # Screenshot monitor
             "$shiftMod, PRINT, exec, screenshot region" # Screenshot region
@@ -52,7 +59,7 @@
             ",XF86AudioPlay, exec, ${pkgs.playerctl}/bin/playerctl play-pause" # Play/Pause Song
             ",XF86AudioNext, exec, ${pkgs.playerctl}/bin/playerctl next" # Next Song
             ",XF86AudioPrev, exec, ${pkgs.playerctl}/bin/playerctl previous" # Previous Song
-            ",switch:Lid Switch, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock when closing Lid
+            ",switch:Lid Switch, exec, systemctl suspend" # ${pkgs.hyprlock}/bin/hyprlock" # Sleep when closing Lid
         ];
 
         bindlep = [
