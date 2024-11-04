@@ -22,7 +22,7 @@ let
   base0F = "#${config.lib.stylix.colors.base0F}";
 
 
-  font = "${config.stylix.fonts.serif.name}";
+  font = config.var.theme.desktopFont;
   fontSize = "${toString config.stylix.fonts.sizes.desktop}";
 
   rounding = config.var.theme.rounding;

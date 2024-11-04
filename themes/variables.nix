@@ -14,4 +14,6 @@
     transparentButtons = false;
     floating = false;
   };
+
+  desktopFont = "BigBlueTermPlus Nerd Font Mono";
 }

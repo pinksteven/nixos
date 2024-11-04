@@ -4,6 +4,9 @@ let
     close = config.lib.stylix.colors.base08;
     maximize = config.lib.stylix.colors.base09;
     text = config.lib.stylix.colors.base05;
+
+    font = config.var.theme.desktopFont;
+    fontSize = "${toString config.stylix.fonts.sizes.desktop}";
 in {
     wayland.windowManager.hyprland.settings = {
         plugin = {
@@ -14,8 +17,8 @@ in {
 	            bar_padding = 10;
 	            bar_button_padding = 5;
 
-	            bar_text_font = "BigBlueTermPlus Nerd Font Mono";
-	            bar_text_size = 10;
+	            bar_text_font = font;
+	            bar_text_size = fontSize;
 
                 bar_color = "rgb(${bg})";
                 col.text = "rgb(${text})";

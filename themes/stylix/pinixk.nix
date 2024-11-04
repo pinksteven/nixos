@@ -16,15 +16,15 @@
 
     fonts = {
       monospace = {
-        package = pkgs.nerdfonts.override { fonts = [ "FiraMono" ]; };
+        package = pkgs.nerdfonts;
         name = "FiraMono Nerd Font Mono";
       };
       sansSerif = {
-        package = pkgs.nerdfonts.override { fonts = [ "FiraMono" ]; };
+        package = pkgs.nerdfonts;
         name = "FiraMono Nerd Font Mono";
       };
       serif = {
-        package = pkgs.nerdfonts.override { fonts = [ "FiraMono" ]; };
+        package = pkgs.nerdfonts;
         name = "FiraMono Nerd Font Mono";
       };
       emoji = {
@@ -34,7 +34,7 @@
       sizes = {
         applications = 11;
         desktop = 11;
-        popups = 11;
+        popups = 14;
         terminal = 11;
       };
     };

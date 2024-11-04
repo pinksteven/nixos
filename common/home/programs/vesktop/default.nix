@@ -20,7 +20,7 @@ let
 
 
   font = "${config.stylix.fonts.serif.name}";
-  fontSize = "${toString config.stylix.fonts.sizes.desktop}";
+  fontSize = "${toString config.stylix.fonts.sizes.applications}";
 in {
     home.packages = with pkgs; [ vesktop ];
     stylix.targets.vesktop.enable = false;
@@ -47,7 +47,7 @@ in {
         /* customize things here */
         :root {
 	        /* font, change to 'gg sans' for default discord font*/
-	        --font: 'figtree';
+	        --font: font;
 
 	        /* top left corner text */
 	        --corner-text: 'Nixnight';
