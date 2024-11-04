@@ -1,7 +1,17 @@
 { config, pkgs, lib, ... }:
-
-{
+let
+  accent = "#${config.lib.stylix.colors.base0E}";
+  background = "#${config.lib.stylix.colors.base00}";
+  background-alt = "#${config.lib.stylix.colors.base01}";
+  foreground = "#${config.lib.stylix.colors.base05}";
+  font = config.stylix.fonts.serif.name;
+  rounding = config.var.theme.rounding;
+  font-size = config.stylix.fonts.sizes.popups*1.3;
+  border-size = config.var.theme.border-size;
+  border-color = "#${config.lib.stylix.colors.base0D}";
+in {
     home.packages = with pkgs; [ wofi-emoji ];
+    stylix.targets.wofi.enable = false;
 
     programs.wofi = {
         enable = true;
@@ -32,7 +42,63 @@
             key_expand = "Tab";
             key_exit = "Escape";
         };
-    };
+        style = # css
+        ''
+            * {
+                font-family: "${font}";
+                font-weight: 500;
+                font-size: ${toString font-size}px;
+            }
+            #window {
+                background-color: ${background};
+                color: ${foreground};
+                border-radius: ${toString rounding}px;
+                border: ${toString border-size}px solid ${border-color};
 
-    stylix.targets.wofi.enable = true;
+            }
+
+            #outer-box {
+                padding: 20px;
+            }
+
+            #input {
+                background-color: ${background-alt};
+                border: 0px solid ${accent};
+                color: ${foreground};
+                padding: 8px 12px;
+            }
+
+            #scroll {
+                margin-top: 20px;
+            }
+
+            #inner-box {}
+
+            #img {
+                padding-right: 8px;
+            }
+
+            #text {
+                color: ${foreground};
+            }
+
+            #text:selected {
+                color: ${background-alt};
+            }
+
+            #entry {
+                padding: 6px;
+            }
+
+            #entry:selected {
+                background-color: ${accent};
+                color: ${background-alt};
+            }
+
+            #input,
+            #entry:selected {
+                border-radius: ${toString rounding}px;
+            }
+        '';
+    };
 }
