@@ -31,7 +31,7 @@ in {
     enable = true;
     theme = spicePkgs.themes.dribbblish;
 
-    #colorScheme = "custom";
+    colorScheme = "custom";
 
     customColorScheme = {
       text               = base05;
