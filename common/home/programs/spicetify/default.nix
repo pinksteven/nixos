@@ -43,8 +43,8 @@ in {
       card               = base00;
       shadow             = base01;
       selected-row       = base06;
-      button             = base0D;
-      button-active      = base0D;
+      button             = base0E;
+      button-active      = base0E;
       button-disabled    = base04;
       tab-active         = base02;
       notification       = base02;
