@@ -6,7 +6,11 @@ let
   '';
 
   clipboard = pkgs.writeShellScriptBin "clipboard" ''
-    cliphist list | wofi -S dmenu | cliphist decode | wl-copy
+    if pgrep wofi; then
+      	pkill wofi
+    else
+      cliphist list | wofi -S dmenu | cliphist decode | wl-copy
+    fi
   '';
 
 in {
