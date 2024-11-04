@@ -1,5 +1,6 @@
 { config, inputs, ... }:
 let autoGarbageCollector = config.var.autoGarbageCollection;
+    configDirectory = config.var.configDirectory;
 in {
     nixpkgs.config = {
         allowUnfree = true;
@@ -14,9 +15,16 @@ in {
         ];
     };
     nix.gc = {
-        automatic = autoGarbageCollector;
+        automatic = false;
         persistent = true;
         dates = "weekly";
         options = "--delete-older-than 7d";
+    };
+
+    programs.nh = {
+        enable = true;
+        clean.enable = autoGarbageCollector;
+        clean.extraArgs = "--keep 3 --keep-since 4d";
+        flake = configDirectory;
     };
 }
