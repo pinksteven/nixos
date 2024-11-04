@@ -14,12 +14,6 @@ in {
             "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
         ];
     };
-    nix.gc = {
-        automatic = false;
-        persistent = true;
-        dates = "weekly";
-        options = "--delete-older-than 7d";
-    };
 
     programs.nh = {
         enable = true;
