@@ -23,46 +23,6 @@ let
       # fi
     '';
 
-  powermenu = pkgs.writeShellScriptBin "powermenu"
-    # bash
-    ''
-      if pgrep wofi; then
-      	pkill wofi
-      # if pgrep tofi; then
-      #   pkill tofi
-      else
-        options=(
-          "󰌾 Lock"
-          "󰍃 Logout"
-          " Suspend"
-          "󰑐 Reboot"
-          "󰿅 Shutdown"
-        )
-
-        selected=$(printf '%s\n' "''${options[@]}" | wofi -p " Powermenu" --dmenu)
-        # selected=$(printf '%s\n' "''${options[@]}" | tofi --prompt-text "> ")
-        selected=''${selected:2}
-
-        case $selected in
-          "Lock")
-            ${pkgs.hyprlock}/bin/hyprlock
-            ;;
-          "Logout")
-            hyprctl dispatch exit
-            ;;
-          "Suspend")
-            systemctl suspend
-            ;;
-          "Reboot")
-            systemctl reboot
-            ;;
-          "Shutdown")
-            systemctl poweroff
-            ;;
-        esac
-      fi
-    '';
-
   quickmenu = pkgs.writeShellScriptBin "quickmenu"
     # bash
     ''

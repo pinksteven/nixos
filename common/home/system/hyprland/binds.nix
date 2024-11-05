@@ -11,7 +11,7 @@
             "$mod, B, exec, ${pkgs.firefox}/bin/firefox" # Firefox
             "$mod ,XF86AudioPlay, exec, spotify" # Spotify
             "$mod, L, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock
-            "$ctrl ALT, Delete, exec, powermenu" # Powermenu
+            "$ctrl ALT, Delete, exec, wlogout" # Powermenu
             "$mod, SPACE, exec, menu" # Launcher
             "$mod, C, exec, quickmenu" # Quickmenu
             "$shiftMod, SPACE, exec, hyprfocus-toggle" # Toggle HyprFocus
