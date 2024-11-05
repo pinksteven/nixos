@@ -5,6 +5,7 @@
         "$mod" = "SUPER";
         "$shiftMod" = "SUPER_SHIFT";
         "$ctrl" = "CONTROL_L";
+        bindr = [ "$mod, SUPER_L,exec, hyprpanel -t dashboardmenu" ];# Open dashboard with SUPER 
         bind = [
             "$ctrl ALT, T, exec, ${pkgs.kitty}/bin/kitty" # Kitty
             "$mod, F, exec, ${pkgs.xfce.thunar}/bin/thunar" # Thunar
@@ -13,11 +14,11 @@
             "$mod, L, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock
             "$ctrl ALT, Delete, exec, wlogout" # Powermenu
             "$mod, SPACE, exec, menu" # Launcher
-            "$mod, C, exec, quickmenu" # Quickmenu
             "$shiftMod, SPACE, exec, hyprfocus-toggle" # Toggle HyprFocus
             "$mod, TAB, overview:toggle" # Overview
             "ALT, Tab, cyclenext" "ALT, Tab, bringactivetotop" # Simulate Alt-Tab behaviour
             "$mod, S, togglesplit," # Change split horizontal/vertical
+            "$shiftMod, P, exec, hyprpricker -a"
 
             "$mod, Q, killactive," # Close window
             ", F11, fullscreen" # Toggle Fullscreen
