@@ -54,7 +54,6 @@ in {
                 color: ${foreground};
                 border-radius: ${toString rounding}px;
                 border: ${toString border-size}px solid ${border-color};
-
             }
 
             #outer-box {

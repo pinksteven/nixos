@@ -8,6 +8,7 @@ in {
 
   security.polkit.enable = true;
 
+  programs.gdk-pixbuf.modulePackages = [ pkgs.librsvg ]; #Add svg support to gtk
   services = {
     xserver = {
       enable = true;
