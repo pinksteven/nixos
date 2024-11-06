@@ -14,6 +14,7 @@
         ../../common/home/programs/thunar
         ../../common/home/programs/trayscale
         ../../common/home/programs/vesktop
+        ../../common/home/programs/test
 
         # Scripts
         ../../common/home/scripts # All script courtesy of Hadi
@@ -41,6 +42,10 @@
             easyeffects
             distrobox
             syncthing
+
+            libreoffice-fresh
+            hunspell
+            hunspellDicts.pl_PL
 
             zip
             unzip
