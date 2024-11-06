@@ -7,7 +7,7 @@ let
           font=nerd
           distrotype=none
           osi=""
-          ki=""
+          ki="󰗶"
           ri="󰍛"
           pi="󰏔"
           ui="󰅶"
