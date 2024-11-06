@@ -35,6 +35,10 @@ in {
     udisks2.enable = true;
     fwupd.enable = true;
     fwupd.extraRemotes = [ "lvfs-testing" ];
+    tailscale = {
+      enable = true;
+      useRoutingFeatures = "client";
+    };
   };
 
   # Faster rebuilding

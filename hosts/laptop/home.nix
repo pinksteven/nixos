@@ -12,6 +12,7 @@
         ../../common/home/programs/nerdfetch
         ../../common/home/programs/spicetify
         ../../common/home/programs/thunar
+        ../../common/home/programs/trayscale
         ../../common/home/programs/vesktop
 
         # Scripts
