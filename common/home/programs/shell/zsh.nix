@@ -3,7 +3,7 @@
 
 {
 
-  home.packages = with pkgs; [ bat ripgrep tldr sesh ];
+  home.packages = with pkgs; [ bat ripgrep tldr thefuck ];
 
   home.sessionPath = [ "$HOME/go/bin" ];
 
@@ -16,19 +16,10 @@
 
     initExtraFirst = ''
       bindkey -e
+      bindkey "^[[3~" delete-char
       nerdfetch
 
-      function sesh-sessions() {
-        session=$(sesh list -t -c | fzf --height 70% --reverse)
-        [[ -z "$session" ]] && return
-        sesh connect $session
-      }
-
-      zle     -N             sesh-sessions
-      bindkey -M emacs '\es' sesh-sessions
-      bindkey -M vicmd '\es' sesh-sessions
-      bindkey -M viins '\es' sesh-sessions
-    '';
+      '';
 
     history = {
       ignoreDups = true;
@@ -41,6 +32,17 @@
         lib.concatStringsSep ":" config.home.sessionPath
       }"
     '';
+
+    oh-my-zsh = {
+      enable = true;
+      theme = "fishy";
+      plugins = [
+        "thefuck"
+        "tailscale"
+        "docker"
+        "docker-compose"
+      ];
+    };
 
     shellAliases = {
       vim = "nvim";
