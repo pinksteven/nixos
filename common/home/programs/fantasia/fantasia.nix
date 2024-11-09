@@ -1,5 +1,4 @@
-with import <nixpkgs> {};
-{ lib, appimageTools, fetchzip }:
+{ lib, appimageTools, fetchzip, }:
 let
     pname = "fantasiaarchive";
     version = "0.1.14a";

@@ -87,6 +87,9 @@
             "idleinhibit always, class:^(firefox)$, title:^(.*Max.*)$"
             "idleinhibit always, class:^(firefox)$, title:^(.*S[0-9].*E[0-9].*)$"
 
+            # Disable hyprbars
+            "plugin:hyprbars:nobar, class:(Fantasia Archive)"
+
             # Supress windows self maximising
             "suppressevent maximize, class:.*"
 
