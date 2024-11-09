@@ -14,7 +14,7 @@
         ../../common/home/programs/thunar
         ../../common/home/programs/trayscale
         ../../common/home/programs/vesktop
-        ../../common/home/programs/test
+        ../../common/home/programs/fantasia
 
         # Scripts
         ../../common/home/scripts # All script courtesy of Hadi
