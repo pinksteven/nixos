@@ -1,11 +1,9 @@
 { pkgs, ... }:
 let
     gnome-terminal = pkgs.writeShellScriptBin "gnome-terminal" ''
-        for terminal in "$TERMINAL" gnome-terminal alacritty kitty
+        for terminal in "$TERMINAL" alacritty kitty
         do
-        if command -v "$terminal" > /dev/null 2>&1
-        then
-            if ! [ "$terminal" = "gnome-terminal" ]
+            if command -v "$terminal" > /dev/null 2>&1
             then
                 i=1
                 until [ $# -lt $i ]
@@ -21,12 +19,9 @@ let
                     esac
                     i=$((i+1))
                 done
-                exec /usr/bin/gnome-terminal "$@"
-            else
                 exec "$terminal" "$@"
             fi
-        fi
-    done
+        done
     '';
 in {
     home.packages = [ gnome-terminal ];
