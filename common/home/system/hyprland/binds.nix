@@ -39,10 +39,14 @@
             "$mod $ctrl, right, movetoworkspacesilent, r+1"# Move window to next workspace
             "$mod $ctrl, left, movetoworkspacesilent, r+1"# Move window to previous workspace
 
-            "$mod, PRINT, exec, screenshot window" # Screenshot window
-            ",PRINT, exec, screenshot monitor" # Screenshot monitor
-            "$shiftMod, PRINT, exec, screenshot region" # Screenshot region
-            "ALT, PRINT, exec, screenshot region swappy" # Screenshot region then edit
+
+            ",PRINT, exec, screenshot region" # Screenshot region
+            "ALT, PRINT, exec, screenshot window" # Screenshot window
+            "$ctrl, PRINT, exec, screenshot monitor" # Screenshot monitor
+
+            "$mod, PRINT, exec, screenshot region satty" # Screenshot region then edit
+            "$mod ALT, PRINT, exec, screenshot window satty" # Screenshot window then edit
+            "$mod $ctrl, PRINT, exec, screenshot monitor satty" # Screenshot monitor then edit
 
             "$mod, V, exec, clipboard" # Clipboard picker with wofi
             "$shiftMod, E, exec, emojimenu" # Emoji picker with wofi

@@ -27,9 +27,7 @@ in {
     kdePackages.qt6ct
     adwaita-qt
     adwaita-qt6
-    hyprshot
     hyprpicker
-    satty
     imv
     wf-recorder
     wlr-randr

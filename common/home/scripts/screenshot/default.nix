@@ -1,34 +1,32 @@
 # - ## Screenshot
 #-
-#- This module provides a script to take screenshots using `grimblast` and `swappy`.
+#- This module provides a script to take screenshots using `grimblast` and `satty`.
 #-
-#- - `screenshot [region|window|monitor] [swappy]` - Take a screenshot of the region, window, or monitor. Optionally, use `swappy` to copy the screenshot to the clipboard.
+#- - `screenshot [region|window|monitor] [satty]` - Take a screenshot of the region, window, or monitor. Optionally, use `swappy` to copy the screenshot to the clipboard.
 { pkgs, ... }:
 let
   screenshot = pkgs.writeShellScriptBin "screenshot" ''
-    if [[ $2 == "swappy" ]];then
-      folder="/tmp"
-    else
-      folder="$HOME/Pictures"
-    fi
-    filename="$(date +%Y-%m-%d_%H:%M:%S).png"
+    folder="$HOME/Pictures/Screenshots"
+    filename="$(date +%Y-%m-%d-%H:%M).png"
 
     if [[ $1 == "window" ]];then
-      mode="active"
+      mode="window"
     elif [[ $1 == "region" ]];then
-      mode="area"
+      mode="region"
     elif [[ $1 == "monitor" ]];then
       mode="output"
     fi
 
-    ${pkgs.grimblast}/bin/grimblast --notify --freeze save $mode "$folder/$filename" || exit 1
-
-    if [[ $2 == "swappy" ]];then
-      ${pkgs.satty}/bin/satty -f "$folder/$filename" -o "$HOME/Pictures/$filename"
+    if [[ $2 == "satty" ]];then
+      ${pkgs.hyprshot}/bin/hyprshot -szm $mode --raw | ${pkgs.satty}/bin/satty --fullscreen -f - -o "$folder/$filename"
       exit 0
     fi
+
+    ${pkgs.hyprshot}/bin/hyprshot -zm $mode -o $folder -f $filename
+
+    
   '';
 in {
   home.packages =
-    [ pkgs.hyprshot screenshot pkgs.slurp pkgs.grim pkgs.grimblast ];
+    [ pkgs.hyprshot pkgs.satty screenshot ];
 }
