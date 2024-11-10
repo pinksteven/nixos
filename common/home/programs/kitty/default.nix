@@ -16,4 +16,10 @@
       window_padding_width = 10;
     };
   };
+
+  home.file.".config/xfce4/helpers.rc" = {
+    text = ''
+      TerminalEmulator=kitty
+    '';
+  };
 }

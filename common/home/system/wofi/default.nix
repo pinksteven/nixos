@@ -41,6 +41,7 @@ in {
             filter_rate = 100;
             key_expand = "Tab";
             key_exit = "Escape";
+            term = "kitty";
         };
         style = # css
         ''

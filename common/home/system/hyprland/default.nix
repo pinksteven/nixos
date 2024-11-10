@@ -38,7 +38,8 @@ in {
   ];
 
   home.sessionVariables = {
-    TERMINAL = "kitty";
+    TERMINAL = "xterm-kitty";
+    TERM = "xterm-kitty";
   };
 
   wayland.windowManager.hyprland = {
