@@ -38,6 +38,7 @@
         packages = with pkgs; [
             firefox
             clapper
+            file-roller
             vscode
             easyeffects
             distrobox
