@@ -15,7 +15,7 @@
             "$ctrl ALT, Delete, exec, wlogout" # Powermenu
             "$mod, SPACE, exec, menu" # Launcher
             "$shiftMod, SPACE, exec, hyprfocus-toggle" # Toggle HyprFocus
-            "$mod, TAB, overview:toggle" # Overview
+            #"$mod, TAB, overview:toggle" # Overview
             "ALT, Tab, cyclenext" "ALT, Tab, bringactivetotop" # Simulate Alt-Tab behaviour
             "$mod, S, togglesplit," # Change split horizontal/vertical
             "$shiftMod, P, exec, hyprpricker -a"

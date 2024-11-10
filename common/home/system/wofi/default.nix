@@ -1,12 +1,12 @@
 { config, pkgs, lib, ... }:
 let
-  accent = "#${config.lib.stylix.colors.base0E}";
+  accent = "#${config.lib.stylix.colors.base0D}";
   background = "#${config.lib.stylix.colors.base00}";
   background-alt = "#${config.lib.stylix.colors.base01}";
   foreground = "#${config.lib.stylix.colors.base05}";
   font = config.stylix.fonts.serif.name;
   rounding = config.var.theme.rounding;
-  font-size = config.stylix.fonts.sizes.popups;
+  font-size = config.stylix.fonts.sizes.applications*1.3;
   border-size = config.var.theme.border-size;
   border-color = "#${config.lib.stylix.colors.base0D}";
 in {

@@ -6,7 +6,7 @@
     enable = true;
     targets.plymouth.enable = false;
 
-    base16Scheme = "${inputs.tinted-theming}/base16/" + "catppuccin-mocha.yaml";
+    base16Scheme = "${inputs.tinted-theming}/base16/" + "rose-pine-moon.yaml";
 
     cursor = {
       package = pkgs.bibata-cursors;
@@ -34,7 +34,7 @@
       sizes = {
         applications = 11;
         desktop = 11;
-        popups = 14;
+        popups = 10;
         terminal = 11;
       };
     };
