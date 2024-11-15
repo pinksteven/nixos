@@ -18,7 +18,7 @@
     };
     stylix.url = "github:danth/stylix";
     tinted-theming = {
-      url = "github:tinted-theming/schemes";
+      url = "github:tinted-theming/schemes?ref=pull/33/head";
       flake = false;
     };
     # Hyprland related stuff
