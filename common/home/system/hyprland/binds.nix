@@ -34,10 +34,10 @@
             "$mod, left, workspace, r-1" # Move to previous workspace
 
             "$mod SHIFT, right, movetoworkspace, r+1"# Move with window to next workspace
-            "$mod SHIFT, left, movetoworkspace, r+1"# Move with window to previous workspace
+            "$mod SHIFT, left, movetoworkspace, r-1"# Move with window to previous workspace
 
             "$mod $ctrl, right, movetoworkspacesilent, r+1"# Move window to next workspace
-            "$mod $ctrl, left, movetoworkspacesilent, r+1"# Move window to previous workspace
+            "$mod $ctrl, left, movetoworkspacesilent, r-1"# Move window to previous workspace
 
 
             ",PRINT, exec, screenshot region" # Screenshot region

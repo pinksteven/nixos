@@ -15,6 +15,7 @@
         ../../common/home/programs/trayscale
         ../../common/home/programs/vesktop
         ../../common/home/programs/fantasia
+        ../../common/home/programs/yazi
 
         # Scripts
         ../../common/home/scripts # All script courtesy of Hadi
