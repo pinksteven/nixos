@@ -11,7 +11,7 @@
         ../../common/home/programs/lazygit
         ../../common/home/programs/nerdfetch
         ../../common/home/programs/spicetify
-        ../../common/home/programs/thunar
+        #../../common/home/programs/thunar
         ../../common/home/programs/trayscale
         ../../common/home/programs/vesktop
         ../../common/home/programs/fantasia
@@ -39,7 +39,7 @@
         packages = with pkgs; [
             firefox
             clapper
-            file-roller
+            #file-roller
             vscode
             easyeffects
             distrobox
@@ -52,6 +52,7 @@
             zip
             unzip
             btop
+            cloc
         ];
 
         # Don't touch

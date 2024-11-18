@@ -12,6 +12,7 @@
             "float, title:^(Sign In - Google Accounts)$"
             "float, class:^()$, title:^(Save File)$"
             "float, class:^()$, title:^(Open File)$"
+            "float, class:^()$, title:^(Open Folder)$"
 
             "float, class:^(.*Overskride.*)$"
             "size 500 700, class:^(.*Overskride.*)$"
@@ -24,19 +25,20 @@
             "float, class:^(com.github.Aylur.ags)$"
 
             # File Manager.
-            "float, class:^(.hunar)$"
-            "size 450 172, class:^(.hunar)$, initialTitle:^(Rename.*)$"
-            "size 450 172, class:^(.hunar)$, initialTitle:^(Create New Folder)$"
-            "size 600 112, class:^(.hunar)$, initialTitle:^(Execute File)$"
-            "size 600 242, class:^(.hunar)$, initialTitle:^(Moving files)$"
-            "size 760 500, class:^(.hunar)$"
+            "float, class:^(yazi)$"
+            "size 760 500, class:^(yazi)$"
+            "minsize 760 500, class:^(yazi)$"
+            #"size 450 172, class:^(.hunar)$, initialTitle:^(Rename.*)$"
+            #"size 450 172, class:^(.hunar)$, initialTitle:^(Create New Folder)$"
+            #"size 600 112, class:^(.hunar)$, initialTitle:^(Execute File)$"
+            #"size 600 242, class:^(.hunar)$, initialTitle:^(Moving files)$"
 
             # File Archiver??.
-            "float, class:^(org.gnome.FileRoller)$"
-            "size 450 172, class:^(org.gnome.FileRoller)$, initialTitle:^(Rename.*)$"
-            "size 600 112, class:^(org.gnome.FileRoller)$, initialTitle:^(Execute File)$"
-            "size 600 242, class:^(org.gnome.FileRoller)$, initialTitle:^(Moving files)$"
-            "size 760 500, class:^(org.gnome.FileRoller)$"
+            #"float, class:^(org.gnome.FileRoller)$"
+            #"size 450 172, class:^(org.gnome.FileRoller)$, initialTitle:^(Rename.*)$"
+            #"size 600 112, class:^(org.gnome.FileRoller)$, initialTitle:^(Execute File)$"
+            #"size 600 242, class:^(org.gnome.FileRoller)$, initialTitle:^(Moving files)$"
+            #"size 760 500, class:^(org.gnome.FileRoller)$"
 
             # GTK and QT Settings.
             "float, class:^(nwg-look)$"

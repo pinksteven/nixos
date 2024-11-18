@@ -37,6 +37,8 @@ let
 
   location = config.var.location;
   username = config.var.username;
+
+  yazi = ''${pkgs.kitty}/bin/kitty --class=yazi zsh -c 'yazi'';
 in {
   wayland.windowManager.hyprland.settings.exec-once =
     [ "${pkgs.hyprpanel}/bin/hyprpanel" ];
@@ -144,17 +146,17 @@ in {
           "menus.dashboard.shortcuts.right.shortcut3.tooltip": "Screenshot",
 
           "menus.dashboard.directories.left.directory1.label": "󰉍 Downloads",
-          "menus.dashboard.directories.left.directory1.command": "bash -c \"thunar $HOME/Downloads/\"",
+          "menus.dashboard.directories.left.directory1.command": "${yazi} $HOME/Downloads/; exit'",
           "menus.dashboard.directories.left.directory2.label": "󰉏 Pictures",
-          "menus.dashboard.directories.left.directory2.command": "bash -c \"thunar $HOME/Pictures/\"",
+          "menus.dashboard.directories.left.directory2.command": "${yazi} $HOME/Pictures/; exit'",
           "menus.dashboard.directories.left.directory3.label": "󱧶 Documents",
-          "menus.dashboard.directories.left.directory3.command": "bash -c \"thunar $HOME/Documents/\"",
+          "menus.dashboard.directories.left.directory3.command": "${yazi} $HOME/Documents/; exit'",
           "menus.dashboard.directories.right.directory1.label": "󱂵 Home",
-          "menus.dashboard.directories.right.directory1.command": "bash -c \"thunar $HOME/\"",
+          "menus.dashboard.directories.right.directory1.command": "${yazi} $HOME/; exit'",
           "menus.dashboard.directories.right.directory2.label": "󰚝 Projects",
-          "menus.dashboard.directories.right.directory2.command": "bash -c \"thunar $HOME/dev/\"",
+          "menus.dashboard.directories.right.directory2.command": "${yazi} $HOME/dev/; exit'",
           "menus.dashboard.directories.right.directory3.label": " Config",
-          "menus.dashboard.directories.right.directory3.command": "bash -c \"thunar $HOME/.config/\"",
+          "menus.dashboard.directories.right.directory3.command": "${yazi} $HOME/.config/; exit'",
 
           "theme.bar.menus.monochrome": true,
           "wallpaper.enable": false,
@@ -215,7 +217,11 @@ in {
           "theme.bar.menus.menu.media.card.tint": 90,
           "bar.customModules.updates.pollingInterval": 1440000,
           "bar.media.show_active_only": true,
-          "theme.bar.location": "${position}"
+          "theme.bar.location": "${position}",
+
+          "bar.windowtitle.title_map": [
+            ["yazi", "", "Yazi"]
+          ]
         }
       '';
   };

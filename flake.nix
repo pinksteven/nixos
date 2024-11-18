@@ -35,7 +35,7 @@
         url = "github:VirtCode/hypr-dynamic-cursors";
         inputs.hyprland.follows = "hyprland";
     };
-    hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent?submodules=1";
+    hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
     hyprsunset.url = "github:hyprwm/hyprsunset";
     hyprpanel.url = "github:Jas-SinghFSU/Hyprpanel";
   };

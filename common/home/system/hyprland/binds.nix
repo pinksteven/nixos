@@ -8,7 +8,7 @@
         bindr = [ "$mod, SUPER_L,exec, hyprpanel -t dashboardmenu" ];# Open dashboard with SUPER 
         bind = [
             "$ctrl ALT, T, exec, ${pkgs.kitty}/bin/kitty" # Kitty
-            "$mod, F, exec, ${pkgs.xfce.thunar}/bin/thunar" # Thunar
+            "$mod, F, exec, ${pkgs.kitty}/bin/kitty --class=yazi zsh -c 'yazi; exit'" # File Manager
             "$mod, B, exec, ${pkgs.firefox}/bin/firefox" # Firefox
             "$mod ,XF86AudioPlay, exec, spotify" # Spotify
             "$mod, L, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock
