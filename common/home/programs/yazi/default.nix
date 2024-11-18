@@ -111,5 +111,23 @@ in {
 		};
     };
 
+    # This is very scuffed but idc
+    xdg.desktopEntries.yazi = {
+        name = "Yazi";
+        icon = "yazi";
+        comment = "Blazing fast terminal file manager written in Rust, based on async I/O";
+        genericName = "File Manager";
+        exec = ''kitty --class=yazi zsh -c "yazi %u; exit"'';
+        terminal = false;
+        type = "Application";
+        mimeType = [ "inode/directory" ];
+        categories = [ "Utility" "Core" "System" "FileTools" "FileManager" "ConsoleOnly" ];
+        settings = {
+            TryExec = "yazi";
+            Keywords = "File;Manager;Explorer;Browser;Launcher";
+            StartupWMClass = "yazi";
+        };
+    };
+
     home.packages = with pkgs; [ ffmpegthumbnailer jq poppler fd ripgrep imagemagick ];
 }

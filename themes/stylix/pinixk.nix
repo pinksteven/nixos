@@ -39,7 +39,7 @@
       };
     };
 
-    image = ./Wallpapers/dandadan1.png;
+    image = ./Wallpapers/ken.png;
   };
 
 }
