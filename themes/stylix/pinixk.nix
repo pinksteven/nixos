@@ -39,7 +39,7 @@
       };
     };
 
-    image = ./Wallpapers/manga.png;
+    image = ./Wallpapers/dandadan1.png;
   };
 
 }
