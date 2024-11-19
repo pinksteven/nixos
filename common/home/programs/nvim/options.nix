@@ -105,6 +105,6 @@
 
             conceallevel = 3;
         };
-        programs.nixvim.extraConfigLua = "vim.o.breakindentopt = \"shift:2\"";# vim.opt doesn't work for this setting
+        extraConfigLua = "vim.o.breakindentopt = \"shift:2\"";# vim.opt doesn't work for this setting
     };
 }
