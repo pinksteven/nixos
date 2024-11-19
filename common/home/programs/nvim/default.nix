@@ -3,7 +3,8 @@
 {
     imports = [
         inputs.nixvim.homeManagerModules.nixvim
-        ./opts.nix
+        ./options.nix
+        ./filetypes.nix
     ];
 
     programs.nixvim = {
