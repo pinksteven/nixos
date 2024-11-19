@@ -16,6 +16,7 @@
         ../../common/home/programs/vesktop
         ../../common/home/programs/fantasia
         ../../common/home/programs/yazi
+        ../../common/home/programs/nvim
 
         # Scripts
         ../../common/home/scripts # All script courtesy of Hadi
