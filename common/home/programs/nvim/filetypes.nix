@@ -1,12 +1,12 @@
 {
-  filetype = {
+  programs.nixvim.filetype = {
     extension = {
       "avsc" = "json";
       "rasi" = "scss";
       "ignore" = "gitignore";
     };
 
-    pattern = {
+    programs.nixvim.pattern = {
       ".*/hypr/.*%.conf" = "hyprlang";
       "flake.lock" = "json";
       ".*helm-chart*.yaml" = "helm";
