@@ -5,6 +5,9 @@
         inputs.nixvim.homeManagerModules.nixvim
         ./options.nix
         ./filetypes.nix
+        ./autocmd.nix
+        ./diagnostic.nix
+        ./plugins
     ];
 
     programs.nixvim = {
