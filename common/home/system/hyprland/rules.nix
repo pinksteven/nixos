@@ -33,13 +33,6 @@
             #"size 600 112, class:^(.hunar)$, initialTitle:^(Execute File)$"
             #"size 600 242, class:^(.hunar)$, initialTitle:^(Moving files)$"
 
-            # File Archiver??.
-            #"float, class:^(org.gnome.FileRoller)$"
-            #"size 450 172, class:^(org.gnome.FileRoller)$, initialTitle:^(Rename.*)$"
-            #"size 600 112, class:^(org.gnome.FileRoller)$, initialTitle:^(Execute File)$"
-            #"size 600 242, class:^(org.gnome.FileRoller)$, initialTitle:^(Moving files)$"
-            #"size 760 500, class:^(org.gnome.FileRoller)$"
-
             # GTK and QT Settings.
             "float, class:^(nwg-look)$"
             "float, class:^(dconf-editor)$"
@@ -61,6 +54,9 @@
             "float, class:^(kitty)$"
             "size 820 540, class:^(kitty)$"
             "minsize 800 500, class:^(kitty)$"
+
+            #Nvim
+            "tile, title^(.*NVIM.*)$"
 
             # Browsers.
             "opaque, class:^(firefox)$"
