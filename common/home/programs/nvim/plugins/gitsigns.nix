@@ -1,7 +1,7 @@
 let
     inherit (builtins) toJSON;
 in {
-    plugins.gitsigns = {
+    programs.nixvim.plugins.gitsigns = {
         enable = true;
 
         settings = {
@@ -20,7 +20,7 @@ in {
         };
     };
 
-    which-key.settings.spec = [
+    programs.nixvim.which-key.settings.spec = [
         {
             __unkeyed = "<leader>gh";
             group = "Hunks";
@@ -32,7 +32,7 @@ in {
         }
     ];
 
-    keymaps = [
+    programs.nixvim.keymaps = [
     # UI binds
     {
         mode = "n";

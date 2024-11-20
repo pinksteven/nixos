@@ -20,6 +20,15 @@
             };
         };
 
+        globals = {
+            # Custom for toggles
+            disable_diagnostics = false;
+            disable_autoformat = false;
+            spell_enabled = true;
+            colorizing_enabled = 1;
+            first_buffer_opened = false;
+        };
+
         luaLoader.enable = true;
         match.ExtraWhitespace = "\\s\\+$";
         highlight.ExtraWhitespace.bg = "red";
