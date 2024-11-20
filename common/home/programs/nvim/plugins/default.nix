@@ -3,5 +3,7 @@
         ./bufferline.nix
         ./lualine.nix
         ./mini
+        ./gitsigns.nix
+        ./telescope.nix
     ];
 }
