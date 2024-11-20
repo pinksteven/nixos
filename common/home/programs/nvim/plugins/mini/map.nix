@@ -1,9 +1,9 @@
 { config, lib, ... }:
 {
-    plugins.mini = {
+    programs.nixvim.plugins.mini = {
         enable = true;
 
-        programs.nixvim.modules.map = {
+        modules.map = {
             # __raw = lua code
             # __unkeyed.* = no key, just the value
             integrations = {

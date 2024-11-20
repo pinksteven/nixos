@@ -20,7 +20,7 @@ in {
         };
     };
 
-    programs.nixvim.which-key.settings.spec = [
+    programs.nixvim.plugins.which-key.settings.spec = [
         {
             __unkeyed = "<leader>gh";
             group = "Hunks";
