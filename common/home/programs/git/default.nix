@@ -3,6 +3,7 @@ let
   username = config.var.git.username;
   email = config.var.git.email;
 in {
+  programs.git-credential-oauth.enable = true;
   programs.git = {
     enable = true;
     userName = username;

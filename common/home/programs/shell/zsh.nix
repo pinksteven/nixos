@@ -58,6 +58,8 @@
       sl = "ls";
       open = "${pkgs.xdg-utils}/bin/xdg-open";
       icat = "${pkgs.kitty}/bin/kitty +kitten icat";
+      yoink = "nh os switch -a";
+      yeet = "nh clean all --keep 3";
 
       # git
       g = "lazygit";
