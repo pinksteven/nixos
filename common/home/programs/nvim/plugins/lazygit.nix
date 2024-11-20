@@ -1,9 +1,9 @@
 {
-    packages.nixvim.plugins.lazygit = {
+    programs.nixvim.plugins.lazygit = {
         enable = true;
     };
 
-    packages.nixvim.keymaps = [
+    programs.nixvim.keymaps = [
         {
             mode = "n";
             key = "<leader>gl";

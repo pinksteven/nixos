@@ -17,7 +17,7 @@
             filteredItems = {
                 hideDotfiles = false;
                 hideHidden = false;
-                hide_gitignored = true;
+                hideGitignored = true;
                 neverShowByPattern = [
                     ".direnv"
                     ".git"
