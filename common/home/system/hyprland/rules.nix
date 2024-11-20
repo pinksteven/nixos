@@ -56,7 +56,7 @@
             "minsize 800 500, class:^(kitty)$"
 
             #Nvim
-            "tile, title^(.*NVIM.*)$"
+            "tile, class:^(kitty)$, title:^(.*NVIM.*)$"
 
             # Browsers.
             "opaque, class:^(firefox)$"
