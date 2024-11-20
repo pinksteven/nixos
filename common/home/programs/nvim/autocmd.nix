@@ -1,6 +1,6 @@
 { config, lib, ... }:
 {
-    autoCmd = [
+    programs.nixvim.autoCmd = [
         # Remove trailing whitespace on save
         {
         event = "BufWrite";
