@@ -1,6 +1,6 @@
 { config, lib, ... }:
 {
-    plugins.bufferline =
+    programs.nixvim.plugins.bufferline =
     let
     mouse = {
         right = # Lua
@@ -117,7 +117,7 @@
         };
         };
 
-    keymaps = lib.mkIf config.plugins.bufferline.enable [
+    programs.nixvim.keymaps = lib.mkIf config.plugins.bufferline.enable [
         {
         mode = "n";
         key = "<leader>bP";

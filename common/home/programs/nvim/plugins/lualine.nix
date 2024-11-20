@@ -11,7 +11,7 @@ cond.__raw = ''
     end
 '';
 in {
-    plugins.lualine = {
+    programs.nixvim.plugins.lualine = {
         enable = true;
 
         settings = {
