@@ -1,5 +1,7 @@
+{ config, ... }:
+
 {
-  plugins.bufferline =
+  programs.nixvim.plugins.bufferline =
     let
       mouse = {
         right = # Lua
@@ -19,9 +21,15 @@
         options = {
           mode = "buffers";
           always_show_bufferline = true;
+          themable = true;
           buffer_close_icon = "󰅖";
           close_command.__raw = mouse.close;
           close_icon = "";
+          hover = {
+            enabled = true;
+            delay = 200;
+            reveal = ["close"];
+          };
           diagnostics = "nvim_lsp";
           diagnostics_indicator = # Lua
             ''
@@ -79,20 +87,13 @@
           };
 
           indicator = {
-            style = "icon";
-            icon = "▎";
+            style = "underline";
           };
 
           left_trunc_marker = "";
           max_name_length = 18;
           max_prefix_length = 15;
           modified_icon = "●";
-
-          numbers.__raw = ''
-            function(opts)
-              return string.format('%s·%s', opts.raise(opts.id), opts.lower(opts.ordinal))
-            end
-          '';
 
           persist_buffer_sort = true;
           right_mouse_command.__raw = mouse.right;
@@ -117,7 +118,7 @@
       };
     };
 
-  keymaps = [
+  programs.nixvim.keymaps = [
     {
       mode = "n";
       key = "<leader>bP";

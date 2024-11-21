@@ -7,7 +7,8 @@
         {
             mode = "n";
             key = "<leader>gl";
-            action = "<cmd>LazyGit<CR>";
+            action = "<cmd>LazyGitCurrentFile<CR>";
+            options.desc = "Open lazygit";
         }
     ];
 }

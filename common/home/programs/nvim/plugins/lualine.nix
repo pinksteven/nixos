@@ -102,26 +102,6 @@ in {
             }
             ];
         };
-
-        winbar = {
-            lualine_c = [
-            {
-                __unkeyed = "navic";
-                inherit cond;
-            }
-            ];
-
-            # TODO: Need to dynamically hide/show component so navic takes precedence on smaller width
-            lualine_x = [
-            {
-                __unkeyed = "filename";
-                newfile_status = true;
-                path = 3;
-                # Shorten path names to fit navic component
-                shorting_target = 150;
-            }
-            ];
-        };
         };
     };
 }
