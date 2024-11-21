@@ -34,7 +34,7 @@
         };
 
         window = {
-            width = 40;
+            width = 30;
             autoExpandWidth = false;
         };
     };
