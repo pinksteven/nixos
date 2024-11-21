@@ -12,15 +12,8 @@ let
       return valid_bufs
     end
   '';
-in
-{
-  opts.completeopt = [
-    "menu"
-    "menuone"
-    "noselect"
-  ];
-
-  plugins = {
+in {
+  programs.nixvim.plugins = {
     cmp = {
       enable = true;
       autoEnableSources = true;

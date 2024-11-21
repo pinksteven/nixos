@@ -9,5 +9,9 @@
         ./yazi.nix
         ./neo-tree.nix
         ./bufferline.nix
+        ./noice.nix
+        ./lsp.nix
+        ./cmp.nix
+        ./conform.nix
     ];
 }

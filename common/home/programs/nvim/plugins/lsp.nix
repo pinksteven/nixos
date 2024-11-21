@@ -1,12 +1,11 @@
 {
-  config,
   lib,
   pkgs,
   self,
   ...
 }:
 {
-  extraConfigLuaPre = ''
+  programs.nixvim.extraConfigLuaPre = ''
     vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticError", linehl = "", numhl = "" })
     vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticWarn", linehl = "", numhl = "" })
     vim.fn.sign_define("DiagnosticSignHint", { text = " 󰌵", texthl = "DiagnosticHint", linehl = "", numhl = "" })
@@ -39,7 +38,7 @@
     }
   '';
 
-  autoCmd = [
+  programs.nixvim.autoCmd = [
     {
       event = "FileType";
       pattern = "helm";
@@ -47,7 +46,7 @@
     }
   ];
 
-  plugins = {
+  programs.nixvim.plugins = {
     helm.enable = true;
     lspkind.enable = true;
     lsp-lines.enable = true;
@@ -244,7 +243,7 @@
         nil_ls = {
           # FIXME: when nixd works again
           # enable = !config.plugins.lsp.servers.nixd.enable;
-          enable = false;
+          enable = true;
           filetypes = [ "nix" ];
           settings = {
             formatting = {
@@ -259,7 +258,7 @@
         };
 
         nixd = {
-          enable = true;
+          enable = false; # This server is broken
           filetypes = [ "nix" ];
           settings =
             let

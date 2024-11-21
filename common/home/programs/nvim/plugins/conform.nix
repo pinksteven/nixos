@@ -1,6 +1,6 @@
 { lib, pkgs, ... }:
 {
-  extraConfigLuaPre = ''
+  programs.nixvim.extraConfigLuaPre = ''
     local slow_format_filetypes = {}
 
     vim.api.nvim_create_user_command("FormatDisable", function(args)
@@ -34,7 +34,7 @@
     })
   '';
 
-  plugins = {
+  programs.nixvim.plugins = {
     conform-nvim = {
       enable = true;
 
