@@ -21,7 +21,6 @@
         options = {
           mode = "buffers";
           always_show_bufferline = true;
-          themable = true;
           buffer_close_icon = "󰅖";
           close_command.__raw = mouse.close;
           close_icon = "";
@@ -87,7 +86,7 @@
           };
 
           indicator = {
-            style = "underline";
+            style = "icon";
           };
 
           left_trunc_marker = "";
@@ -98,7 +97,6 @@
           persist_buffer_sort = true;
           right_mouse_command.__raw = mouse.right;
           right_trunc_marker = "";
-          separator_style = "slant";
           show_buffer_close_icons = true;
           show_buffer_icons = true;
           show_close_icon = true;
@@ -114,6 +112,43 @@
               highlight = "Directory";
             }
           ];
+        };
+
+        highlights =
+        let
+          background = {
+            bg = "#${config.lib.stylix.colors.base00}";
+          };
+
+          bgSwap = builtins.listToAttrs (
+            map
+              (name: {
+                inherit name;
+                value = background;
+              })
+              [
+                "fill"
+                "buffer_selected"
+                "tab_selected"
+                "numbers_selected"
+              ]
+          );
+        in
+        bgSwap
+        // {
+          separator = {
+            fg = "#${config.lib.stylix.colors.base00}";
+          };
+          separator_visible = {
+            fg = "#${config.lib.stylix.colors.base00}";
+          };
+          separator_selected = {
+            bg = "#${config.lib.stylix.colors.base00}";
+            fg = "#${config.lib.stylix.colors.base00}";
+          };
+          indicator_selected = {
+            fg = "#${config.lib.stylix.colors.base0D}";
+          };
         };
       };
     };
