@@ -1,4 +1,3 @@
-{ config, lib, ... }:
 let
 cond.__raw = ''
     function()
@@ -102,19 +101,6 @@ in {
                 inherit cond;
             }
             ];
-        };
-
-        tabline = {
-            lualine_a = [
-            # NOTE: not high priority since i use bufferline now, but should fix left separator color
-            {
-                __unkeyed = "buffers";
-                symbols = {
-                alternate_file = "";
-                };
-            }
-            ];
-            lualine_z = [ "tabs" ];
         };
 
         winbar = {

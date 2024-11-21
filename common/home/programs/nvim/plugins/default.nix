@@ -8,6 +8,6 @@
         ./lazygit.nix
         ./yazi.nix
         ./neo-tree.nix
+        ./bufferline.nix
     ];
-    programs.nixvim.plugins.barbar.enable = true;
 }
