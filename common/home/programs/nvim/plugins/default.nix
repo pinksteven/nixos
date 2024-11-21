@@ -1,6 +1,6 @@
 {
     imports = [
-        ./bufferline.nix
+        # ./bufferline.nix
         ./lualine.nix
         ./mini
         ./gitsigns.nix
@@ -10,4 +10,5 @@
         ./yazi.nix
         ./neo-tree.nix
     ];
+    programs.nixvim.plugins.bufferline.enable = true;
 }

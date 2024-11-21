@@ -109,40 +109,6 @@ in {
                     highlight = "Directory";
                 }];
             };
-            highlights =
-            let
-                commonBgColor = "#${config.lib.stylix.colors.base00}";
-                commonFgColor = "#${config.lib.stylix.colors.base05}";
-                commonSelectedAttrs = { bg = commonBgColor; };
-                selectedAttrsSet = builtins.listToAttrs (
-                    map
-                        (name: {
-                            inherit name;
-                            value = commonSelectedAttrs;
-                        })
-                    [
-                    "buffer_selected"
-                    "tab_selected"
-                    "numbers_selected"
-                    ]
-                );
-            in
-            selectedAttrsSet
-            // {
-                fill = {
-                    bg = commonFgColor;
-                };
-                separator = {
-                    fg = commonFgColor;
-                };
-                separator_visible = {
-                    fg = commonFgColor;
-                };
-                separator_selected = {
-                    bg = commonBgColor;
-                    fg = commonFgColor;
-                };
-            };
         };
     };
 

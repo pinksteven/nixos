@@ -8,6 +8,7 @@
         ./autocmd.nix
         ./diagnostic.nix
         ./plugins
+        ./theme.nix
     ];
 
     programs.nixvim = {
