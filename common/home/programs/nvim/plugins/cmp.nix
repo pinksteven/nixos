@@ -12,7 +12,8 @@ let
       return valid_bufs
     end
   '';
-in {
+in
+{
   programs.nixvim.plugins = {
     cmp = {
       enable = true;
@@ -74,10 +75,6 @@ in {
           {
             name = "luasnip";
             priority = 750;
-          }
-          {
-            name = "copilot";
-            priority = 600;
           }
           # TODO: figure out infinite recursion
           {
