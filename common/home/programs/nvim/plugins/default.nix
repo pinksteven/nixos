@@ -14,5 +14,7 @@
     ./cmp.nix
     ./conform.nix
     ./project-nvim.nix
+    ./snacks.nix
+    ./toogleterm.nix
   ];
 }

@@ -24,6 +24,7 @@
         bracketed = { };
         align = { };
         git = { };
+        sessions = { };
       };
     };
   };
