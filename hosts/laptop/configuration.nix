@@ -18,6 +18,7 @@
     ../../common/nixos/utils.nix
     ../../common/nixos/variables-config.nix
     ../../common/nixos/xdg-portal.nix
+    ../../common/nixos/sudo.nix
 
     ./hardware-configuration.nix
     ./variables.nix

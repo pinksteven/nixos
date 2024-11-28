@@ -30,8 +30,6 @@
     };
 
     luaLoader.enable = true;
-    match.ExtraWhitespace = "\\s\\+$";
-    highlight.ExtraWhitespace.bg = "red";
 
     opts = {
       updatetime = 50;
