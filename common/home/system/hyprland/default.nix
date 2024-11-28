@@ -1,4 +1,9 @@
-{ pkgs, config, inputs, ... }:
+{
+  pkgs,
+  config,
+  inputs,
+  ...
+}:
 let
   border-size = config.var.theme.border-size;
   gaps-in = config.var.theme.gaps-in;
@@ -17,10 +22,18 @@ let
   border-locked = rgb config.lib.stylix.colors.base0C;
   text-color = rgb config.lib.stylix.colors.base05;
   background = rgb config.lib.stylix.colors.base00;
-in {
-    imports = [ ./rules.nix ./animations.nix ./binds.nix ./polkitagent.nix ./startup.nix ./plugins.nix ];
+in
+{
+  imports = [
+    ./rules.nix
+    ./animations.nix
+    ./binds.nix
+    ./polkitagent.nix
+    ./startup.nix
+    ./plugins.nix
+  ];
 
-    home.packages = with pkgs; [
+  home.packages = with pkgs; [
     qt5.qtwayland
     qt6.qtwayland
     libsForQt5.qt5ct
@@ -49,7 +62,7 @@ in {
   };
 
   stylix.targets.hyprland.enable = false;
-  services.hyprpaper.enable=true;
+  services.hyprpaper.enable = true;
   stylix.targets.hyprpaper.enable = true;
 
   wayland.windowManager.hyprland = {
@@ -58,134 +71,136 @@ in {
     systemd.enable = true;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 
-    plugins = [ 
-#        inputs.hyprspace.packages.${pkgs.system}.Hyprspace 
-        inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
-#	     inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
+    plugins = [
+      inputs.hyprspace.packages.${pkgs.system}.Hyprspace
+      inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
+      inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
     ];
-    #idk why but this works, and puuting this in plugins doesn't
-#    extraConfig = ''
-#        plugin = ${inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors}/lib/libhypr-dynamic-cursors.so
-#    '';
 
     settings = {
-        monitor = ", preferred, auto, 1.566667";
-        xwayland = {force_zero_scaling = true;};
+      monitor = ", preferred, auto, 1.566667";
+      xwayland = {
+        force_zero_scaling = true;
+      };
 
-        env = [
-            "XDG_SESSION_TYPE,wayland"
-            "XDG_CURRENT_DESKTOP,Hyprland"
-            "XDG_SESSION_DESKTOP,Hyprland"
-            "MOZ_ENABLE_WAYLAND,1"
-            "ANKI_WAYLAND,1"
-            "DISABLE_QT5_COMPAT,0"
-            "NIXOS_OZONE_WL,1"
-            "XDG_SESSION_TYPE,wayland"
-            
-            "QT_AUTO_SCREEN_SCALE_FACTOR,1"
-            "QT_QPA_PLATFORM,wayland"
-            "QT_QPA_PLATFORMTHEME,qt6ct"
-            "QT_QUICK_CONTROLS_STYLE,org.kde.desktop"
-            "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
-            "ELECTRON_OZONE_PLATFORM_HINT,auto"
+      env = [
+        "XDG_SESSION_TYPE,wayland"
+        "XDG_CURRENT_DESKTOP,Hyprland"
+        "XDG_SESSION_DESKTOP,Hyprland"
+        "MOZ_ENABLE_WAYLAND,1"
+        "ANKI_WAYLAND,1"
+        "DISABLE_QT5_COMPAT,0"
+        "NIXOS_OZONE_WL,1"
+        "XDG_SESSION_TYPE,wayland"
 
-            "DIRENV_LOG_FORMAT,"
-            "WLR_DRM_NO_ATOMIC,1"
-            "WLR_BACKEND,vulkan"
-            "WLR_RENDERER,vulkan"
-            "SDL_VIDEODRIVER,wayland"
-            "CLUTTER_BACKEND,wayland"
+        "QT_AUTO_SCREEN_SCALE_FACTOR,1"
+        "QT_QPA_PLATFORM,wayland"
+        "QT_QPA_PLATFORMTHEME,qt6ct"
+        "QT_QUICK_CONTROLS_STYLE,org.kde.desktop"
+        "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
+        "ELECTRON_OZONE_PLATFORM_HINT,auto"
 
-            # Set up folders
-            "XDG_DESKTOP_DIR, $HOME/Desktop"
-            "XDG_DOWNLOAD_DIR, $HOME/Downloads"
-            "XDG_TEMPLATES_DIR, $HOME/Templates"
-            "XDG_DOCUMENTS_DIR, $HOME/Documents"
-            "XDG_MUSIC_DIR, $HOME/Music"
-            "XDG_PICTURES_DIR, $HOME/Pictures"
-            "XDG_VIDEOS_DIR, $HOME/Videos"
-        ];
+        "DIRENV_LOG_FORMAT,"
+        "WLR_DRM_NO_ATOMIC,1"
+        "WLR_BACKEND,vulkan"
+        "WLR_RENDERER,vulkan"
+        "SDL_VIDEODRIVER,wayland"
+        "CLUTTER_BACKEND,wayland"
 
-        general = {
-            gaps_in = gaps-in;
-            gaps_out = gaps-out;
-            border_size = border-size;
-            "col.active_border" = border-active;
-            "col.inactive_border" = border-inactive;
+        # Set up folders
+        "XDG_DESKTOP_DIR, $HOME/Desktop"
+        "XDG_DOWNLOAD_DIR, $HOME/Downloads"
+        "XDG_TEMPLATES_DIR, $HOME/Templates"
+        "XDG_DOCUMENTS_DIR, $HOME/Documents"
+        "XDG_MUSIC_DIR, $HOME/Music"
+        "XDG_PICTURES_DIR, $HOME/Pictures"
+        "XDG_VIDEOS_DIR, $HOME/Videos"
+      ];
 
-            resize_on_border = true;
-            extend_border_grab_area = 15;
+      general = {
+        gaps_in = gaps-in;
+        gaps_out = gaps-out;
+        border_size = border-size;
+        "col.active_border" = border-active;
+        "col.inactive_border" = border-inactive;
+
+        resize_on_border = true;
+        extend_border_grab_area = 15;
+      };
+
+      decoration = {
+        active_opacity = active-opacity;
+        inactive_opacity = inactive-opacity;
+        rounding = rounding;
+        shadow = {
+          enabled = true;
+          range = 20;
+          render_power = 3;
+          color = shadow-color;
         };
-
-        decoration = {
-            active_opacity = active-opacity;
-            inactive_opacity = inactive-opacity;
-            rounding = rounding;
-            shadow = {
-                enabled = true;
-                range = 20;
-                render_power = 3;
-                color = shadow-color;
-            };
-            blur = { enabled = if blur then "true" else "false"; size = 8; passes = 1;};
+        blur = {
+          enabled = if blur then "true" else "false";
+          size = 8;
+          passes = 1;
         };
-        
-        dwindle = {
-            pseudotile = true; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
-            preserve_split = true; # You probably want this
+      };
+
+      dwindle = {
+        pseudotile = true; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+        preserve_split = true; # You probably want this
+      };
+
+      master = {
+        new_status = "master";
+      };
+
+      group = {
+        "col.border_inactive" = border-active;
+        "col.border_active" = border-inactive;
+        "col.border_locked_active" = border-locked;
+        groupbar = {
+          text_color = text-color;
+          "col.active" = border-active;
+          "col.inactive" = border-inactive;
         };
+      };
 
-        master = {
-            new_status = "master";
+      misc = {
+        disable_hyprland_logo = true; # If true disables the random hyprland logo / anime girl background.
+        disable_splash_rendering = true;
+        disable_autoreload = true;
+        new_window_takes_over_fullscreen = 2;
+        background_color = background;
+      };
+
+      input = {
+        kb_layout = keyboardLayout;
+
+        repeat_delay = 300;
+        repeat_rate = 50;
+        follow_mouse = 1;
+
+        sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
+
+        touchpad = {
+          disable_while_typing = false;
+          natural_scroll = true;
+          tap-to-click = true;
+          tap-and-drag = true;
         };
+      };
+      gestures = {
+        workspace_swipe = true;
+        workspace_swipe_fingers = 3;
+        workspace_swipe_distance = 600;
+        workspace_swipe_use_r = true;
+      };
 
-        group = {
-            "col.border_inactive" = border-active;
-            "col.border_active" = border-inactive;
-            "col.border_locked_active" = border-locked;
-            groupbar = {
-                text_color = text-color;
-                "col.active" = border-active;
-                "col.inactive" = border-inactive;
-            };
-        };
-
-        misc = {
-            disable_hyprland_logo = true; # If true disables the random hyprland logo / anime girl background.
-            disable_splash_rendering = true;
-            disable_autoreload = true;
-            new_window_takes_over_fullscreen = 2;
-            background_color = background;
-        };
-
-        input = {
-            kb_layout = keyboardLayout;
-
-            repeat_delay = 300;
-            repeat_rate = 50;
-            follow_mouse = 1;
-
-            sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
-
-            touchpad = {
-                disable_while_typing = false;
-                natural_scroll = true;
-                tap-to-click = true;
-                tap-and-drag = true;
-            };
-        };
-        gestures = {
-            workspace_swipe = true;
-            workspace_swipe_fingers = 3;
-            workspace_swipe_distance = 600;
-            workspace_swipe_use_r = true;
-        };
-
-        cursor = {
-            no_warps = true;
-            inactive_timeout = 60;
-            enable_hyprcursor = true;
-        };
+      cursor = {
+        no_warps = true;
+        inactive_timeout = 60;
+        enable_hyprcursor = true;
+      };
     };
   };
   systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
