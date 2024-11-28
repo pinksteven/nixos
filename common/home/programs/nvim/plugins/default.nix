@@ -10,7 +10,6 @@
     ./bufferline.nix
     ./noice.nix
     ./lsp.nix
-    ./cmp.nix
     ./conform.nix
     ./project-nvim.nix
     ./snacks.nix
