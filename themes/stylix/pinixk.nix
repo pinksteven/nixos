@@ -1,18 +1,18 @@
-{ pkgs, inputs, ... }: 
+{ pkgs, inputs, ... }:
 
 {
-  home-manager.sharedModules = [{stylix.enable=true;}];
+  home-manager.sharedModules = [ { stylix.enable = true; } ];
   stylix = {
     enable = true;
     targets.plymouth.enable = false;
 
     base16Scheme = "${inputs.tinted-theming}/base16/" + "rose-pine-moon.yaml";
 
-    cursor = {
-      package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Ice";
-      size = 24;
-    };
+    # cursor = {
+    #   package = pkgs.bibata-cursors;
+    #   name = "Bibata-Modern-Ice";
+    #   size = 24;
+    # };
 
     fonts = {
       monospace = {
@@ -43,3 +43,4 @@
   };
 
 }
+

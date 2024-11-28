@@ -197,7 +197,7 @@ in
       };
 
       cursor = {
-        no_warps = true;
+        no_warps = false;
         inactive_timeout = 60;
         enable_hyprcursor = true;
       };
