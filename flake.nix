@@ -40,6 +40,10 @@
     hyprpanel.url = "github:Jas-SinghFSU/Hyprpanel";
 
     blink-cmp.url = "github:Saghen/blink.cmp";
+    blink-compat = {
+      url = "github:saghen/blink.compat";
+      flake = false;
+    };
   };
 
   outputs =
