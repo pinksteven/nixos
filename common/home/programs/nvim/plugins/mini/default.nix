@@ -25,8 +25,8 @@
         align = { };
         git = { };
         sessions = { };
+        trailspace = { };
       };
     };
   };
 }
-

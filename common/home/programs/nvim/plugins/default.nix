@@ -15,5 +15,6 @@
     ./project-nvim.nix
     ./snacks.nix
     ./toogleterm.nix
+    ./compiler.nix
   ];
 }

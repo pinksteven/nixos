@@ -204,6 +204,7 @@
               linters = {
                 linking_verbs = true;
                 wrong_quotes = true;
+                avoid_curses = false;
               };
               codeActions = {
                 forceStable = true;
@@ -360,6 +361,15 @@
         yamlls = {
           enable = true;
           filetypes = [ "yaml" ];
+        };
+
+        lemminx = {
+          enable = true;
+          filetypes = [
+            "xml"
+            "xsd"
+            "dtd"
+          ];
         };
       };
     };

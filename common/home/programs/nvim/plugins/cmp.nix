@@ -76,11 +76,12 @@ in
             name = "luasnip";
             priority = 750;
           }
+
           # TODO: figure out infinite recursion
-          {
-            name = "codeium";
-            priority = 600;
-          }
+          # {
+          # name = "codeium";
+          # priority = 600;
+          # }
           {
             name = "buffer";
             priority = 500;

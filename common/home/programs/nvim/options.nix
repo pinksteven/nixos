@@ -104,7 +104,7 @@
       matchtime = 1; # duration of that flashing n deci-seconds
       startofline = true; # motions like "G" also move to the first char
       cmdheight = 0;
-      hlsearch = true;
+      hlsearch = false;
       infercase = true;
       linebreak = true;
       pumheight = 10;
