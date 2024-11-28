@@ -32,29 +32,35 @@
       inputs.hyprland.follows = "hyprland";
     };
     hypr-dynamic-cursors = {
-        url = "github:VirtCode/hypr-dynamic-cursors";
-        inputs.hyprland.follows = "hyprland";
+      url = "github:VirtCode/hypr-dynamic-cursors";
+      inputs.hyprland.follows = "hyprland";
     };
     hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
     hyprsunset.url = "github:hyprwm/hyprsunset";
     hyprpanel.url = "github:Jas-SinghFSU/Hyprpanel";
+
+    blink-cmp.url = "github:Saghen/blink.cmp";
   };
 
-  outputs = inputs@{ nixpkgs, ... }: {
-    nixosConfigurations = {
-      steven-framework = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          {
-            nixpkgs.overlays = [ inputs.hyprpanel.overlay ];
-            _module.args = { inherit inputs; };
-          }
-          inputs.nixos-hardware.nixosModules.framework-13-7040-amd #Change to support correct hardware or remove
-          inputs.home-manager.nixosModules.home-manager
-          inputs.stylix.nixosModules.stylix
-          ./hosts/laptop/configuration.nix #Set the host u want to use (currently only laptop)
-        ];
+  outputs =
+    inputs@{ nixpkgs, ... }:
+    {
+      nixosConfigurations = {
+        steven-framework = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            {
+              nixpkgs.overlays = [ inputs.hyprpanel.overlay ];
+              _module.args = {
+                inherit inputs;
+              };
+            }
+            inputs.nixos-hardware.nixosModules.framework-13-7040-amd # Change to support correct hardware or remove
+            inputs.home-manager.nixosModules.home-manager
+            inputs.stylix.nixosModules.stylix
+            ./hosts/laptop/configuration.nix # Set the host u want to use (currently only laptop)
+          ];
+        };
       };
     };
-  };
 }

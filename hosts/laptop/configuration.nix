@@ -19,8 +19,6 @@
     ../../common/nixos/variables-config.nix
     ../../common/nixos/xdg-portal.nix
 
-    ../../common/nixos/overlays
-
     ./hardware-configuration.nix
     ./variables.nix
 
@@ -31,4 +29,3 @@
   # Don't touch unless to swap to the one from pregenned cofniguration.nix after install
   system.stateVersion = "24.05";
 }
-

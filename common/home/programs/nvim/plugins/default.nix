@@ -16,6 +16,6 @@
     ./snacks.nix
     ./toogleterm.nix
     ./compiler.nix
-    ./blink-cmp
+    ./blink-cmp.nix
   ];
 }
