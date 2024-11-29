@@ -17,5 +17,18 @@
     ./compiler.nix
     ./blink-cmp.nix
     ./codeium.nix
+    ./helpview.nix
+    ./hmts.nix
+    ./illuminate.nix
+    ./lightbulb.nix
+    ./nix.nix
+    ./overseer.nix
+    ./sleuth.nix
+    ./smartcolumn.nix
+    ./todo.nix
+    ./treesitter.nix
+    ./ts-comments.nix
+    ./wakatime.nix
+    ./trouble.nix
   ];
 }
