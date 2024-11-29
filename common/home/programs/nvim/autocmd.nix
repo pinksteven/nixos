@@ -37,5 +37,16 @@
       ];
       command = "setlocal spell spelllang=en_us";
     }
+    {
+      event = "BufLeave";
+      pattern = "*lazygit*";
+      callback.__raw = ''
+        function()
+          require("neo-tree.sources.filesystem.commands").refresh(
+        		require("neo-tree.sources.manager").get_state("filesystem")
+        	)
+        end
+      '';
+    }
   ];
 }
