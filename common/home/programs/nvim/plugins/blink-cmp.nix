@@ -22,6 +22,7 @@
         nerd_font_variant = "mono";
         kind_icons = {
           Copilot = "";
+          Codeium = "󰚩";
         };
         highlight = {
           use_nvim_cmp_as_default = true;
@@ -55,6 +56,7 @@
               "git"
               "calc"
               "luasnip"
+              "codeium"
             ];
           };
           providers = {
@@ -85,10 +87,10 @@
               name = "calc";
               module = "blink.compat.source";
             };
-            # copilot = {
-            # name = "copilot";
-            # module = "blink.compat.source";
-            # };
+            codeium = {
+              name = "codeium";
+              module = "blink.compat.source";
+            };
             luasnip = {
               name = "luasnip";
               module = "blink.compat.source";
@@ -144,6 +146,5 @@
 
     cmp-git.enable = true;
     cmp-calc.enable = true;
-    # copilot-cmp.enable = true;
   };
 }

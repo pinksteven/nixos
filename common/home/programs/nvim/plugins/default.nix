@@ -16,5 +16,6 @@
     ./toogleterm.nix
     ./compiler.nix
     ./blink-cmp.nix
+    ./codeium.nix
   ];
 }
