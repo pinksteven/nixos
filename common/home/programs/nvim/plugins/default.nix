@@ -30,5 +30,6 @@
     ./ts-comments.nix
     ./wakatime.nix
     ./trouble.nix
+    ./auto-session.nix
   ];
 }
