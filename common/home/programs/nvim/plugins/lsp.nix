@@ -198,7 +198,7 @@
         };
 
         harper_ls = {
-          enable = true;
+          enable = false;
           settings = {
             "harper-ls" = {
               linters = {

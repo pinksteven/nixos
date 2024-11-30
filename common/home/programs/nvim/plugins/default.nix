@@ -32,6 +32,5 @@
     ./trouble.nix
     ./auto-session.nix
     ./clangd-extenions.nix
-    ./lint.nix
   ];
 }
