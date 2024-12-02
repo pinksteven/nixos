@@ -6,7 +6,7 @@
     enable = true;
     targets.plymouth.enable = false;
 
-    base16Scheme = "${inputs.tinted-theming}/base16/" + "rose-pine-moon.yaml";
+    base16Scheme = "${inputs.tinted-theming}/base16/" + "rose-pine.yaml";
 
     # cursor = {
     #   package = pkgs.bibata-cursors;
@@ -39,8 +39,7 @@
       };
     };
 
-    image = ./Wallpapers/ken.png;
+    image = ./Wallpapers/dandadan_yes.jpg;
   };
 
 }
-
