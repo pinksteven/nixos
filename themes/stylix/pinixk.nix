@@ -16,15 +16,15 @@
 
     fonts = {
       monospace = {
-        package = pkgs.nerdfonts;
-        name = "FiraMono Nerd Font Mono";
+        package = pkgs.nerdfonts.fira-code;
+        name = "FiraCode Nerd Font Mono";
       };
       sansSerif = {
-        package = pkgs.nerdfonts;
+        package = pkgs.nerdfonts.fira-mono;
         name = "FiraMono Nerd Font Mono";
       };
       serif = {
-        package = pkgs.nerdfonts;
+        package = pkgs.nerdfonts.fira-mono;
         name = "FiraMono Nerd Font Mono";
       };
       emoji = {
