@@ -48,5 +48,10 @@
         end
       '';
     }
+    # Tile neovim on entering
+    {
+      event = "VimEnter";
+      command = ''!hyprctl dispatch settiled "title:^(.*NVIM.*)$" --quiet'';
+    }
   ];
 }

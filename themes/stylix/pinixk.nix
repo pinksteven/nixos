@@ -16,15 +16,15 @@
 
     fonts = {
       monospace = {
-        package = pkgs.nerdfonts.fira-code;
+        package = pkgs.nerd-fonts.fira-code;
         name = "FiraCode Nerd Font Mono";
       };
       sansSerif = {
-        package = pkgs.nerdfonts.fira-mono;
+        package = pkgs.nerd-fonts.fira-mono;
         name = "FiraMono Nerd Font Mono";
       };
       serif = {
-        package = pkgs.nerdfonts.fira-mono;
+        package = pkgs.nerd-fonts.fira-mono;
         name = "FiraMono Nerd Font Mono";
       };
       emoji = {
@@ -42,4 +42,12 @@
     image = ./Wallpapers/dandadan_yes.jpg;
   };
 
+  # Stylix iss using an EOL version of dotne or multiple????????t
+  nixpkgs.config.permittedInsecurePackages = [
+    "dotnet-core-combined"
+    "dotnet-sdk-6.0.428"
+    "dotnet-sdk-7.0.410"
+    "dotnet-sdk-wrapped-6.0.428"
+
+  ];
 }

@@ -3,7 +3,9 @@
 {
   fonts = {
     packages = with pkgs; [
-      nerdfonts
+      nerd-fonts.fira-code
+      nerd-fonts.fira-mono
+      nerd-fonts.bigblue-terminal
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-emoji
@@ -12,7 +14,7 @@
     fontconfig = {
       defaultFonts = {
         monospace = [
-          "FiraMono Nerd Font Mono"
+          "FiraCode Nerd Font Mono"
           "Noto Color Emoji"
         ];
         sansSerif = [
@@ -28,4 +30,3 @@
     };
   };
 }
-

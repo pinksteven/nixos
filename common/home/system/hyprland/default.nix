@@ -55,7 +55,6 @@ in
     direnv
     meson
     papers
-    nerd-fonts.bigblue-terminal
   ];
 
   home.sessionVariables = {

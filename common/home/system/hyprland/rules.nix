@@ -31,10 +31,6 @@
       "float, class:^(yazi)$"
       "size 760 500, class:^(yazi)$"
       "minsize 760 500, class:^(yazi)$"
-      #"size 450 172, class:^(.hunar)$, initialTitle:^(Rename.*)$"
-      #"size 450 172, class:^(.hunar)$, initialTitle:^(Create New Folder)$"
-      #"size 600 112, class:^(.hunar)$, initialTitle:^(Execute File)$"
-      #"size 600 242, class:^(.hunar)$, initialTitle:^(Moving files)$"
 
       # GTK and QT Settings.
       "float, class:^(nwg-look)$"
@@ -57,9 +53,6 @@
       "float, class:^(kitty)$"
       "size 820 540, class:^(kitty)$"
       "minsize 800 500, class:^(kitty)$"
-
-      #Nvim
-      "tile, class:^(kitty)$, title:^(.*NVIM)$"
 
       # Browsers.
       "opaque, class:^(firefox)$"
@@ -97,4 +90,3 @@
     ];
   };
 }
-
