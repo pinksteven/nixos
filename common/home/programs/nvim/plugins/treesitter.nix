@@ -7,6 +7,7 @@
       nixvimInjections = true;
 
       settings = {
+        auto_install = true;
         highlight = {
           additional_vim_regex_highlighting = true;
           enable = true;

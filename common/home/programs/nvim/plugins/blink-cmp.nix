@@ -12,17 +12,20 @@
     blink-cmp = {
       enable = true;
       package = inputs.blink-cmp.packages."${pkgs.system}".blink-cmp;
-      luaConfig.pre = # lua
-        ''
-          require('blink.compat').setup({debug = true})
-        '';
 
       settings = {
         accept.auto_brackets.enabled = true;
         nerd_font_variant = "mono";
         kind_icons = {
-          Copilot = "";
-          Codeium = "󰚩";
+          codeium = "󰚩";
+          buffer = "";
+          calc = "";
+          emoji = "󰞅";
+          git = "";
+          lsp = "";
+          nvim_lua = "";
+          path = "";
+          spell = "";
         };
         highlight = {
           use_nvim_cmp_as_default = true;
@@ -55,7 +58,6 @@
               "buffer"
               "git"
               "calc"
-              "luasnip"
               "codeium"
             ];
           };
@@ -91,14 +93,21 @@
               name = "codeium";
               module = "blink.compat.source";
             };
-            luasnip = {
-              name = "luasnip";
+            cmdline = {
+              name = "cmdline";
               module = "blink.compat.source";
-              score_offset = -3;
-              opts = {
-                use_show_condition = false;
-                show_autosnippets = true;
-              };
+            };
+            emoji = {
+              name = "emoji";
+              module = "blink.compat.source";
+            };
+            spell = {
+              name = "spell";
+              module = "blink.compat.source";
+            };
+            zsh = {
+              name = "zsh";
+              module = "blink.compat.source";
             };
           };
         };
@@ -146,5 +155,9 @@
 
     cmp-git.enable = true;
     cmp-calc.enable = true;
+    cmp-cmdline.enable = true;
+    cmp-emoji.enable = true;
+    cmp-spell.enable = true;
+    cmp-zsh.enable = true;
   };
 }
