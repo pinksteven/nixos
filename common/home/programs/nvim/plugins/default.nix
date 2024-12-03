@@ -32,5 +32,7 @@
     ./trouble.nix
     ./auto-session.nix
     ./clangd-extenions.nix
+    ./neoscroll.nix
+    ./nvim-colorizer.nix
   ];
 }
