@@ -7,7 +7,6 @@
     ./indentscope.nix
     ./fuzzy.nix
     ./map.nix
-    ./starter.nix
   ];
   programs.nixvim.plugins = {
     mini = {
