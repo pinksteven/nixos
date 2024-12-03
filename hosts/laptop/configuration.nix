@@ -25,6 +25,14 @@
 
     ../../themes/stylix/pinixk.nix
   ];
+
+  # steam doesn't work with home manager
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+  };
+
   home-manager.users."${config.var.username}" = import ./home.nix;
 
   # Don't touch unless to swap to the one from pregenned cofniguration.nix after install
