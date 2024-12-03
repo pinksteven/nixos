@@ -27,10 +27,13 @@
       command = ''call timer_start(100, {tid -> execute('!hyprctl dispatch settiled "title:^(.*NVIM.*)$" --quiet')})'';
       once = true;
     }
+    #FIXME:
+    #Figure out a way to make it without crashing the desktop when closing the window
+
     # Untile on exit
-    {
-      event = "VimLeave";
-      command = ''!hyprctl dispatch setfloating "title:^(.*NVIM.*)$" --quiet'';
-    }
+    # {
+    #   event = "VimLeave";
+    #   command = ''!hyprctl dispatch setfloating "title:^(.*NVIM.*)$" --quiet'';
+    # }
   ];
 }
