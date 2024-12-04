@@ -30,10 +30,10 @@
     ./ts-comments.nix
     ./wakatime.nix
     ./trouble.nix
-    ./auto-session.nix
     ./clangd-extenions.nix
     ./neoscroll.nix
     ./nvim-colorizer.nix
-    ./alpha.nix
+    ./persistence.nix
+    ./startup.nix
   ];
 }

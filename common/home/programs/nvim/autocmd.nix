@@ -24,7 +24,7 @@
     # Tile neovim on entering
     {
       event = "UIEnter";
-      command = ''call timer_start(100, {tid -> execute('!hyprctl dispatch settiled "title:^(.*NVIM.*)$" --quiet')})'';
+      command = ''!hyprctl dispatch settiled --quiet'';
       once = true;
     }
     #FIXME:
@@ -33,7 +33,7 @@
     # Untile on exit
     # {
     #   event = "VimLeave";
-    #   command = ''!hyprctl dispatch setfloating "title:^(.*NVIM.*)$" --quiet'';
+    #   command = ''!hyprctl dispatch setfloating --quiet'';
     # }
   ];
 }
