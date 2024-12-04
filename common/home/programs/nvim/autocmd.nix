@@ -27,13 +27,5 @@
       command = ''!hyprctl dispatch settiled --quiet'';
       once = true;
     }
-    #FIXME:
-    #Figure out a way to make it without crashing the desktop when closing the window
-
-    # Untile on exit
-    # {
-    #   event = "VimLeave";
-    #   command = ''!hyprctl dispatch setfloating --quiet'';
-    # }
   ];
 }
