@@ -30,9 +30,9 @@ in
           "rgb(${maximize}), 15, 󰊓, hyprctl dispatch fullscreen 1"
         ];
       };
-      overview = {
-        autoDrag = false;
-      };
+      # overview = {
+      #   autoDrag = false;
+      # };
       dynamic-cursors = {
         enabled = true;
         mode = "tilt";

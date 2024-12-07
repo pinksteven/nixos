@@ -21,7 +21,6 @@ let
   base0E = "#${config.lib.stylix.colors.base0E}";
   base0F = "#${config.lib.stylix.colors.base0F}";
 
-
   font = config.var.theme.desktopFont;
   fontSize = "${toString config.stylix.fonts.sizes.desktop}";
 
@@ -39,11 +38,14 @@ let
   username = config.var.username;
 
   yazi = ''${pkgs.kitty}/bin/kitty --class=yazi zsh -c 'yazi'';
-in {
-  wayland.windowManager.hyprland.settings.exec-once =
-    [ "${pkgs.hyprpanel}/bin/hyprpanel" ];
+in
+{
+  wayland.windowManager.hyprland.settings.exec-once = [ "${pkgs.hyprpanel}/bin/hyprpanel" ];
 
-  home.packages = with pkgs; [ hyprpanel libnotify ];
+  home.packages = with pkgs; [
+    hyprpanel
+    libnotify
+  ];
 
   home.file.".cache/ags/hyprpanel/options.json" = {
     text = # json
@@ -72,12 +74,8 @@ in {
           },
           "theme.font.name": "${font}",
           "theme.font.size": "${fontSize}px",
-          "theme.bar.outer_spacing": "${
-            if floating && transparent then "0" else "8"
-          }px",
-          "theme.bar.buttons.y_margins": "${
-            if floating && transparent then "0" else "4"
-          }px",
+          "theme.bar.outer_spacing": "${if floating && transparent then "0" else "8"}px",
+          "theme.bar.buttons.y_margins": "${if floating && transparent then "0" else "4"}px",
           "theme.bar.buttons.spacing": "0.3em",
           "theme.bar.buttons.radius": "${
             if transparent then toString rounding else toString (rounding - 8)
@@ -91,12 +89,8 @@ in {
           "theme.bar.buttons.workspaces.available": "${base0C}",
           "theme.bar.buttons.workspaces.occupied": "${base08}",
 
-          "theme.bar.margin_top": "${
-            if position == "top" then toString (gaps-in * 2) else "0"
-          }px",
-          "theme.bar.margin_bottom": "${
-            if position == "top" then "0" else toString (gaps-in * 2)
-          }px",
+          "theme.bar.margin_top": "${if position == "top" then toString (gaps-in * 2) else "0"}px",
+          "theme.bar.margin_bottom": "${if position == "top" then "0" else toString (gaps-in * 2)}px",
           "theme.bar.margin_sides": "${toString gaps-out}px",
           "theme.bar.border_radius": "${toString rounding}px",
 
@@ -106,6 +100,7 @@ in {
           "bar.workspaces.workspaces": 5,
           "bar.workspaces.monitorSpecific": true,
           "bar.workspaces.hideUnoccupied": true,
+          "bar.workspaces.ignored": "spotify",
           "bar.windowtitle.label": true,
           "bar.volume.label": false,
           "bar.network.truncation_size": 12,
@@ -183,15 +178,12 @@ in {
           "theme.bar.menus.tooltip.text": "${base05}",
           "theme.bar.menus.dropdownmenu.background":"${base00}",
           "theme.bar.menus.dropdownmenu.text": "${base05}",
-          "theme.bar.background": "${
-            base00 + (if transparentButtons then "00" else "")
-          }",
+          "theme.bar.background": "${base00 + (if transparentButtons then "00" else "")}",
           "theme.bar.buttons.style": "default",
           "theme.bar.buttons.monochrome": true,
           "theme.bar.buttons.text": "${base0D}",
           "theme.bar.buttons.background": "${
-            (if transparent then base00 else base01)
-            + (if transparentButtons then "00" else "")
+            (if transparent then base00 else base01) + (if transparentButtons then "00" else "")
           }",
           "theme.bar.buttons.icon": "${base0D}",
           "theme.bar.buttons.notifications.background": "${base01}",
@@ -226,3 +218,4 @@ in {
       '';
   };
 }
+
