@@ -51,6 +51,13 @@
       colorcolumn = "100"; # Columns to highlight
       laststatus = 3; # When to use a status line for the last window
       fileencoding = "utf-8"; # File-content encoding for the current buffer
+      fileencodings = [
+        # Changing standard latin1 to cp852 to used encodings (thanks Obszar)
+        "usc-bom"
+        "utf-8"
+        "default"
+        "cp852"
+      ];
       termguicolors = true; # Enables 24-bit RGB color in the |TUI|
       spelllang = [
         "en_us"
@@ -120,6 +127,11 @@
 
       conceallevel = 3;
     };
-    extraConfigLua = "vim.o.breakindentopt = \"shift:2\""; # vim.opt doesn't work for this setting
+
+    #Maybe this will work
+    extraConfigLua = ''
+      vim.opt.sessionoptions = 
+        { "buffers", "tabpages", "winpos","winsize", "help", "globals", "skiprtp", "folds" }
+    '';
   };
 }

@@ -14,6 +14,7 @@
     enable = true;
 
     closeIfLastWindow = true;
+    autoCleanAfterSessionRestore = true;
 
     filesystem = {
       filteredItems = {
@@ -28,17 +29,17 @@
         visible = true;
       };
 
-      followCurrentFile = {
-        enabled = true;
-        leaveDirsOpen = false;
-      };
+      followCurrentFile.enabled = true;
 
       useLibuvFileWatcher.__raw = ''vim.fn.has "win32" ~= 1'';
     };
 
+    buffers = {
+      followCurrentFile.enabled = true;
+    };
+
     window = {
       width = 30;
-      autoExpandWidth = false;
     };
   };
 }

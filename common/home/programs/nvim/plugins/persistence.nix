@@ -3,12 +3,13 @@
     enable = true;
     options = [
       "buffers"
-      "curdir"
       "folds"
-      "options"
-      "skiprtp"
       "tabpages"
       "winsize"
+      "winpos"
+      "localoptions"
+      "terminal"
+      "skiprtp"
     ];
   };
 
@@ -48,6 +49,18 @@
       options = {
         desc = "Load last session";
       };
+    }
+  ];
+
+  programs.nixvim.autoCmd = [
+    # {
+    #   event = "SessionLoadPost";
+    #   command = "Neotree show filesystem left";
+    # }
+    {
+      event = "User";
+      pattern = "PersistenceSavePre";
+      command = "Neotree close filesystem";
     }
   ];
 }

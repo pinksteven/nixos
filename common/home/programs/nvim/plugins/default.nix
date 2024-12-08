@@ -11,7 +11,6 @@
     ./noice.nix
     ./lsp.nix
     ./conform.nix
-    ./project-nvim.nix
     ./snacks.nix
     ./toogleterm.nix
     ./compiler.nix
