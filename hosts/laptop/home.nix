@@ -42,7 +42,6 @@
       clapper
       vscode
       easyeffects
-      distrobox
       syncthing
 
       libreoffice-fresh
@@ -61,4 +60,3 @@
 
   programs.home-manager.enable = true;
 }
-

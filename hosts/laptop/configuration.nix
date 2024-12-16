@@ -33,6 +33,10 @@
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
 
+  environment.variables = {
+    VDPAU_DRIVER = "radeonsi";
+  };
+
   home-manager.users."${config.var.username}" = import ./home.nix;
 
   # Don't touch unless to swap to the one from pregenned cofniguration.nix after install

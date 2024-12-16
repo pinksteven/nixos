@@ -1,23 +1,39 @@
-{ inputs, ... }:
-
 {
-    imports = [
-        inputs.nixvim.homeManagerModules.nixvim
-        ./options.nix
-        ./filetypes.nix
-        ./autocmd.nix
-        ./diagnostic.nix
-        ./plugins
-    ];
-
-    stylix.targets.nixvim = {
-        enable = true;
-        plugin = "base16-nvim";
-    };
-
-    programs.nixvim = {
-        enable = true;
-        viAlias = true;
-        vimAlias = true;
-    };
+  inputs,
+  pkgs,
+  config,
+  ...
+}:
+let
+  nixvim' = inputs.nixvim-config.packages.${pkgs.system}.default;
+  nvim = nixvim'.nixvimExtend {
+    config.theme.colors =
+      let
+        colors = config.lib.stylix.colors.withHashtag;
+      in
+      {
+        base00 = colors.base00;
+        base01 = colors.base01;
+        base02 = colors.base02;
+        base03 = colors.base03;
+        base04 = colors.base04;
+        base05 = colors.base05;
+        base06 = colors.base06;
+        base07 = colors.base07;
+        base08 = colors.base08;
+        base09 = colors.base09;
+        base0A = colors.base0A;
+        base0B = colors.base0B;
+        base0C = colors.base0C;
+        base0D = colors.base0D;
+        base0E = colors.base0E;
+        base0F = colors.base0F;
+      };
+    config.flake = "${config.var.configDirectory}/flake.nix";
+  };
+in
+{
+  home.packages = [
+    nvim
+  ];
 }

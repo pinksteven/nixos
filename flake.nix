@@ -16,6 +16,7 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixvim-config.url = "github:pinksteven/nixvim";
     stylix.url = "github:danth/stylix";
     tinted-theming = {
       url = "github:tinted-theming/schemes";
@@ -47,16 +48,19 @@
   };
 
   outputs =
-    inputs@{ nixpkgs, ... }:
+    inputs@{ self, nixpkgs, ... }:
     {
       nixosConfigurations = {
         steven-framework = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
+          specialArgs = {
+            flake-self = self;
+          };
           modules = [
             {
               nixpkgs.overlays = [ inputs.hyprpanel.overlay ];
               _module.args = {
-                inherit inputs;
+                inherit inputs self;
               };
             }
             inputs.nixos-hardware.nixosModules.framework-13-7040-amd # Change to support correct hardware or remove

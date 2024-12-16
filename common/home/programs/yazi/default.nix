@@ -50,18 +50,18 @@ in {
             max-preview = "${yazi-plugins}/max-preview.yazi";
             hide-preview = "${yazi-plugins}/hide-preview.yazi";
             git = "${yazi-plugins}/git.yazi";
-            starship = pkgs.fetchFromGitHub {
-				owner = "Rolv-Apneseth";
-				repo = "starship.yazi";
-                rev = "77a65f5";
-				sha256 = "sha256-sAB0958lLNqqwkpucRsUqLHFV/PJYoJL2lHFtfHDZF8=";
-			};
-            eza-preview = pkgs.fetchFromGitHub {
-				owner = "sharklasers996";
-				repo = "eza-preview.yazi";
-                rev = "7ca4c25";
-				sha256 = "sha256-ncOOCj53wXPZvaPSoJ5LjaWSzw1omHadKDrXdIb7G5U=";
-			};
+        #            starship = pkgs.fetchFromGitHub {
+        #				owner = "Rolv-Apneseth";
+        #				repo = "starship.yazi";
+        #                rev = "77a65f5";
+        #				sha256 = "sha256-sAB0958lLNqqwkpucRsUqLHFV/PJYoJL2lHFtfHDZF8=";
+      #			};
+        #            eza-preview = pkgs.fetchFromGitHub {
+        #				owner = "sharklasers996";
+        #				repo = "eza-preview.yazi";
+        #                rev = "7ca4c25";
+        #				sha256 = "sha256-ncOOCj53wXPZvaPSoJ5LjaWSzw1omHadKDrXdIb7G5U=";
+      #			};
             lazygit = pkgs.fetchFromGitHub {
 				owner = "Lil-Dank";
 				repo = "lazygit.yazi";
@@ -72,7 +72,6 @@ in {
 
         initLua = ''
 			require("full-border"):setup()
-			require("starship"):setup()
             require("git"):setup()
 
             if os.getenv("NVIM") then
@@ -96,12 +95,7 @@ in {
 					on = ["c" "m"];
 					run = "plugin chmod";
 					desc = "Chmod on selected files";
-				}
-                {
-                    on = "E";
-                    run = "plugin eza-preview";
-                    desc = "Toggle tree/list dir preview";
-                }
+        }
                 {
                     on = ["g" "i"];
                     run = "plugin lazygit";

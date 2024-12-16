@@ -72,7 +72,7 @@ in
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 
     plugins = [
-      # inputs.hyprspace.packages.${pkgs.system}.Hyprspace
+      inputs.hyprspace.packages.${pkgs.system}.Hyprspace
       inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
       inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
     ];
@@ -106,15 +106,6 @@ in
         "WLR_RENDERER,vulkan"
         "SDL_VIDEODRIVER,wayland"
         "CLUTTER_BACKEND,wayland"
-
-        # Set up folders
-        "XDG_DESKTOP_DIR, $HOME/Desktop"
-        "XDG_DOWNLOAD_DIR, $HOME/Downloads"
-        "XDG_TEMPLATES_DIR, $HOME/Templates"
-        "XDG_DOCUMENTS_DIR, $HOME/Documents"
-        "XDG_MUSIC_DIR, $HOME/Music"
-        "XDG_PICTURES_DIR, $HOME/Pictures"
-        "XDG_VIDEOS_DIR, $HOME/Videos"
       ];
 
       general = {

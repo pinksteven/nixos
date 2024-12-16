@@ -2,23 +2,29 @@
 let
   hostname = config.var.hostname;
   keyboardLayout = config.var.keyboardLayout;
-in {
+in
+{
 
   networking.hostName = hostname;
 
   security.polkit.enable = true;
 
-  programs.gdk-pixbuf.modulePackages = [ pkgs.librsvg ]; #Add svg support to gtk
+  programs.gdk-pixbuf.modulePackages = [ pkgs.librsvg ]; # Add svg support to gtk
   services = {
     xserver = {
       enable = true;
       xkb.layout = keyboardLayout;
       xkb.variant = "";
       excludePackages = [ pkgs.xterm ];
+      videoDrivers = [ "amdgpu" ];
     };
     gnome.gnome-keyring.enable = true;
   };
   console.keyMap = keyboardLayout;
+
+  systemd.tmpfiles.rules = [
+    "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
+  ];
 
   environment.variables = {
     XDG_DATA_HOME = "$HOME/.local/share";
