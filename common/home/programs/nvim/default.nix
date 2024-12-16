@@ -6,7 +6,7 @@
 }:
 let
   nixvim' = inputs.nixvim-config.packages.${pkgs.system}.default;
-  nvim = nixvim'.nixvimExtend {
+  nvim = nixvim'.extend {
     config.theme.colors =
       let
         colors = config.lib.stylix.colors.withHashtag;
