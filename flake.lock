@@ -1276,11 +1276,11 @@
         "normal_snippets": "normal_snippets"
       },
       "locked": {
-        "lastModified": 1734349752,
-        "narHash": "sha256-vdyDIxyI2iG5fstyRBHc1xFsdm/9y/pU8s1UWRMEQpQ=",
+        "lastModified": 1734369578,
+        "narHash": "sha256-akDUwwivbWPH5eMRT0nDLYBxEAOm61ty9ejwdKlpsrI=",
         "owner": "pinksteven",
         "repo": "nixvim",
-        "rev": "6a7459d41b235c0780a688a91fe0a35eaa999f32",
+        "rev": "317926e2126796346452852250d3be2d15a93b56",
         "type": "github"
       },
       "original": {
