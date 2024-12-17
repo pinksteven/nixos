@@ -140,6 +140,22 @@
         "type": "github"
       }
     },
+    "eza-preview": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1734030368,
+        "narHash": "sha256-L7i+uL2kAx3AUr5EAzRrduoV2m4+/tE1gCfbTOSuAc4=",
+        "owner": "ahkohd",
+        "repo": "eza-preview.yazi",
+        "rev": "5ef05bcee141291566276e62cc16e265a387dca4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ahkohd",
+        "repo": "eza-preview.yazi",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -998,6 +1014,22 @@
         "type": "github"
       }
     },
+    "lazygit-yazi": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1724139069,
+        "narHash": "sha256-m2zITkjGrUjaPnzHnnlwA6d4ODIpvlBfIO0RZCBfL0E=",
+        "owner": "Lil-Dank",
+        "repo": "lazygit.yazi",
+        "rev": "c82794fb410cca36b23b939d32126a6a9705f94d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Lil-Dank",
+        "repo": "lazygit.yazi",
+        "type": "github"
+      }
+    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -1323,6 +1355,7 @@
     },
     "root": {
       "inputs": {
+        "eza-preview": "eza-preview",
         "home-manager": "home-manager",
         "hypr-dynamic-cursors": "hypr-dynamic-cursors",
         "hyprland": "hyprland",
@@ -1331,12 +1364,15 @@
         "hyprpanel": "hyprpanel",
         "hyprspace": "hyprspace",
         "hyprsunset": "hyprsunset",
+        "lazygit-yazi": "lazygit-yazi",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_7",
         "nixvim-config": "nixvim-config",
         "spicetify-nix": "spicetify-nix",
+        "starship-yazi": "starship-yazi",
         "stylix": "stylix",
-        "tinted-theming": "tinted-theming"
+        "tinted-theming": "tinted-theming",
+        "yazi-plugins": "yazi-plugins"
       }
     },
     "spicetify-nix": {
@@ -1357,6 +1393,22 @@
       "original": {
         "owner": "Gerg-L",
         "repo": "spicetify-nix",
+        "type": "github"
+      }
+    },
+    "starship-yazi": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1732979864,
+        "narHash": "sha256-0J6hxcdDX9b63adVlNVWysRR5htwAtP5WhIJ2AK2+Gs=",
+        "owner": "Rolv-Apneseth",
+        "repo": "starship.yazi",
+        "rev": "247f49da1c408235202848c0897289ed51b69343",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Rolv-Apneseth",
+        "repo": "starship.yazi",
         "type": "github"
       }
     },
@@ -1636,6 +1688,22 @@
       "original": {
         "owner": "hyprwm",
         "repo": "xdg-desktop-portal-hyprland",
+        "type": "github"
+      }
+    },
+    "yazi-plugins": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1734331688,
+        "narHash": "sha256-w9dSXW0NpgMOTnBlL/tzlNSCyRpZNT4XIcWZW5NlIUQ=",
+        "owner": "yazi-rs",
+        "repo": "plugins",
+        "rev": "7afba3a73cdd69f346408b77ea5aac26fe09e551",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yazi-rs",
+        "repo": "plugins",
         "type": "github"
       }
     }

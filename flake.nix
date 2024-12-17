@@ -35,6 +35,26 @@
     };
     hyprsunset.url = "github:hyprwm/hyprsunset";
     hyprpanel.url = "github:Jas-SinghFSU/Hyprpanel";
+
+    # Yazi plugins
+    yazi-plugins = {
+      url = "github:yazi-rs/plugins";
+      flake = false;
+    };
+    starship-yazi = {
+      url = "github:Rolv-Apneseth/starship.yazi";
+      flake = false;
+    };
+    eza-preview = {
+      # use an up to date fork
+      url = "github:ahkohd/eza-preview.yazi";
+      flake = false;
+    };
+    lazygit-yazi = {
+      url = "github:Lil-Dank/lazygit.yazi";
+      flake = false;
+    };
+
   };
 
   outputs =
