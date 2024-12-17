@@ -12,10 +12,6 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nixvim-config.url = "github:pinksteven/nixvim";
     stylix.url = "github:danth/stylix";
     tinted-theming = {
@@ -24,6 +20,7 @@
     };
     # Hyprland related stuff
     hyprland.url = "github:hyprwm/Hyprland";
+    hyprlock.url = "github:hyprwm/hyprlock";
     hyprspace = {
       url = "github:KZDKM/Hyprspace";
       inputs.hyprland.follows = "hyprland";
@@ -36,15 +33,8 @@
       url = "github:VirtCode/hypr-dynamic-cursors";
       inputs.hyprland.follows = "hyprland";
     };
-    hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
     hyprsunset.url = "github:hyprwm/hyprsunset";
     hyprpanel.url = "github:Jas-SinghFSU/Hyprpanel";
-
-    blink-cmp.url = "github:Saghen/blink.cmp";
-    blink-compat = {
-      url = "github:saghen/blink.compat";
-      flake = false;
-    };
   };
 
   outputs =

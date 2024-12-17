@@ -1,5 +1,11 @@
 # Hyprlock is a lockscreen for Hyprland
-{ config, lib, ... }:
+{
+  config,
+  lib,
+  inputs,
+  pkgs,
+  ...
+}:
 let
   foreground = "rgb(${config.lib.stylix.colors.base05})";
   background = "rgba(${config.lib.stylix.colors.base01}88)";
@@ -11,6 +17,7 @@ in
 {
   programs.hyprlock = {
     enable = true;
+    package = inputs.hyprlock.packages.${pkgs.system}.hyprlock;
     settings = lib.mkForce {
       general = {
         grace = 2;

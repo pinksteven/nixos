@@ -30,6 +30,8 @@ let
         base0F = colors.base0F;
       };
     config.flake = "${config.var.configDirectory}/flake.nix";
+    config.theme.transparency.main = true;
+    config.theme.transparency.signColumn = true;
   };
 in
 {
