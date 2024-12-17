@@ -1,9 +1,19 @@
 # My shell configuration
-{ pkgs, lib, config, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 
 {
 
-  home.packages = with pkgs; [ bat ripgrep tldr thefuck ];
+  home.packages = with pkgs; [
+    bat
+    ripgrep
+    tldr
+    thefuck
+  ];
 
   home.sessionPath = [ "$HOME/go/bin" ];
 
@@ -19,7 +29,7 @@
       bindkey "^[[3~" delete-char
       nerdfetch
 
-      '';
+    '';
 
     history = {
       ignoreDups = true;
@@ -28,9 +38,7 @@
     };
 
     profileExtra = lib.optionalString (config.home.sessionPath != [ ]) ''
-      export PATH="$PATH''${PATH:+:}${
-        lib.concatStringsSep ":" config.home.sessionPath
-      }"
+      export PATH="$PATH''${PATH:+:}${lib.concatStringsSep ":" config.home.sessionPath}"
     '';
 
     oh-my-zsh = {
@@ -60,6 +68,7 @@
       icat = "${pkgs.kitty}/bin/kitty +kitten icat";
       yoink = "nh os switch -a";
       yeet = "nh clean all --keep 3";
+      vimgrab = "nix flake update nixvim-config --flake ${config.var.configDirectory}";
 
       # git
       g = "lazygit";
