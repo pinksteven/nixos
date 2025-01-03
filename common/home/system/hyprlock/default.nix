@@ -27,6 +27,9 @@ in
         fingerprint_ready_message = "(Scan fingerprint to unlock)";
         fingerprint_present_message = "Scanning fingerprint";
       };
+      auth.fingerprint = {
+        enabled = true;
+      };
 
       # BACKGROUND
       background = {
