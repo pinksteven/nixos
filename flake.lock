@@ -828,11 +828,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1735887230,
-        "narHash": "sha256-wVGFhgMLZLXf2LPZ7FRaealuDnJgpDidwCzeiiYamko=",
+        "lastModified": 1735894462,
+        "narHash": "sha256-4+ogUuo7eRBqrpUISEUeqBDC6g034f2Lf0MNueyDhMs=",
         "owner": "Jas-SinghFSU",
         "repo": "Hyprpanel",
-        "rev": "0533965c86efa4f8eede63d50db5b51b7ad936ff",
+        "rev": "d46e7ff417a154ce4f85d629b32b80e5973e7b90",
         "type": "github"
       },
       "original": {
