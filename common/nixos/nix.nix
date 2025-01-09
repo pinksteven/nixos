@@ -26,5 +26,6 @@ in
     clean.extraArgs = "--keep 3 --keep-since 4d";
     flake = configDirectory;
   };
-}
 
+  nixpkgs.config.permittedInsecurePackages = [ "electron-27.3.11" ];
+}

@@ -64,14 +64,14 @@ in
           base = 3.0;
           # magnification increase per second when continuing to shake
           speed = 1.5;
-          # how much the speed is influenced by the current shake intensitiy
+          # how much the speed is influenced by the current shake intensity
           influence = 0.0;
 
           # maximal magnification the cursor can reach
           # values below 1 disable the limit (e.g. 0)
           limit = 10.0;
 
-          # time in millseconds the cursor will stay magnified after a shake has ended
+          # time in milliseconds the cursor will stay magnified after a shake has ended
           timeout = 2000;
 
           # show cursor behaviour `tilt`, `rotate`, etc. while shaking

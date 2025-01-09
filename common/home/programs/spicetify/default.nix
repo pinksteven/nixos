@@ -1,5 +1,10 @@
 # Spicetify is a spotify client customizer
-{ pkgs, config, lib, inputs, ... }:
+{
+  pkgs,
+  config,
+  inputs,
+  ...
+}:
 let
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
 
@@ -19,12 +24,9 @@ let
   base0D = "${config.lib.stylix.colors.base0D}";
   base0E = "${config.lib.stylix.colors.base0E}";
   base0F = "${config.lib.stylix.colors.base0F}";
-in {
+in
+{
   imports = [ inputs.spicetify-nix.homeManagerModules.default ];
-
-  nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) [ "spotify" ];
-
   stylix.targets.spicetify.enable = false;
 
   programs.spicetify = {
@@ -34,22 +36,22 @@ in {
     colorScheme = "custom";
 
     customColorScheme = {
-      text               = base05;
-      subtext            = base04;
-      sidebar-text       = base05;
-      main               = base00;
-      sidebar            = base01;
-      player             = base00;
-      card               = base00;
-      shadow             = base01;
-      selected-row       = base06;
-      button             = base0D;
-      button-active      = base0D;
-      button-disabled    = base04;
-      tab-active         = base02;
-      notification       = base02;
+      text = base05;
+      subtext = base04;
+      sidebar-text = base05;
+      main = base00;
+      sidebar = base01;
+      player = base00;
+      card = base00;
+      shadow = base01;
+      selected-row = base06;
+      button = base0D;
+      button-active = base0D;
+      button-disabled = base04;
+      tab-active = base02;
+      notification = base02;
       notification-error = base08;
-      misc               = base03;
+      misc = base03;
     };
 
     enabledExtensions = with spicePkgs.extensions; [
@@ -66,3 +68,4 @@ in {
     ];
   };
 }
+

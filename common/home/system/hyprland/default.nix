@@ -72,7 +72,7 @@ in
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 
     plugins = [
-      inputs.hyprspace.packages.${pkgs.system}.Hyprspace
+      # inputs.hyprspace.packages.${pkgs.system}.Hyprspace
       inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
       inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
     ];
