@@ -17,7 +17,7 @@ let
 
 in
 {
-  home.file."${config.programs.nixcord.configDir}/nixnight.css".text = # css
+  home.file."${config.programs.nixcord.configDir}/themes/nixnight.css".text = # css
     ''
               /**
                * @name nixnight
