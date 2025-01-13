@@ -31,6 +31,7 @@
     ../../common/home/system/cliphist
     ../../common/home/system/batsignal
     ../../common/home/system/wlogout
+    ../../common/home/system/eww
   ];
   home = {
     inherit (config.var) username;
