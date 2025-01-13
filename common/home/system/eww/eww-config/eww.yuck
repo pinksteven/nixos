@@ -1,12 +1,9 @@
 (defwindow bar
-  :geometry(geometry :x "0"
-                     :y "0"
-                     :width "47px"
-                     :height "100%")
-  :monitor 0
-  :reserve (struts :distance "35px"
-                   :side "left")
-  :wm-ignore false
-  :hexpand "false"
-  :vexpand "false"
-(bar))
+           :monitor 0
+           :geometry (geometry :x "0%"
+                               :y "0%"
+                               :width "100%"
+                               :height "30px"
+                               :anchor "top center")
+           :stacking "fg"
+    "Hello World!")
