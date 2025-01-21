@@ -10,7 +10,7 @@
     enable = true;
     targets.plymouth.enable = false;
 
-    base16Scheme = "${inputs.tinted-theming}/base16/" + "rose-pine.yaml";
+    base16Scheme = "${inputs.tinted-theming}/base16/" + "nord.yaml";
     polarity = "dark";
 
     cursor = {
@@ -44,6 +44,6 @@
       };
     };
 
-    image = ./Wallpapers/dandadan_yes.jpg;
+    image = ./Wallpapers/nord_car.gif;
   };
 }
