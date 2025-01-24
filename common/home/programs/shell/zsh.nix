@@ -68,7 +68,7 @@
       yoink = "nh os switch -a";
       yeet = "nh clean all --keep 3";
       vimgrab = "nix flake update nixvim-config --flake ${config.var.configDirectory}";
-      rollback = "sudo nixos-rebuild switch --rollback --flake ${config.var.configDirectory}}";
+      rollback = "sudo nixos-rebuild switch --rollback --flake ${config.var.configDirectory}";
 
       # git
       g = "lazygit";

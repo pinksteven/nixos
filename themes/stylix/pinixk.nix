@@ -44,6 +44,6 @@
       };
     };
 
-    image = ./Wallpapers/nord_car.gif;
+    image = ./Wallpapers/Doodle_Space_Nord.png;
   };
 }
