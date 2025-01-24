@@ -23,12 +23,11 @@ in
         grace = 2;
         no_fade_in = false;
         disable_loading_bar = false;
-        enable_fingerprint = true;
-        fingerprint_ready_message = "(Scan fingerprint to unlock)";
-        fingerprint_present_message = "Scanning fingerprint";
       };
       auth.fingerprint = {
         enabled = true;
+        ready_message = "(Scan fingerprint to unlock)";
+        present_message = "Scanning fingerprint";
       };
 
       # BACKGROUND
