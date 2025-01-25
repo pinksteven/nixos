@@ -12,8 +12,7 @@
     ../../common/home/programs/nerdfetch
     ../../common/home/programs/spicetify
     ../../common/home/programs/trayscale
-    # ../../common/home/programs/vesktop
-    # ../../common/home/programs/fantasia
+    ../../common/home/programs/fantasia
     ../../common/home/programs/yazi
     ../../common/home/programs/nvim
     ../../common/home/programs/nixcord
@@ -44,7 +43,6 @@
       vscode
       easyeffects
       syncthing
-      logseq
 
       libreoffice-fresh
       hunspell
