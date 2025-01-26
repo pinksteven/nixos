@@ -12,7 +12,7 @@ let
       url = "https://github.com/vishiri/fantasia-archive-v1/releases/download/v${version}/Fantasia.Archive-${version}-linux-appImage.zip";
       hash = "sha256-C+5Ed+0wiibW4Cxu+2cyhlccjCCLOqelNg6Afj2/u1Y=";
     }
-    + "/Fantasia.Archive-${version}-linux-appimage.AppImage";
+    + "/Fantasia.Archive-${version}-linux.AppImage";
 
   appimageContents = appimageTools.extract { inherit pname version src; };
 in

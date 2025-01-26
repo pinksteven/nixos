@@ -1,22 +1,4 @@
-(deflisten workspaces :initial "[]" "bash ./scripts/get-workspaces")
-(deflisten current_workspace :initial "1" "bash ./scripts/get-active-workspace")
-(defwidget workspaces []
-  (eventbox :onscroll "bash ./scripts/change-active-workspace {} ${current_workspace}"
-            :class "workspaces-widget"
-    (box :space-evenly true
-      (label :text "${workspaces}${current_workspace}" :visible false)
-      (for workspace in workspaces
-        (eventbox :onclick "hyprctl dispatch workspace ${workspace.id}"
-          (box class: "workspace-entry ${workspace.windows > 0 ? "occupied" : "empty"}"
-            (label :text "${workspace.id}"
-                   :class "workspace-entry ${workspace.id == current_workspace ? "current" : ""}"
-            )
-          )
-        )
-      )
-    )
-  )
-)
+(include "layouts.yuck")
 
 (defwindow bar
            :monitor 0
@@ -27,4 +9,4 @@
                                :anchor "top center")
            :stacking "fg"
            :exclusive true
-    (workspaces))
+    (bar_layout))
