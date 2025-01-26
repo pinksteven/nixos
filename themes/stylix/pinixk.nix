@@ -6,6 +6,7 @@
 
 {
   home-manager.sharedModules = [ { stylix.enable = true; } ];
+
   stylix = {
     enable = true;
     targets.plymouth.enable = false;
@@ -46,4 +47,6 @@
 
     image = ./Wallpapers/Doodle_Space_Nord.png;
   };
+
+  environment.systemPackages = [ pkgs.gowall ];
 }
