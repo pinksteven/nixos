@@ -31,7 +31,6 @@
     ../../common/home/system/batsignal
     ../../common/home/system/wlogout
     ../../common/home/system/eww
-    ../../common/home/system/gowall
   ];
   home = {
     inherit (config.var) username;

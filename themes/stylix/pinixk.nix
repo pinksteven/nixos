@@ -47,6 +47,4 @@
 
     image = ./Wallpapers/Doodle_Space_Nord.png;
   };
-
-  environment.systemPackages = [ pkgs.gowall ];
 }

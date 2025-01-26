@@ -17,3 +17,4 @@
 
   desktopFont = "BigBlueTermPlus Nerd Font Mono";
 }
+
