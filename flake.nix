@@ -38,7 +38,10 @@
       inputs.hyprland.follows = "hyprland";
     };
     hyprsunset.url = "github:hyprwm/hyprsunset";
-    hyprpanel.url = "github:Jas-SinghFSU/Hyprpanel";
+    hyprpanel = {
+      url = "github:Jas-SinghFSU/Hyprpanel";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Yazi plugins
     yazi-plugins = {
