@@ -29,8 +29,7 @@
     ../../common/home/system/udiskie
     ../../common/home/system/cliphist
     ../../common/home/system/batsignal
-    ../../common/home/system/wlogout
-    ../../common/home/system/eww
+    # ../../common/home/system/wlogout
   ];
   home = {
     inherit (config.var) username;
@@ -40,7 +39,6 @@
     packages = with pkgs; [
       firefox
       clapper
-      vscode
       easyeffects
       syncthing
 

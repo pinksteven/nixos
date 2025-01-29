@@ -37,5 +37,8 @@ in
 {
   home.packages = [
     nvim
+
+    # language toolings
+    pkgs.rustup
   ];
 }
