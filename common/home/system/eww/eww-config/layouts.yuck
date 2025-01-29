@@ -1,8 +1,0 @@
-(include "widgets.yuck")
-(include "variables.yuck")
-
-(defwidget bar_layout []
-  (box :class "bar-layout" :space-evenly false :orientation "h"
-    (_workspaces)
-    (_network :name net_name :strength net_strength :offline "󰤮"
-              :excellent "󰤨" :good "󰤥" :okay "󰤢" :slow "󰤟")))))

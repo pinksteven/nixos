@@ -51,8 +51,6 @@
 
         "$mod, V, exec, uwsm app -- clipboard" # Clipboard picker with wofi
         "$shiftMod, E, exec, uwsm app -- emojimenu" # Emoji picker with wofi
-        "$mod,F2, exec, uwsm app -- night-shift" # Toggle night shift
-        "$mod,F3, exec, uwsm app -- night-shift" # Toggle night shift
       ]
       ++ (builtins.concatLists (
         builtins.genList (

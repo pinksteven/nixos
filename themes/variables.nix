@@ -11,9 +11,6 @@
   bar = {
     position = "top"; # "top" | "bottom"
     transparent = false;
-    transparentButtons = false;
     floating = true;
   };
-
-  desktopFont = "BigBlueTermPlus Nerd Font Mono";
 }

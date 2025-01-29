@@ -5,7 +5,7 @@ let
   maximize = config.lib.stylix.colors.base09;
   text = config.lib.stylix.colors.base05;
 
-  font = config.var.theme.desktopFont;
+  font = config.stylix.fonts.serif.name;
   fontSize = "${toString config.stylix.fonts.sizes.desktop}";
 in
 {
