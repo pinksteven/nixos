@@ -7,23 +7,6 @@
 }:
 let
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
-
-  base00 = "${config.lib.stylix.colors.base00}";
-  base01 = "${config.lib.stylix.colors.base01}";
-  base02 = "${config.lib.stylix.colors.base02}";
-  base03 = "${config.lib.stylix.colors.base03}";
-  base04 = "${config.lib.stylix.colors.base04}";
-  base05 = "${config.lib.stylix.colors.base05}";
-  base06 = "${config.lib.stylix.colors.base06}";
-  base07 = "${config.lib.stylix.colors.base07}";
-  base08 = "${config.lib.stylix.colors.base08}";
-  base09 = "${config.lib.stylix.colors.base09}";
-  base0A = "${config.lib.stylix.colors.base0A}";
-  base0B = "${config.lib.stylix.colors.base0B}";
-  base0C = "${config.lib.stylix.colors.base0C}";
-  base0D = "${config.lib.stylix.colors.base0D}";
-  base0E = "${config.lib.stylix.colors.base0E}";
-  base0F = "${config.lib.stylix.colors.base0F}";
 in
 {
   imports = [ inputs.spicetify-nix.homeManagerModules.default ];
@@ -31,27 +14,50 @@ in
 
   programs.spicetify = {
     enable = true;
-    theme = spicePkgs.themes.dribbblish;
+    theme = {
+      name = "Comfy";
+      src = "${inputs.spicetify-comfy}/Comfy";
+      injectCss = true;
+      injectThemeJs = true;
+      replaceColors = true;
+      overwriteAssets = true;
+
+      extraCommands = ''
+        # remove the auto-update functionality
+        echo "\n" >> ./Extensions/theme.js
+        cat ./Themes/Comfy/theme.script.js >> ./Extensions/theme.js
+      '';
+    };
 
     colorScheme = "custom";
 
-    customColorScheme = {
+    customColorScheme = with config.lib.stylix.colors; {
       text = base05;
       subtext = base04;
-      sidebar-text = base05;
-      main = base00;
-      sidebar = base01;
-      player = base00;
-      card = base00;
-      shadow = base01;
-      selected-row = base06;
-      button = base0D;
-      button-active = base0D;
-      button-disabled = base04;
-      tab-active = base02;
-      notification = base02;
+      main = base01;
+      main-elevated = base02;
+      main-transition = base01;
+      highlight = base07;
+      highlight-elevated = base0D;
+      sidebar = base00;
+      player = base01;
+      card = base07;
+      shadow = base07;
+      selected-row = base05;
+      button = base0E;
+      button-active = base0E;
+      button-disabled = base03;
+      tab-active = base07;
+      notification = base0C;
       notification-error = base08;
-      misc = base03;
+      misc = base05;
+      play-button = base0D;
+      play-button-active = base0D;
+      progress-fg = base0D;
+      progress-bg = base02;
+      heart = base08;
+      pagelink-active = base0A;
+      radio-btn-active = base0C;
     };
 
     enabledExtensions = with spicePkgs.extensions; [
@@ -68,4 +74,3 @@ in
     ];
   };
 }
-

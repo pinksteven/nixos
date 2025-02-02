@@ -1526,11 +1526,28 @@
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_6",
         "nixvim-config": "nixvim-config",
+        "spicetify-comfy": "spicetify-comfy",
         "spicetify-nix": "spicetify-nix",
         "starship-yazi": "starship-yazi",
         "stylix": "stylix",
         "tinted-theming": "tinted-theming",
         "yazi-plugins": "yazi-plugins"
+      }
+    },
+    "spicetify-comfy": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1733237444,
+        "narHash": "sha256-clq21blMlQVrt6h0tW3wdSMNAUPaOo10XExWofimK1o=",
+        "owner": "Comfy-Themes",
+        "repo": "Spicetify",
+        "rev": "b5fbe9f01feed5081b74b678076bed4a59801185",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Comfy-Themes",
+        "repo": "Spicetify",
+        "type": "github"
       }
     },
     "spicetify-nix": {

@@ -75,10 +75,6 @@ in
 
     # I'm pretty sure this is an official tool to manage my laptop
     framework-tool
-
-    # so at least with qt6ct the themes have to be system wide
-    adwaita-qt
-    adwaita-qt6
   ];
 
   services.logind.extraConfig = ''

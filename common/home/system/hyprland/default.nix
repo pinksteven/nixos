@@ -37,10 +37,8 @@ in
   home.packages = with pkgs; [
     qt5.qtwayland
     qt6.qtwayland
-    libsForQt5.qt5ct
-    kdePackages.qt6ct
-    adwaita-qt
-    adwaita-qt6
+    qadwaitadecorations-qt6
+    qadwaitadecorations
     hyprpicker
     imv
     wf-recorder
@@ -58,13 +56,14 @@ in
     papers
   ];
 
-  home.sessionVariables = {
-    TERMINAL = "kitty";
-  };
-
   stylix.targets.hyprland.enable = false;
   services.hyprpaper.enable = true;
   stylix.targets.hyprpaper.enable = true;
+
+  gtk.iconTheme = {
+    package = pkgs.tela-circle-icon-theme.override { circularFolder = true; };
+    name = "Tela-circle-dark";
+  };
 
   wayland.windowManager.hyprland = {
     enable = true;

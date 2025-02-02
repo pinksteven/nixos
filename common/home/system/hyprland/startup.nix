@@ -2,7 +2,7 @@
   wayland.windowManager.hyprland.settings = {
     exec-once = [
       "syncthing --no-browser"
-      "discord --start-minimized"
+      "sleep 2; discord --start-minimized"
       "steam -silent"
     ];
   };
