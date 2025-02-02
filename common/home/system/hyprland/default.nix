@@ -30,7 +30,7 @@ in
     ./binds.nix
     ./polkitagent.nix
     ./startup.nix
-    ./plugins.nix
+    ./plugins
     ./env.nix
   ];
 
@@ -72,11 +72,11 @@ in
     systemd.enable = true;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 
-    plugins = [
-      # inputs.hyprspace.packages.${pkgs.system}.Hyprspace
-      inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
-      inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
-    ];
+    # plugins = [
+    #   # inputs.hyprspace.packages.${pkgs.system}.Hyprspace
+    #   inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
+    #   inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
+    # ];
 
     settings = {
       monitor = ", preferred, auto, 1.566667";
@@ -170,5 +170,5 @@ in
       };
     };
   };
-  # systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
+  systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
 }
