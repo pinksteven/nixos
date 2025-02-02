@@ -41,10 +41,12 @@
         noReplyMention.enable = true;
         openInApp.enable = true;
         platformIndicators.enable = true;
-        readAllNotificationsButton.enable = true;
         roleColorEverywhere.enable = true;
         shikiCodeblocks.enable = true;
-        showMeYourName.enable = true;
+        showMeYourName = {
+          enable = true;
+          mode = "nick-user";
+        };
         silentTyping = {
           enable = true;
           showIcon = true;
