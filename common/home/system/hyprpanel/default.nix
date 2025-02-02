@@ -33,7 +33,6 @@ in
   programs.hyprpanel = {
     enable = true;
     hyprland.enable = true;
-    systemd.enable = true;
     overwrite.enable = true;
 
     layout = {

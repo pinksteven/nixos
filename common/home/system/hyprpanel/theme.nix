@@ -293,6 +293,15 @@ in
                 };
               };
             };
+            dashboard.powermenu.confirmation = {
+              background = colors.base00;
+              border = colors.base0D;
+              card = colors.base02;
+              label = colors.base0D;
+              body = colors.base05;
+              confirm = colors.base0B;
+              deny = colors.base08;
+            };
           };
         };
       };
