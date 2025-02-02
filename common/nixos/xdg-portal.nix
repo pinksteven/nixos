@@ -9,7 +9,7 @@
       pkgs.xdg-desktop-portal-gtk
     ];
     config = {
-      hyprland.default = "*";
+      common.default = "*";
     };
   };
 }
