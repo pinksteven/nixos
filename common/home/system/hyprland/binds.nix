@@ -8,19 +8,19 @@
     bindr = [ "$mod, SUPER_L,exec, uwsm app -- hyprpanel -t dashboardmenu" ]; # Open dashboard with SUPER
     bind =
       [
-        "$ctrl ALT, T, exec, uwsm app -- ${pkgs.kitty}/bin/kitty" # Kitty
-        "$mod, F, exec, uwsm app -- ${pkgs.kitty}/bin/kitty --class=yazi zsh -c 'yazi; exit'" # File Manager
-        "$mod, B, exec, uwsm app -- ${pkgs.firefox}/bin/firefox" # Firefox
-        "$mod ,XF86AudioPlay, exec, uwsm app -- spotify" # Spotify
-        "$mod, L, exec, uwsm app -- ${pkgs.hyprlock}/bin/hyprlock" # Lock
-        "$ctrl ALT, Delete, exec, uwsm app -- wlogout" # Powermenu
-        "$mod, SPACE, exec, uwsm app -- menu" # Launcher
-        "$shiftMod, SPACE, exec, uwsm app -- hyprfocus-toggle" # Toggle HyprFocus
+        "$ctrl ALT, T, exec,${pkgs.kitty}/bin/kitty" # Kitty
+        "$mod, F, exec,${pkgs.kitty}/bin/kitty --class=yazi zsh -c 'yazi; exit'" # File Manager
+        "$mod, B, exec, ${pkgs.firefox}/bin/firefox" # Firefox
+        "$mod ,XF86AudioPlay, exec,spotify" # Spotify
+        "$mod, L, exec,${pkgs.hyprlock}/bin/hyprlock" # Lock
+        "$ctrl ALT, Delete, exec,wlogout" # Powermenu
+        "$mod, SPACE, exec,menu" # Launcher
+        "$shiftMod, SPACE, exec,hyprfocus-toggle" # Toggle HyprFocus
         # "$mod, TAB, overview:toggle" # Overview
         "ALT, Tab, cyclenext"
         "ALT, Tab, bringactivetotop" # Simulate Alt-Tab behaviour
         "$mod, S, togglesplit," # Change split horizontal/vertical
-        # "$shiftMod, P, exec, uwsm app -- hyprpricker -a"
+        # "$shiftMod, P, exec,hyprpricker -a"
 
         "$mod, Q, killactive," # Close window
         ", F11, fullscreen" # Toggle Fullscreen
@@ -41,16 +41,16 @@
         "$mod $ctrl, right, movetoworkspacesilent, r+1" # Move window to next workspace
         "$mod $ctrl, left, movetoworkspacesilent, r-1" # Move window to previous workspace
 
-        ",PRINT, exec, uwsm app -- screenshot region" # Screenshot region
-        "ALT, PRINT, exec, uwsm app -- screenshot window" # Screenshot window
-        "$ctrl, PRINT, exec, uwsm app -- screenshot monitor" # Screenshot monitor
+        ",PRINT, exec, screenshot region" # Screenshot region
+        "ALT, PRINT, exec, screenshot window" # Screenshot window
+        "$ctrl, PRINT, exec, screenshot monitor" # Screenshot monitor
 
-        "$mod, PRINT, exec, uwsm app -- screenshot region satty" # Screenshot region then edit
-        "$mod ALT, PRINT, exec, uwsm app -- screenshot window satty" # Screenshot window then edit
-        "$mod $ctrl, PRINT, exec, uwsm app -- screenshot monitor satty" # Screenshot monitor then edit
+        "$mod, PRINT, exec, screenshot region satty" # Screenshot region then edit
+        "$mod ALT, PRINT, exec, screenshot window satty" # Screenshot window then edit
+        "$mod $ctrl, PRINT, exec, screenshot monitor satty" # Screenshot monitor then edit
 
-        "$mod, V, exec, uwsm app -- clipboard" # Clipboard picker with wofi
-        "$shiftMod, E, exec, uwsm app -- emojimenu" # Emoji picker with wofi
+        "$mod, V, exec, clipboard" # Clipboard picker with wofi
+        "$shiftMod, E, exec, emojimenu" # Emoji picker with wofi
       ]
       ++ (builtins.concatLists (
         builtins.genList (
@@ -66,18 +66,18 @@
       ));
 
     bindl = [
-      ",XF86AudioMute, exec, uwsm app -- sound-toggle" # Toggle Mute
-      ",XF86AudioPlay, exec, uwsm app -- ${pkgs.playerctl}/bin/playerctl play-pause" # Play/Pause Song
-      ",XF86AudioNext, exec, uwsm app -- ${pkgs.playerctl}/bin/playerctl next" # Next Song
-      ",XF86AudioPrev, exec, uwsm app -- ${pkgs.playerctl}/bin/playerctl previous" # Previous Song
-      ",switch:Lid Switch, exec, uwsm app -- ${pkgs.hyprlock}/bin/hyprlock" # Lock when closing Lid
+      ",XF86AudioMute, exec, sound-toggle" # Toggle Mute
+      ",XF86AudioPlay, exec, ${pkgs.playerctl}/bin/playerctl play-pause" # Play/Pause Song
+      ",XF86AudioNext, exec, ${pkgs.playerctl}/bin/playerctl next" # Next Song
+      ",XF86AudioPrev, exec, ${pkgs.playerctl}/bin/playerctl previous" # Previous Song
+      ",switch:Lid Switch, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock when closing Lid
     ];
 
     bindlep = [
-      ",XF86AudioRaiseVolume, exec, uwsm app -- sound-up" # Sound Up
-      ",XF86AudioLowerVolume, exec, uwsm app -- sound-down" # Sound Down
-      ",XF86MonBrightnessUp, exec, uwsm app -- brightness-up" # Brightness Up
-      ",XF86MonBrightnessDown, exec, uwsm app -- brightness-down" # Brightness Down
+      ",XF86AudioRaiseVolume, exec, sound-up" # Sound Up
+      ",XF86AudioLowerVolume, exec, sound-down" # Sound Down
+      ",XF86MonBrightnessUp, exec, brightness-up" # Brightness Up
+      ",XF86MonBrightnessDown, exec, brightness-down" # Brightness Down
     ];
   };
 }

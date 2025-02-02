@@ -69,7 +69,7 @@ in
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-    systemd.enable = false;
+    systemd.enable = true;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 
     plugins = [

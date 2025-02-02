@@ -1,8 +1,6 @@
 {
   pkgs,
   config,
-  lib,
-  inputs,
   ...
 }:
 let
@@ -64,19 +62,6 @@ in
     dev.enable = false;
     info.enable = false;
     nixos.enable = false;
-  };
-
-  # use uwsm to manage hyprland like the wiki recommends
-  programs = {
-    uwsm = {
-      enable = true;
-      waylandCompositors.hyprland = {
-        prettyName = "Hyprland";
-        comment = "Hyprland compositor managed by UWSM";
-        binPath = "${lib.getExe inputs.hyprland.packages.${pkgs.system}.hyprland}";
-      };
-    };
-    hyprland.withUWSM = true;
   };
 
   environment.systemPackages = with pkgs; [
