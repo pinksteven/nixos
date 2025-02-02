@@ -20,11 +20,11 @@ let
   position = config.var.theme.bar.position;
 in
 {
-  wayland.windowManager.hyprland.settings.exec-once = [
-    "uwsm app -- ${pkgs.hyprpanel}/bin/hyprpanel"
+  home.packages = with pkgs; [
+    libnotify
+    hypridle
   ];
 
-  home.packages = with pkgs; [ libnotify ];
   imports = [
     inputs.hyprpanel.homeManagerModules.hyprpanel
     ./theme.nix
@@ -32,6 +32,8 @@ in
 
   programs.hyprpanel = {
     enable = true;
+    hyprland.enable = true;
+    systemd.enable = true;
     overwrite.enable = true;
 
     layout = {
@@ -82,6 +84,9 @@ in
             label = false;
             onIcon = "󰾪";
             offIcon = "󰅶";
+            # waiting for a pr to get merged
+            # startCommand = "systemctl --user start hypridle";
+            # stopCommand = "systemctl --user stop hypridle";
           };
           hyprsunset = {
             label = false;
@@ -103,27 +108,29 @@ in
       };
 
       theme = {
+        tooltip.scaling = 75;
         bar = {
           transparent = transparent;
           floating = floating;
           location = position;
           outer_spacing = "${if floating && transparent then "0" else "8"}px";
           border_radius = "${toString rounding}px";
+          opacity = if transparent then 0 else 75;
           border = {
-            location = "full";
+            location = "none";
             width = "${toString border-size}px";
           };
 
-          margin_top = "${if position == "top" then toString gaps-out else "0"}px";
-          margin_bottom = "${if position == "top" then "0" else toString gaps-out}px";
+          margin_top = "0px";
+          margin_bottom = "0px";
           margin_sides = "${toString gaps-out}px";
 
           buttons = {
             spacing = "0.3em";
             y_margins = "0";
-            padding_x = "0.4em";
+            padding_x = "0.6em";
             padding_y = "0.2em";
-            radius = "${if transparent then toString rounding else toString (rounding - 8)}px";
+            radius = "${toString rounding}px";
           };
 
           menus = {
@@ -134,6 +141,10 @@ in
             menu.media.card.tint = 50;
             tooltip.radius = "${toString rounding}px";
             card_radius = "${toString rounding}px";
+            popover = {
+              radius = "${toString rounding}px";
+              scaling = 75;
+            };
           };
         };
         font = {
