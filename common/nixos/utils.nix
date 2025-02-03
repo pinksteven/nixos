@@ -26,10 +26,6 @@ in
   };
   console.keyMap = keyboardLayout;
 
-  systemd.tmpfiles.rules = [
-    "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
-  ];
-
   environment.variables = {
     XDG_DATA_HOME = "$HOME/.local/share";
     EDITOR = "nvim";
@@ -38,10 +34,7 @@ in
   services.libinput.enable = true;
   programs.dconf.enable = true;
   services = {
-    dbus = {
-      enable = true;
-      implementation = "broker";
-    };
+    dbus.enable = true;
     gvfs.enable = true;
     upower.enable = true;
     power-profiles-daemon.enable = true;

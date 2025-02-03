@@ -70,6 +70,7 @@ in
     xwayland.enable = true;
     systemd.enable = true;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+    portalPackage = inputs.hyprland.packages."${pkgs.system}".xdg-desktop-portal-hyprland;
 
     settings = {
       monitor = ", preferred, auto, 1.566667";

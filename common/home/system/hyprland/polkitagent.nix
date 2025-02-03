@@ -2,6 +2,5 @@
 {
   home.packages = [ pkgs.lxqt.lxqt-policykit ];
 
-  wayland.windowManager.hyprland.settings.exec-once = [ "uwsm app -- lxqt-policykit-agent" ];
+  wayland.windowManager.hyprland.settings.exec-once = [ "lxqt-policykit-agent" ];
 }
-

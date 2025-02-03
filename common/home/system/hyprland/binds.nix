@@ -5,7 +5,6 @@
     "$mod" = "SUPER";
     "$shiftMod" = "SUPER_SHIFT";
     "$ctrl" = "CONTROL_L";
-    bindr = [ "$mod, SUPER_L,exec, uwsm app -- hyprpanel -t dashboardmenu" ]; # Open dashboard with SUPER
     bind =
       [
         "$ctrl ALT, T, exec,${pkgs.kitty}/bin/kitty" # Kitty
