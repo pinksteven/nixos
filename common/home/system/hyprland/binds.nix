@@ -8,11 +8,10 @@
     bind =
       [
         "$ctrl ALT, T, exec,${pkgs.kitty}/bin/kitty" # Kitty
-        "$mod, F, exec,${pkgs.kitty}/bin/kitty --class=yazi zsh -c 'yazi; exit'" # File Manager
+        "$mod, F, exec,${pkgs.kitty}/bin/kitty zsh -c 'yazi; exit'" # File Manager
         "$mod, B, exec, ${pkgs.firefox}/bin/firefox" # Firefox
         "$mod ,XF86AudioPlay, exec,spotify" # Spotify
         "$mod, L, exec,${pkgs.hyprlock}/bin/hyprlock" # Lock
-        "$ctrl ALT, Delete, exec,wlogout" # Powermenu
         "$mod, SPACE, exec,menu" # Launcher
         "$shiftMod, SPACE, exec,hyprfocus-toggle" # Toggle HyprFocus
         "ALT, Tab, cyclenext"
@@ -48,7 +47,6 @@
         "$mod $ctrl, PRINT, exec, screenshot monitor satty" # Screenshot monitor then edit
 
         "$mod, V, exec, clipboard" # Clipboard picker with wofi
-        "$shiftMod, E, exec, emojimenu" # Emoji picker with wofi
       ]
       ++ (builtins.concatLists (
         builtins.genList (

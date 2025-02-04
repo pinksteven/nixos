@@ -2,19 +2,22 @@
 let
   animationSpeed = config.var.theme.animation-speed;
 
-  animationDuration = if animationSpeed == "slow" then
-    "4"
-  else if animationSpeed == "medium" then
-    "2.5"
-  else
-    "1.5";
-  borderDuration = if animationSpeed == "slow" then
-    "10"
-  else if animationSpeed == "medium" then
-    "6"
-  else
-    "3";
-in {
+  animationDuration =
+    if animationSpeed == "slow" then
+      "4"
+    else if animationSpeed == "medium" then
+      "2.5"
+    else
+      "1.5";
+  borderDuration =
+    if animationSpeed == "slow" then
+      "10"
+    else if animationSpeed == "medium" then
+      "6"
+    else
+      "3";
+in
+{
   wayland.windowManager.hyprland.settings = {
     animations = {
       enabled = true;
@@ -41,13 +44,14 @@ in {
         "windowsOut, 1, ${animationDuration}, md3_accel, popin 60%"
         "border, 1, ${borderDuration}, default"
         "fade, 1, ${animationDuration}, md3_decel"
-        "layersIn, 1, ${animationDuration}, menu_decel, slide"
-        "layersOut, 1, ${animationDuration}, menu_accel"
-        "fadeLayersIn, 1, ${animationDuration}, menu_decel"
-        "fadeLayersOut, 1, ${animationDuration}, menu_accel"
+        "layersIn, 1, ${animationDuration}, menu_decel, slide top"
+        "layersOut, 1, ${animationDuration}, menu_accel, slide top"
+        "fadeLayersIn, 1, ${borderDuration}, linear"
+        "fadeLayersOut, 1, ${borderDuration}, linear"
         "workspaces, 1, ${animationDuration}, menu_decel, slide"
         "specialWorkspace, 1, ${animationDuration}, md3_decel, slidevert"
       ];
     };
   };
 }
+

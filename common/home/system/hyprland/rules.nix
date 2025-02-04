@@ -1,8 +1,12 @@
 {
   wayland.windowManager.hyprland.settings = {
     layerrule = [
-      "noanim, launcher"
-      "noanim, ^ags-.*"
+      "blur, launcher"
+      "animation fade, launcher"
+
+      "noanim, ^bar-.*"
+      "blur, ^bar-.*"
+      "ignorezero, ^bar-.*"
     ];
 
     windowrulev2 = [

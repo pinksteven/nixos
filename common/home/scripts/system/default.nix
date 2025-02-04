@@ -1,37 +1,34 @@
 # - ## System
-#- 
-#- Usefull quick scripts
 #-
-#- - `menu` - Open wofi with drun mode. (wofi)
-#- - `powermenu` - Open power dropdown menu. (wofi)
+#- Useful quick scripts
+#-
+#- - `menu` - Open wofi with drun mode. (tofi)
 #- - `lock` - Lock the screen. (hyprlock)
 { pkgs, ... }:
 
 let
-  menu = pkgs.writeShellScriptBin "menu"
-    # bash
-    ''
-      if pgrep wofi; then
-      	pkill wofi
-      else
-      	wofi -p " Apps" --show drun
-      fi
-    '';
+  menu =
+    pkgs.writeShellScriptBin "menu"
+      # bash
+      ''
+        if pgrep tofi; then
+        	pkill tofi
+        else
+        	tofi-drun
+        fi
+      '';
 
-    emojimenu = pkgs.writeShellScriptBin "emojimenu"
-    # bash
-    ''
-      if pgrep wofi; then
-      	pkill wofi
-      else
-      	${pkgs.wofi-emoji}/bin/wofi-emoji
-      fi
-    '';
+  lock =
+    pkgs.writeShellScriptBin "lock"
+      # bash
+      ''
+        ${pkgs.hyprlock}/bin/hyprlock
+      '';
 
-  lock = pkgs.writeShellScriptBin "lock"
-    # bash
-    ''
-      ${pkgs.hyprlock}/bin/hyprlock
-    '';
-
-in { home.packages = [ menu lock emojimenu ]; }
+in
+{
+  home.packages = [
+    menu
+    lock
+  ];
+}

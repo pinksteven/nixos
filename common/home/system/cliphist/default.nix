@@ -6,10 +6,10 @@ let
   '';
 
   clipboard = pkgs.writeShellScriptBin "clipboard" ''
-    if pgrep wofi; then
-      	pkill wofi
+    if pgrep tofi; then
+      	pkill tofi
     else
-      cliphist list | wofi -S dmenu | cliphist decode | wl-copy
+      cliphist list | tofi --padding-left 20% --padding-right 20% | cliphist decode | wl-copy
     fi
   '';
 
