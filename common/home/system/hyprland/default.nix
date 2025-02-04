@@ -8,8 +8,8 @@ let
   border-size = config.var.theme.border-size;
   gaps-in = config.var.theme.gaps-in;
   gaps-out = config.var.theme.gaps-out;
-  active-opacity = config.var.theme.active-opacity;
-  inactive-opacity = config.var.theme.inactive-opacity;
+  active-opacity = config.stylix.opacity.applications;
+  inactive-opacity = config.stylix.opacity.applications * 0.66;
   rounding = config.var.theme.rounding;
   blur = config.var.theme.blur;
   keyboardLayout = config.var.keyboardLayout;
@@ -102,8 +102,8 @@ in
         };
         blur = {
           enabled = if blur then "true" else "false";
-          size = 8;
-          passes = 1;
+          size = 12;
+          passes = 3;
         };
       };
 

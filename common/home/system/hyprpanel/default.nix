@@ -8,7 +8,7 @@
 }:
 let
   font = config.stylix.fonts.serif.name;
-  fontSize = "${toString config.stylix.fonts.sizes.desktop}";
+  fontSize = config.stylix.fonts.sizes.desktop;
 
   rounding = config.var.theme.rounding;
   border-size = config.var.theme.border-size;
@@ -17,6 +17,7 @@ let
 
   floating = config.var.theme.bar.floating;
   transparent = config.var.theme.bar.transparent;
+  opacity = config.stylix.opacity.desktop;
   position = config.var.theme.bar.position;
 in
 {
@@ -115,8 +116,8 @@ in
           location = position;
           outer_spacing = "${if floating && transparent then "0" else "8"}px";
           border_radius = "${toString rounding}px";
-          opacity = if transparent then 0 else 75;
-          dropdownGap = "${toString (gaps-out * 3)}px";
+          opacity = if transparent then 0 else (builtins.floor (opacity * 100));
+          dropdownGap = "${toString (gaps-out + (fontSize * 2))}px";
           border = {
             location = "none";
             width = "${toString border-size}px";
@@ -150,7 +151,7 @@ in
         };
         font = {
           name = font;
-          size = fontSize;
+          size = "${toString fontSize}";
         };
         notification = {
           border_radius = "${toString rounding}px";

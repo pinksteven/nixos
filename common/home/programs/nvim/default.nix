@@ -30,8 +30,8 @@ let
         base0F = colors.base0F;
       };
     config.nixos-flake = "${config.var.configDirectory}/flake.nix";
-    config.theme.transparency.main = true;
-    config.theme.transparency.signColumn = true;
+    config.theme.transparency.main = false;
+    config.theme.transparency.signColumn = false;
   };
 in
 {

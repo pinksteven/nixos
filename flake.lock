@@ -1432,11 +1432,11 @@
         "yuck_vim": "yuck_vim"
       },
       "locked": {
-        "lastModified": 1738658427,
-        "narHash": "sha256-r5j9J7/ItyFCUICQt+Jtfe+xCo03/RlJLn2AbakLcX8=",
+        "lastModified": 1738684672,
+        "narHash": "sha256-DbsRhcq2EKMrA0mdMjyhAa24N53qJ18e+T3Optjn92U=",
         "owner": "pinksteven",
         "repo": "nixvim",
-        "rev": "56b5c0195b2e439196ddbb99a2f74e0326d5e61b",
+        "rev": "40f2359e5ccf284e40f5006acc686fa10873fd83",
         "type": "github"
       },
       "original": {

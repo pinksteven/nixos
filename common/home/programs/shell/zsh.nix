@@ -42,7 +42,6 @@
 
     oh-my-zsh = {
       enable = true;
-      theme = "fishy";
       plugins = [
         "thefuck"
         "tailscale"

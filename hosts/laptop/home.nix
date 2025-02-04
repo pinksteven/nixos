@@ -26,6 +26,7 @@
     ../../common/home/system/hyprlock
     ../../common/home/system/hyprpanel
     ../../common/home/system/wofi
+    ../../common/home/system/tofi
     ../../common/home/system/udiskie
     ../../common/home/system/cliphist
     ../../common/home/system/batsignal

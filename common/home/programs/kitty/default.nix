@@ -1,3 +1,5 @@
+{ config, ... }:
+
 {
   programs.kitty = {
     enable = true;
@@ -14,12 +16,18 @@
       cursor_shape = "Underline";
       cursor_underline_thickness = 3;
       window_padding_width = 10;
+
+      background_blur = 64;
+      transparent_background_colors =
+        with config.lib.stylix.colors.withHashtag;
+        "${base01} ${base02} ${base03}";
+
+      "modify_font underline_position" = 2;
+      "modify_font underline_thickness" = "150%";
     };
   };
 
-  home.file.".config/xfce4/helpers.rc" = {
-    text = ''
-      TerminalEmulator=kitty
-    '';
-  };
+  home.file.".config/xfce4/helpers.rc".text = ''
+    TerminalEmulator=kitty
+  '';
 }

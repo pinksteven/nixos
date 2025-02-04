@@ -4,6 +4,7 @@ let
 in
 {
   programs.hyprpanel.override = {
+    # test
     theme = {
       bar = {
         background = colors.base00;

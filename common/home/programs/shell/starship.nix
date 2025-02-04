@@ -3,7 +3,8 @@
 let
   accent = "#${config.lib.stylix.colors.base0D}";
   background-alt = "#${config.lib.stylix.colors.base01}";
-in {
+in
+{
   programs.starship = {
     enable = true;
     settings = {
@@ -15,7 +16,9 @@ in {
         "$git_status"
         "$character"
       ];
-      directory = { style = accent; };
+      directory = {
+        style = accent;
+      };
 
       character = {
         success_symbol = "[❯](${accent})";
@@ -24,14 +27,13 @@ in {
       };
 
       git_branch = {
-        symbol = "[](${background-alt}) ";
-        style = "fg:${accent} bg:${background-alt}";
-        format = "on [$symbol$branch]($style)[](${background-alt}) ";
+        symbol = "[](${accent}) ";
+        style = "fg:${background-alt} bg:${accent}";
+        format = "on [$symbol$branch]($style)[](${accent}) ";
       };
 
       git_status = {
-        format =
-          "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218)($ahead_behind$stashed)]($style)";
+        format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218)($ahead_behind$stashed)]($style)";
         style = "cyan";
         conflicted = "";
         renamed = "";
@@ -46,3 +48,4 @@ in {
     };
   };
 }
+
