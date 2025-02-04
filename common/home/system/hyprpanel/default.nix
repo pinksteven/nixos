@@ -97,6 +97,7 @@ in
       };
 
       menus = {
+        transitionTime = 300;
         clock = {
           time = {
             military = true;
@@ -115,6 +116,7 @@ in
           outer_spacing = "${if floating && transparent then "0" else "8"}px";
           border_radius = "${toString rounding}px";
           opacity = if transparent then 0 else 75;
+          dropdownGap = "${toString (gaps-out * 3)}px";
           border = {
             location = "none";
             width = "${toString border-size}px";
@@ -162,6 +164,7 @@ in
           margins = "0px 0px ${toString (gaps-out * 3)}px 0px";
           muted_zero = false;
           radius = "${toString rounding}px";
+          border.size = "${toString border-size}px";
         };
       };
       wallpaper.enable = false;

@@ -328,6 +328,7 @@ in
         bar_color = colors.base0D;
         icon_container = colors.base0D;
         bar_container = colors.base01;
+        border.color = colors.base0D;
       };
     };
   };

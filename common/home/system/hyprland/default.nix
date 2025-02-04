@@ -70,13 +70,14 @@ in
     xwayland.enable = true;
     systemd.enable = true;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-    portalPackage = inputs.hyprland.packages."${pkgs.system}".xdg-desktop-portal-hyprland;
+    portalPackage = null;
 
     settings = {
       monitor = ", preferred, auto, 1.566667";
       xwayland = {
         force_zero_scaling = true;
       };
+      exec-once = [ "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP" ];
 
       general = {
         gaps_in = gaps-in;
