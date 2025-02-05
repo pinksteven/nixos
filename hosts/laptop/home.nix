@@ -3,32 +3,33 @@
 {
   imports = [
     ./variables.nix
+    ../../themes/pine-rose-glass
 
     # Programs imports
-    ../../common/home/programs/shell
-    ../../common/home/programs/git
-    ../../common/home/programs/kitty
-    ../../common/home/programs/lazygit
-    ../../common/home/programs/nerdfetch
-    ../../common/home/programs/spicetify
-    ../../common/home/programs/trayscale
-    ../../common/home/programs/fantasia
-    ../../common/home/programs/yazi
-    ../../common/home/programs/nvim
-    ../../common/home/programs/nixcord
+    ../../hm/programs/shell
+    ../../hm/programs/git
+    ../../hm/programs/kitty
+    ../../hm/programs/lazygit
+    ../../hm/programs/nerdfetch
+    ../../hm/programs/spicetify
+    ../../hm/programs/trayscale
+    ../../hm/programs/fantasia
+    ../../hm/programs/yazi
+    ../../hm/programs/nvim
+    ../../hm/programs/nixcord
 
     # Scripts
-    ../../common/home/scripts # All script courtesy of Hadi
+    ../../hm/scripts # All script courtesy of Hadi
 
     # DE experience imports
-    ../../common/home/system/hyprland
-    ../../common/home/system/hypridle
-    ../../common/home/system/hyprlock
-    ../../common/home/system/hyprpanel
-    ../../common/home/system/tofi
-    ../../common/home/system/udiskie
-    ../../common/home/system/cliphist
-    ../../common/home/system/batsignal
+    ../../hm/system/hyprland
+    ../../hm/system/hypridle
+    ../../hm/system/hyprlock
+    ../../hm/system/hyprpanel
+    ../../hm/system/tofi
+    ../../hm/system/udiskie
+    ../../hm/system/cliphist
+    ../../hm/system/batsignal
   ];
   home = {
     inherit (config.var) username;

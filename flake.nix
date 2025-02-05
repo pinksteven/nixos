@@ -8,6 +8,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    wallpapers = {
+      url = "github:pinksteven/wallpapers";
+      flake = false;
+    };
+
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -21,15 +27,17 @@
       url = "github:KaylorBen/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim-config.url = "github:pinksteven/nixvim";
+
+    nixvim.url = "github:pinksteven/nixvim";
+
     stylix.url = "github:danth/stylix";
     tinted-theming = {
       url = "github:tinted-theming/schemes";
       flake = false;
     };
+
     # Hyprland related stuff
     hyprland.url = "github:hyprwm/Hyprland";
-    hyprlock.url = "github:hyprwm/hyprlock";
     hyprspace = {
       url = "github:KZDKM/Hyprspace";
       inputs.hyprland.follows = "hyprland";
