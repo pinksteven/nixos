@@ -48,11 +48,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Yazi and it's plugins
-    yazi = {
-      url = "github:sxyazi/yazi";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # Yazi plugins
     yazi-plugins = {
       url = "github:yazi-rs/plugins";
       flake = false;

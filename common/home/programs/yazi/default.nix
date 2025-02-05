@@ -2,7 +2,6 @@
 {
   programs.yazi = {
     enable = true;
-    package = inputs.yazi.packages.${pkgs.system}.default;
     enableZshIntegration = true;
     shellWrapperName = "y";
 
@@ -129,15 +128,11 @@
   };
 
   home.packages = with pkgs; [
-    ffmpeg
+    ffmpegthumbnailer
     jq
     poppler
     fd
     ripgrep
-    fzf
-    zoxide
     imagemagick
-    zip
-    unzip
   ];
 }
