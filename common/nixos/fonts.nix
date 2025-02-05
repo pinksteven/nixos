@@ -5,7 +5,6 @@
     packages = with pkgs; [
       nerd-fonts.fira-code
       nerd-fonts.fira-mono
-      nerd-fonts.bigblue-terminal
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-emoji
