@@ -6,10 +6,17 @@
   ];
   programs.nixcord = {
     enable = true;
+    discord = {
+      enable = true;
+      vencord = {
+        enable = true;
+        unstable = false;
+      };
+      openASAR.enable = true;
+    };
     config = {
       useQuickCss = true;
       frameless = true;
-      disableMinSize = true;
       themeLinks = [ "https://refact0r.github.io/midnight-discord/midnight.css" ];
       enabledThemes = [ "nixnight.css" ];
 
