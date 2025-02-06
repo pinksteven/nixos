@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 let
-  username = config.var.username;
+  inherit (config.var) user;
 in
 {
   programs.zsh = {
@@ -8,9 +8,9 @@ in
   };
   users = {
     defaultUserShell = pkgs.zsh;
-    users.${username} = {
+    users.${user} = {
       isNormalUser = true;
-      description = "${username} account";
+      description = "${user} account";
       extraGroups = [
         "networkmanager"
         "wheel"

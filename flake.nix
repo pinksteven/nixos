@@ -13,6 +13,9 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-secrets = {
+      url = "git+ssh://git@github.com/pinksteven/nix-secrets?shallow=1&ref=main";
+    };
 
     wallpapers = {
       url = "github:pinksteven/wallpapers";

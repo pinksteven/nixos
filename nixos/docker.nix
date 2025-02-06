@@ -6,6 +6,5 @@
     enableOnBoot = true;
     storageDriver = "btrfs";
   };
-  users.users.${config.var.username}.extraGroups = [ "docker" ];
+  users.users.${config.var.user}.extraGroups = [ "docker" ];
 }
-

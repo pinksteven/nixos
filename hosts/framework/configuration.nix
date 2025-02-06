@@ -22,6 +22,7 @@
 
     ./hardware-configuration.nix
     ./variables.nix
+    ./secrets.nix
 
     ../../themes/pine-rose-glass
   ];
@@ -37,7 +38,7 @@
     VDPAU_DRIVER = "radeonsi";
   };
 
-  home-manager.users."${config.var.username}" = import ./home;
+  home-manager.users."${config.var.user}" = import ./home;
   home-manager.sharedModules = [ { stylix.enable = true; } ];
 
   # Don't touch unless to swap to the one from pregenned cofniguration.nix after install

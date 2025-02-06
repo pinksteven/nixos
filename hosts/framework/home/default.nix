@@ -33,8 +33,8 @@
     ../../../hm/system/batsignal
   ];
   home = {
-    inherit (config.var) username;
-    homeDirectory = "/home/" + config.var.username;
+    username = config.var.user;
+    homeDirectory = "/home/" + config.var.user;
 
     # Import packages without setting their options in nix files (1 line installs only)
     packages = with pkgs; [
