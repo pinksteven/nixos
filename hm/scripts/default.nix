@@ -9,5 +9,6 @@
     ./notification
     ./system
     ./gio-fix
+    ./gamerun
   ];
 }
