@@ -102,7 +102,7 @@
             inputs.sops-nix.nixosModules.sops # Handling secrets
             inputs.home-manager.nixosModules.home-manager
             inputs.stylix.nixosModules.stylix
-            ./hosts/laptop/configuration.nix # Set the host u want to use (currently only laptop)
+            ./hosts/framework/configuration.nix # Set the host
           ];
         };
       };
