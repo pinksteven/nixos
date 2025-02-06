@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
@@ -27,11 +27,32 @@
     ../../themes/pine-rose-glass
   ];
 
-  # steam doesn't work with home manager
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+  # some programs don't work with home manager
+  programs = {
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+      dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    };
+    gamemode = {
+      enable = true;
+      settings.custom = {
+        start = "${pkgs.libnotify}/bin/notify-send 'GameMode started'";
+        end = "${pkgs.libnotify}/bin/notify-send 'GameMode ended'";
+      };
+    };
+    gamescope = {
+      enable = true;
+      capSysNice = true;
+      args = [
+        "-r 60"
+        "-o 10"
+        "-b"
+        "--rt"
+        "-W 2256"
+        "-H 1504"
+      ];
+    };
   };
 
   environment.variables = {

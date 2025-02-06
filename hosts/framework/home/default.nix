@@ -43,8 +43,6 @@
       easyeffects
       syncthing
       moonlight-qt
-      gamemode
-      gamescope
 
       libreoffice-fresh
       hunspell
