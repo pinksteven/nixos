@@ -1112,10 +1112,10 @@
     },
     "nixos-secrets": {
       "locked": {
-        "lastModified": 1738848002,
-        "narHash": "sha256-XZWWZZC1sBTTJbwiZoeBCdrML8/WBIktZd/hwR2B8o0=",
+        "lastModified": 1738852637,
+        "narHash": "sha256-extZTO6h7t2EYQFAvNff7FMdgoaEhFzQ2fWxrVagFmc=",
         "ref": "main",
-        "rev": "486eb2895bf12e3549ab762b5c8d41b17a653cae",
+        "rev": "0c0ae7f53a194c12637547a613ee707eb6742325",
         "shallow": true,
         "type": "git",
         "url": "ssh://git@github.com/pinksteven/nix-secrets"
@@ -1432,11 +1432,11 @@
         "systems": "systems_7"
       },
       "locked": {
-        "lastModified": 1738725875,
-        "narHash": "sha256-KJeErSFeuVVo+EOgoZoAKAbh9jOxgd7g/ldgUjbHvOA=",
+        "lastModified": 1738852260,
+        "narHash": "sha256-ysXhwF50dIjLO+BLqNl17k9NqGGYznd9ZwsaNmsDRuI=",
         "owner": "Gerg-L",
         "repo": "spicetify-nix",
-        "rev": "0be8bb03478dad374659369be3b2a5017c63fa61",
+        "rev": "91bd81a382c61ca37afdf996ef38e9d949e0efaf",
         "type": "github"
       },
       "original": {

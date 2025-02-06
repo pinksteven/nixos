@@ -8,11 +8,11 @@ in
   };
   users = {
     defaultUserShell = pkgs.zsh;
-    # mutableUsers = false;
+    mutableUsers = false;
     users.${user} = {
       isNormalUser = true;
       description = "${user} account";
-      # hashedPasswordFile = config.sops.secrets."passwords/steven".path;
+      hashedPasswordFile = config.sops.secrets."passwords/steven".path;
       extraGroups = [
         "networkmanager"
         "wheel"
