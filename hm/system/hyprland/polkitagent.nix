@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }:
 {
-  home.packages = [ pkgs.lxqt.lxqt-policykit ];
+  home.packages = [ inputs.hyprpolkitagent.packages."${pkgs.system}".hyprpolkitagent ];
 
-  wayland.windowManager.hyprland.settings.exec-once = [ "lxqt-policykit-agent" ];
+  wayland.windowManager.hyprland.settings.exec-once = [ "systemctl --user start hyprpolkitagent" ];
 }

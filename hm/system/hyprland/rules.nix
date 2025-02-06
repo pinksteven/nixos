@@ -7,6 +7,8 @@
       "noanim, ^bar-.*"
       "blur, ^bar-.*"
       "ignorezero, ^bar-.*"
+
+      "noanim, selection"
     ];
 
     windowrulev2 = [

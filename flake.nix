@@ -63,6 +63,10 @@
       url = "github:Jas-SinghFSU/Hyprpanel";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprpolkitagent = {
+      url = "github:hyprwm/hyprpolkitagent";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Yazi plugins
     yazi-plugins = {
