@@ -1360,6 +1360,7 @@
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_5",
         "nixvim": "nixvim",
+        "sops-nix": "sops-nix",
         "spicetify-comfy": "spicetify-comfy",
         "spicetify-nix": "spicetify-nix",
         "starship-yazi": "starship-yazi",
@@ -1367,6 +1368,26 @@
         "tinted-theming": "tinted-theming",
         "wallpapers": "wallpapers",
         "yazi-plugins": "yazi-plugins"
+      }
+    },
+    "sops-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1738291974,
+        "narHash": "sha256-wkwYJc8cKmmQWUloyS9KwttBnja2ONRuJQDEsmef320=",
+        "owner": "Mic92",
+        "repo": "sops-nix",
+        "rev": "4c1251904d8a08c86ac6bc0d72cc09975e89aef7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Mic92",
+        "repo": "sops-nix",
+        "type": "github"
       }
     },
     "spicetify-comfy": {

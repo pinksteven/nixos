@@ -3,6 +3,7 @@
 {
   imports = [
     ./variables.nix
+    ./secrets.nix
     ../../themes/pine-rose-glass
 
     # Programs imports

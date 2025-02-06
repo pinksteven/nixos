@@ -9,6 +9,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     wallpapers = {
       url = "github:pinksteven/wallpapers";
       flake = false;
@@ -94,6 +99,7 @@
               };
             }
             inputs.nixos-hardware.nixosModules.framework-13-7040-amd # Change to support correct hardware or remove
+            inputs.sops-nix.nixosModules.sops # Handling secrets
             inputs.home-manager.nixosModules.home-manager
             inputs.stylix.nixosModules.stylix
             ./hosts/laptop/configuration.nix # Set the host u want to use (currently only laptop)
