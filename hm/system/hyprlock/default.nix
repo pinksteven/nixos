@@ -15,6 +15,7 @@ in
     settings = {
       general = {
         grace = 2;
+        no_fade_in = false;
         disable_loading_bar = false;
       };
       auth.fingerprint = {
@@ -75,7 +76,7 @@ in
         # FPRINT
         {
           monitor = "";
-          text = "$FPRINTPROMPT";
+          text = "$FPRINTMESSAGE";
           color = foreground;
           outline_thickness = 2;
           dots_size = 0.2; # Scale of input-field height, 0.2 - 0.8
