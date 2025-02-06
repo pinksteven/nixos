@@ -37,21 +37,9 @@
     gamemode = {
       enable = true;
       settings.custom = {
-        start = "${pkgs.libnotify}/bin/notify-send 'GameMode started'";
-        end = "${pkgs.libnotify}/bin/notify-send 'GameMode ended'";
+        start = "hyprctl notify 1 3000 0 'GameMode is now enabled'";
+        end = "hyprctl notify 1 3000 0 'GameMode is now disabled'";
       };
-    };
-    gamescope = {
-      enable = true;
-      capSysNice = true;
-      args = [
-        "-r 60"
-        "-o 10"
-        "-b"
-        "--rt"
-        "-W 2256"
-        "-H 1504"
-      ];
     };
   };
 
