@@ -42,6 +42,7 @@
       clapper
       easyeffects
       syncthing
+      moonlight-qt
 
       libreoffice-fresh
       hunspell
