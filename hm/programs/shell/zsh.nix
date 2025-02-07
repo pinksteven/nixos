@@ -64,6 +64,7 @@
       sl = "ls";
       open = "${pkgs.xdg-utils}/bin/xdg-open";
       icat = "${pkgs.kitty}/bin/kitty +kitten icat";
+      ssh = "${pkgs.kitty}/bin/kitty +kitten ssh";
       yoink = "nh os switch -a";
       yeet = "nh clean all --keep 3";
       vimgrab = "nix flake update nixvim-config --flake ${config.var.configDirectory}";
