@@ -18,6 +18,7 @@
     ../../../hm/programs/yazi
     ../../../hm/programs/nvim
     ../../../hm/programs/nixcord
+    ../../../hm/programs/dungeondraft
 
     # Scripts
     ../../../hm/scripts # All script courtesy of Hadi
@@ -52,6 +53,7 @@
       unzip
       btop
       cloc
+      sshfs
     ];
 
     # Don't touch
