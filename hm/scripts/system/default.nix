@@ -13,7 +13,7 @@ let
         if pgrep tofi; then
         	pkill tofi
         else
-        	tofi-drun
+        	tofi-drun | xargs hyprctl dispatch exec --
         fi
       '';
 in

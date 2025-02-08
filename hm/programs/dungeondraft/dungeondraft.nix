@@ -14,7 +14,7 @@
 }:
 
 stdenv.mkDerivation (finalAttrs: {
-  pname = "dungeondraft";
+  pname = "Dungeondraft";
   version = "1.1.0.6";
 
   nativeBuildInputs = [ makeWrapper ];
@@ -36,7 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     cp -R usr/share opt $out/
     substituteInPlace \
       $out/share/applications/Dungeondraft.desktop \
-      --replace /opt/ $out/opt/
+      --replace-warn /opt/Dungeondraft/ ""
     ln -s $out/opt/Dungeondraft/Dungeondraft.x86_64 $out/bin/Dungeondraft.x86_64
     runHook postInstall
   '';

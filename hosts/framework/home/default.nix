@@ -44,6 +44,7 @@
       easyeffects
       syncthing
       moonlight-qt
+      gdlauncher-carbon
 
       libreoffice-fresh
       hunspell

@@ -69,6 +69,7 @@
       yeet = "nh clean all --keep 3";
       vimgrab = "nix flake update nixvim-config --flake ${config.var.configDirectory}";
       rollback = "sudo nixos-rebuild switch --rollback --flake ${config.var.configDirectory}";
+      tofi-regen = "rm ${config.home.homeDirectory}/.cache/tofi-drun";
 
       # git
       g = "lazygit";

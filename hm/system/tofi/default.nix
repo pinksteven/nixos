@@ -11,8 +11,6 @@ with config.lib.stylix.colors.withHashtag;
         opacity = lib.toHexString (builtins.ceil (config.stylix.opacity.desktop * 255));
       in
       {
-        drun-launch = true;
-
         font = serif.name;
         font-size = sizes.applications;
 
