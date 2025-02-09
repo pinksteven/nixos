@@ -19,6 +19,7 @@
     ../../../hm/programs/nvim
     ../../../hm/programs/nixcord
     ../../../hm/programs/dungeondraft
+    ../../../hm/programs/termscp
 
     # Scripts
     ../../../hm/scripts # All script courtesy of Hadi

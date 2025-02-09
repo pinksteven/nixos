@@ -12,7 +12,7 @@
         "$mod, B, exec, ${pkgs.firefox}/bin/firefox" # Firefox
         "$mod ,XF86AudioPlay, exec,spotify" # Spotify
         "$mod, L, exec,${pkgs.hyprlock}/bin/hyprlock" # Lock
-        "$mod, SPACE, exec,menu" # Launcher
+        "$mod, SPACE, exec, tofi-drun | xargs hyprctl dispatch exec --" # Launcher
         "$shiftMod, SPACE, exec,hyprfocus-toggle" # Toggle HyprFocus
         "ALT, Tab, cyclenext"
         "ALT, Tab, bringactivetotop" # Simulate Alt-Tab behaviour
