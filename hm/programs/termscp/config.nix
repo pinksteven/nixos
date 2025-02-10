@@ -1,8 +1,8 @@
 { lib, ... }:
 {
-  home.file.".config/termcp/config.toml".text = ''
+  home.file.".config/termscp/config.toml".text = ''
     [user_interface]
-    text_editor = ${lib.getEnv EDITOR}
+    text_editor = "nvim"
     default_protocol = "SFTP"
     show_hidden_files = false
     check_for_updates = false

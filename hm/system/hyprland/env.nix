@@ -1,6 +1,7 @@
+{ pkgs, lib, ... }:
 {
   home.sessionVariables = {
-    TERMINAL = "kitty";
+    TERMINAL = "${lib.getExe pkgs.kitty}";
     NIXOS_OZONE_WL = "1";
   };
 

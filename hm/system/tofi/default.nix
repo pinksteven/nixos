@@ -1,4 +1,9 @@
-{ config, lib, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 with config.stylix.fonts;
 with config.lib.stylix.colors.withHashtag;
 {
@@ -13,6 +18,8 @@ with config.lib.stylix.colors.withHashtag;
       {
         font = serif.name;
         font-size = sizes.applications;
+
+        terminal = lib.getExe pkgs.kitty;
 
         background-color = base00 + opacity;
 
