@@ -86,7 +86,10 @@
       url = "github:Lil-Dank/lazygit.yazi";
       flake = false;
     };
-
+    ouch-yazi = {
+      url = "github:ndtoan96/ouch.yazi";
+      flake = false;
+    };
   };
 
   outputs =
