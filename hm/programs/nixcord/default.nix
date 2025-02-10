@@ -4,6 +4,7 @@
     inputs.nixcord.homeManagerModules.nixcord
     ./theme.nix
   ];
+  stylix.targets.nixcord.enable = false;
   programs.nixcord = {
     enable = true;
     discord = {

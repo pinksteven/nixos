@@ -64,13 +64,13 @@ in
   #   package = pkgs.tela-circle-icon-theme;
   #   name = "Tela-circle-dark";
   # };
+  #
 
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
     systemd.enable = true;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-    portalPackage = null;
 
     settings = {
       monitor = ", preferred, auto, 1.566667";

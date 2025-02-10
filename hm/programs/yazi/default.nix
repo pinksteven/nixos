@@ -19,6 +19,7 @@
           3
         ];
         sort_by = "natural";
+        sort_sensitive = true;
         sort_dir_first = true;
         sort_translit = true;
       };
@@ -28,52 +29,6 @@
         max_width = 1000;
         max_height = 1000;
       };
-      # plugin = {
-      #   prepend_fetchers = [
-      #     {
-      #       id = "git";
-      #       name = "*";
-      #       run = "git";
-      #     }
-      #     {
-      #       id = "git";
-      #       name = "*/";
-      #       run = "git";
-      #     }
-      #   ];
-      #   prepend_previewers = [
-      #     {
-      #       name = "*/";
-      #       run = "eza-preview";
-      #     }
-      #
-      #     # Archive previewer
-      #     {
-      #       name = "application/*zip";
-      #       run = "ouch";
-      #     }
-      #     {
-      #       name = "application/x-tar";
-      #       run = "ouch";
-      #     }
-      #     {
-      #       name = "application/x-bzip2";
-      #       run = "ouch";
-      #     }
-      #     {
-      #       name = "application/x-7z-compressed";
-      #       run = "ouch";
-      #     }
-      #     {
-      #       name = "application/x-rar";
-      #       run = "ouch";
-      #     }
-      #     {
-      #       name = "application/x-xz";
-      #       run = "ouch";
-      #     }
-      #   ];
-      # };
     };
 
     plugins = {
@@ -97,48 +52,6 @@
       	require("hide-preview"):entry()
       end
     '';
-
-    # keymap = {
-    #   manager.prepend_keymap = [
-    #     {
-    #       on = [
-    #         "T"
-    #         "m"
-    #       ];
-    #       run = "plugin --sync max-preview";
-    #       desc = "Maximize preview";
-    #     }
-    #     {
-    #       on = [
-    #         "T"
-    #         "h"
-    #       ];
-    #       run = "plugin --sync hide-preview";
-    #       desc = "Hide preview";
-    #     }
-    #     {
-    #       on = [
-    #         "c"
-    #         "m"
-    #       ];
-    #       run = "plugin chmod";
-    #       desc = "Chmod files";
-    #     }
-    #     {
-    #       on = [
-    #         "g"
-    #         "g"
-    #       ];
-    #       run = "plugin lazygit";
-    #       desc = "lazygit";
-    #     }
-    #     {
-    #       on = [ "C" ];
-    #       run = "plugin ouch --args=zip";
-    #       desc = "Compress files";
-    #     }
-    #   ];
-    # };
   };
 
   home.packages = with pkgs; [
