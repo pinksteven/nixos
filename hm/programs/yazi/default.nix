@@ -18,7 +18,7 @@
       };
       preview = {
         wrap = "yes";
-        tab_size = 4;
+        tab_size = 2;
         max_width = 1000;
         max_height = 1000;
       };
@@ -56,13 +56,13 @@
     };
 
     initLua = ''
-      			require("full-border"):setup()
-                  require("git"):setup()
+      require("full-border"):setup()
+      require("git"):setup()
 
-                  if os.getenv("NVIM") then
-      	            require("hide-preview"):entry()
-                  end
-      		'';
+      if os.getenv("NVIM") then
+      	require("hide-preview"):entry()
+      end
+    '';
 
     keymap = {
       manager.prepend_keymap = [
@@ -72,7 +72,7 @@
             "m"
           ];
           run = "plugin --sync max-preview";
-          desc = "Maximize or restore the preview pane";
+          desc = "Maximize preview";
         }
         {
           on = [
@@ -80,7 +80,7 @@
             "h"
           ];
           run = "plugin --sync hide-preview";
-          desc = "Hide or show preview";
+          desc = "Hide preview";
         }
         {
           on = [
@@ -88,42 +88,17 @@
             "m"
           ];
           run = "plugin chmod";
-          desc = "Chmod on selected files";
+          desc = "Chmod files";
         }
         {
           on = [
             "g"
-            "i"
+            "g"
           ];
           run = "plugin lazygit";
-          desc = "run lazygit";
+          desc = "lazygit";
         }
       ];
-    };
-  };
-
-  # This is very scuffed but idc
-  xdg.desktopEntries.yazi = {
-    name = "Yazi";
-    icon = "yazi";
-    comment = "Blazing fast terminal file manager written in Rust, based on async I/O";
-    genericName = "File Manager";
-    exec = ''kitty --class=yazi zsh -c "yazi %u; exit"'';
-    terminal = false;
-    type = "Application";
-    mimeType = [ "inode/directory" ];
-    categories = [
-      "Utility"
-      "Core"
-      "System"
-      "FileTools"
-      "FileManager"
-      "ConsoleOnly"
-    ];
-    settings = {
-      TryExec = "yazi";
-      Keywords = "File;Manager;Explorer;Browser;Launcher";
-      StartupWMClass = "yazi";
     };
   };
 

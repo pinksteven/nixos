@@ -79,7 +79,7 @@
     };
     eza-preview = {
       # use an up to date fork
-      url = "github:ahkohd/eza-preview.yazi";
+      url = "github:pinksteven/eza-preview.yazi";
       flake = false;
     };
     lazygit-yazi = {

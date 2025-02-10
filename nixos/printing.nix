@@ -3,8 +3,10 @@
   services = {
     printing = {
       enable = true;
+      openFirewall = true;
       drivers = [
         pkgs.epson-escpr
+        pkgs.gutenprint
       ];
     };
     avahi = {

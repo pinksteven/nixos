@@ -9,6 +9,7 @@
       "ignorezero, ^bar-.*"
 
       "noanim, selection"
+      "noanim, hyprpicker"
     ];
 
     windowrulev2 = [

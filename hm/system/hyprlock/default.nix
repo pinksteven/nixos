@@ -53,7 +53,7 @@ in
           text = ''cmd[update:1000] echo "<span>$(date +"%H:%M")</span>"'';
           color = foreground;
           font_size = 160;
-          font_family = "steelfish outline regular";
+          font_family = font;
           position = "0, 370";
           halign = "center";
           valign = "center";

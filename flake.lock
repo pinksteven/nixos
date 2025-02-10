@@ -169,15 +169,15 @@
     "eza-preview": {
       "flake": false,
       "locked": {
-        "lastModified": 1734030368,
-        "narHash": "sha256-L7i+uL2kAx3AUr5EAzRrduoV2m4+/tE1gCfbTOSuAc4=",
-        "owner": "ahkohd",
+        "lastModified": 1739184138,
+        "narHash": "sha256-RwJu79bjdgmKbRaDH++y8wreBKdGGwbyGOx4G/px2PE=",
+        "owner": "pinksteven",
         "repo": "eza-preview.yazi",
-        "rev": "5ef05bcee141291566276e62cc16e265a387dca4",
+        "rev": "d958bb6a847e643a31cf584a9a1ec27594018e6c",
         "type": "github"
       },
       "original": {
-        "owner": "ahkohd",
+        "owner": "pinksteven",
         "repo": "eza-preview.yazi",
         "type": "github"
       }
