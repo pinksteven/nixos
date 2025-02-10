@@ -20,6 +20,7 @@
     ../../nixos/xdg-portal.nix
     ../../nixos/sudo.nix
     ../../nixos/printing.nix
+    ../../nixos/uwsm.nix
 
     ./hardware-configuration.nix
     ./variables.nix

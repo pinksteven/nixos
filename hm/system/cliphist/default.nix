@@ -16,9 +16,8 @@ let
 in
 {
   wayland.windowManager.hyprland.settings.exec-once = [
-    "${clipboard-clear}"
-    "wl-paste -t text --watch cliphist store"
-    "wl-paste -t image --watch cliphist store"
+    "uwsm app -- wl-paste -t text --watch cliphist store"
+    "uwsm app -- wl-paste -t image --watch cliphist store"
   ];
   home.packages = with pkgs; [
     cliphist

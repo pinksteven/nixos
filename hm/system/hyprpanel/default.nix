@@ -31,9 +31,10 @@ in
     ./theme.nix
   ];
 
+  wayland.windowManager.hyprland.settings.exec-once = [ "uwsm app -- hyprpanel" ];
+
   programs.hyprpanel = {
     enable = true;
-    hyprland.enable = true;
     overwrite.enable = true;
 
     layout = {
@@ -105,6 +106,9 @@ in
             hideSeconds = false;
           };
           weather.enabled = false;
+        };
+        power = {
+          logout = "uwsm stop";
         };
       };
 

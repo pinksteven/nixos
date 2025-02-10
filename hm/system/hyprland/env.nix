@@ -1,30 +1,28 @@
 { pkgs, lib, ... }:
 {
-  home.sessionVariables = {
-    TERMINAL = "${lib.getExe pkgs.kitty}";
-    NIXOS_OZONE_WL = "1";
-  };
+  home.file.".config/uwsm/env".text = ''
+    export TERMINAL = ${lib.getExe pkgs.kitty}
+    export NIXOS_OZONE_WL = 1
 
-  wayland.windowManager.hyprland.settings.env = [
-    "XDG_SESSION_TYPE,wayland"
-    "XDG_CURRENT_DESKTOP,Hyprland"
-    "XDG_SESSION_DESKTOP,Hyprland"
-    "MOZ_ENABLE_WAYLAND,1"
-    "ANKI_WAYLAND,1"
-    "DISABLE_QT5_COMPAT,0"
+    export XDG_SESSION_TYPE=wayland
+    export XDG_CURRENT_DESKTOP=Hyprland
+    export XDG_SESSION_DESKTOP=Hyprland
+    export MOZ_ENABLE_WAYLAND=1
+    export ANKI_WAYLAND=1
+    export DISABLE_QT5_COMPAT=0
 
-    "QT_AUTO_SCREEN_SCALE_FACTOR,1"
-    "QT_QPA_PLATFORM,wayland"
-    "QT_QPA_PLATFORMTHEME,gtk3"
-    "QT_WAYLAND_DECORATION,adwaita"
-    "QT_QUICK_CONTROLS_STYLE,org.kde.desktop"
-    "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
-    "ELECTRON_OZONE_PLATFORM_HINT,auto"
+    export QT_AUTO_SCREEN_SCALE_FACTOR=1
+    export QT_QPA_PLATFORM=wayland
+    export QT_QPA_PLATFORMTHEME=gtk3
+    export QT_WAYLAND_DECORATION=adwaita
+    export QT_QUICK_CONTROLS_STYLE=org.kde.desktop
+    export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+    export ELECTRON_OZONE_PLATFORM_HINT=auto
 
-    "WLR_DRM_NO_ATOMIC,1"
-    "WLR_BACKEND,vulkan"
-    "WLR_RENDERER,vulkan"
-    "SDL_VIDEODRIVER,wayland"
-    "CLUTTER_BACKEND,wayland"
-  ];
+    export WLR_DRM_NO_ATOMIC=1
+    export WLR_BACKEND=vulkan
+    export WLR_RENDERER=vulkan
+    export SDL_VIDEODRIVER=wayland
+    export CLUTTER_BACKEND=wayland
+  '';
 }

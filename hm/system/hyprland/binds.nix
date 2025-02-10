@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   wayland.windowManager.hyprland.settings = {
@@ -7,13 +7,13 @@
     "$ctrl" = "CONTROL_L";
     bind =
       [
-        "$ctrl ALT, T, exec,${pkgs.kitty}/bin/kitty" # Kitty
-        "$mod, F, exec,${pkgs.kitty}/bin/kitty zsh -c 'yazi; exit'" # File Manager
-        "$mod, B, exec, ${pkgs.firefox}/bin/firefox" # Firefox
-        "$mod ,XF86AudioPlay, exec,spotify" # Spotify
-        "$mod, L, exec,${pkgs.hyprlock}/bin/hyprlock" # Lock
-        "$mod, SPACE, exec, menu" # Launcher
-        "$shiftMod, SPACE, exec,hyprfocus-toggle" # Toggle HyprFocus
+        "$ctrl ALT, T, exec, uwsm app -- ${lib.getExe pkgs.kitty}" # Kitty
+        "$mod, F, exec, uwsm app -- ${lib.getExe pkgs.kitty} yazi" # File Manager
+        "$mod, B, exec, uwsm app -- ${lib.getExe pkgs.firefox}" # Firefox
+        "$mod ,XF86AudioPlay, exec, uwsm app -- spotify" # Spotify
+        "$mod, L, exec, uwsm app -- ${lib.getExe pkgs.hyprlock}" # Lock
+        "$mod, SPACE, exec, uwsm app -- menu" # Launcher
+        "$shiftMod, SPACE, exec, uwsm app -- hyprfocus-toggle" # Toggle HyprFocus
         "ALT, Tab, cyclenext"
         "ALT, Tab, bringactivetotop" # Simulate Alt-Tab behaviour
         "$mod, S, togglesplit," # Change split horizontal/vertical
@@ -38,13 +38,13 @@
         "$mod $ctrl, right, movetoworkspacesilent, r+1" # Move window to next workspace
         "$mod $ctrl, left, movetoworkspacesilent, r-1" # Move window to previous workspace
 
-        ",PRINT, exec, screenshot region" # Screenshot region
-        "ALT, PRINT, exec, screenshot window" # Screenshot window
-        "$ctrl, PRINT, exec, screenshot monitor" # Screenshot monitor
+        ",PRINT, exec, uwsm app -- screenshot region" # Screenshot region
+        "ALT, PRINT, exec, uwsm app -- screenshot window" # Screenshot window
+        "$ctrl, PRINT, exec, uwsm app -- screenshot monitor" # Screenshot monitor
 
-        "$mod, PRINT, exec, screenshot region satty" # Screenshot region then edit
-        "$mod ALT, PRINT, exec, screenshot window satty" # Screenshot window then edit
-        "$mod $ctrl, PRINT, exec, screenshot monitor satty" # Screenshot monitor then edit
+        "$mod, PRINT, exec, uwsm app -- screenshot region satty" # Screenshot region then edit
+        "$mod ALT, PRINT, exec, uwsm app -- screenshot window satty" # Screenshot window then edit
+        "$mod $ctrl, PRINT, exec, uwsm app -- screenshot monitor satty" # Screenshot monitor then edit
 
         "$mod, V, exec, clipboard" # Clipboard picker with wofi
       ]
@@ -66,7 +66,7 @@
       ",XF86AudioPlay, exec, ${pkgs.playerctl}/bin/playerctl play-pause" # Play/Pause Song
       ",XF86AudioNext, exec, ${pkgs.playerctl}/bin/playerctl next" # Next Song
       ",XF86AudioPrev, exec, ${pkgs.playerctl}/bin/playerctl previous" # Previous Song
-      ",switch:Lid Switch, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock when closing Lid
+      ",switch:Lid Switch, exec, uwsm app -- ${lib.getExe pkgs.hyprlock}" # Lock when closing Lid
     ];
 
     bindlep = [

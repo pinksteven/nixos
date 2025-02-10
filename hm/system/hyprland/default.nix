@@ -69,7 +69,7 @@ in
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-    systemd.enable = true;
+    systemd.enable = false;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 
     settings = {
@@ -165,5 +165,4 @@ in
       };
     };
   };
-  systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
 }

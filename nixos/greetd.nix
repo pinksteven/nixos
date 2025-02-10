@@ -7,7 +7,7 @@ in
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet -r --asterisks --asterisks-char • --window-padding 1 -t --time-format '%H:%M | %a  %d %b %Y' -g 'Welcome back!' -c 'Hyprland > /dev/null 2>&1' --theme '${theme}'";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet -r --asterisks --asterisks-char • --window-padding 1 -t --time-format '%H:%M | %a  %d %b %Y' -g 'Welcome back!' --remember-user-session --theme '${theme}'";
         user = "greeter";
       };
     };
