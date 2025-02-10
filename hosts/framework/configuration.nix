@@ -19,6 +19,7 @@
     ../../nixos/variables-config.nix
     ../../nixos/xdg-portal.nix
     ../../nixos/sudo.nix
+    ../../nixos/printing.nix
 
     ./hardware-configuration.nix
     ./variables.nix
