@@ -2,6 +2,7 @@
   pkgs,
   config,
   inputs,
+  lib,
   ...
 }:
 let
@@ -15,8 +16,8 @@ let
   keyboardLayout = config.var.keyboardLayout;
 
   rgb = color: "rgb(${color})";
-  rgba = color: alpha: "rgba(${color}${alpha})";
-  shadow-color = rgba config.lib.stylix.colors.base00 "99";
+  rgba = color: alpha: "rgba(${color}${lib.toHexString (builtins.ceil (alpha * 255))})";
+  shadow-color = rgba config.lib.stylix.colors.base00 0.8;
   border-active = rgb config.lib.stylix.colors.base0D;
   border-inactive = rgb config.lib.stylix.colors.base03;
   border-locked = rgb config.lib.stylix.colors.base0C;
