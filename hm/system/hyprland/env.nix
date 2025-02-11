@@ -1,5 +1,9 @@
 { pkgs, lib, ... }:
 {
+  home.sessionVariables = {
+    UWSM_USE_SESSION_SLICE = "true";
+  };
+
   home.file.".config/uwsm/env".text = ''
     export TERMINAL = ${lib.getExe pkgs.kitty}
     export NIXOS_OZONE_WL = 1

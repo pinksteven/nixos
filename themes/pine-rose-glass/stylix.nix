@@ -1,8 +1,6 @@
 { pkgs, inputs, ... }:
 
 {
-  # home-manager.sharedModules = [ { stylix.enable = true; } ];
-
   stylix = {
     enable = true;
 

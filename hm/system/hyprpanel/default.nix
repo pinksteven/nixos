@@ -31,7 +31,7 @@ in
     ./theme.nix
   ];
 
-  wayland.windowManager.hyprland.settings.exec-once = [ "uwsm app -- hyprpanel" ];
+  wayland.windowManager.hyprland.settings.exec-once = [ "uwsm app -s s -- hyprpanel" ];
 
   programs.hyprpanel = {
     enable = true;
