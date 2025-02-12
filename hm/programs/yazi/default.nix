@@ -3,6 +3,7 @@
   imports = [
     ./keymap.nix
     ./fetchers.nix
+    ./open.nix
     ./previewers.nix
   ];
 
@@ -18,16 +19,27 @@
           5
           3
         ];
+
         sort_by = "natural";
         sort_sensitive = true;
+        sort_reverse = false;
         sort_dir_first = true;
         sort_translit = true;
+
+        linemode = "none";
+        show_hidden = false;
+        show_symlink = true;
+        scrolloff = 5;
+        title_format = "Yazi - {cwd}";
       };
       preview = {
         wrap = "yes";
         tab_size = 2;
+
         max_width = 1000;
         max_height = 1000;
+        image_filter = "triangle";
+        image_quality = 70;
       };
     };
 
@@ -55,7 +67,7 @@
   };
 
   home.packages = with pkgs; [
-    ffmpeg
+    ffmpegthumbnailer
     jq
     poppler
     fd

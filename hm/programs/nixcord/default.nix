@@ -18,6 +18,7 @@
     config = {
       useQuickCss = true;
       frameless = true;
+      disableMinSize = true;
       themeLinks = [ "https://refact0r.github.io/midnight-discord/midnight.css" ];
       enabledThemes = [ "nixnight.css" ];
 
