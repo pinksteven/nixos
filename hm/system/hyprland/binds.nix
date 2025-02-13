@@ -46,7 +46,7 @@
         "$mod ALT, PRINT, exec, uwsm app -- screenshot window satty" # Screenshot window then edit
         "$mod $ctrl, PRINT, exec, uwsm app -- screenshot monitor satty" # Screenshot monitor then edit
 
-        "$mod, V, exec, clipboard" # Clipboard picker with wofi
+        "$mod, V, exec, uwsm app -- clipboard" # Clipboard picker with wofi
       ]
       ++ (builtins.concatLists (
         builtins.genList (
@@ -62,18 +62,18 @@
       ));
 
     bindl = [
-      ",XF86AudioMute, exec, sound-toggle" # Toggle Mute
-      ",XF86AudioPlay, exec, ${pkgs.playerctl}/bin/playerctl play-pause" # Play/Pause Song
-      ",XF86AudioNext, exec, ${pkgs.playerctl}/bin/playerctl next" # Next Song
-      ",XF86AudioPrev, exec, ${pkgs.playerctl}/bin/playerctl previous" # Previous Song
+      ",XF86AudioMute, exec, uwsm app -- sound-toggle" # Toggle Mute
+      ",XF86AudioPlay, exec, uwsm app -- ${pkgs.playerctl}/bin/playerctl play-pause" # Play/Pause Song
+      ",XF86AudioNext, exec, uwsm app -- ${pkgs.playerctl}/bin/playerctl next" # Next Song
+      ",XF86AudioPrev, exec, uwsm app -- ${pkgs.playerctl}/bin/playerctl previous" # Previous Song
       ",switch:Lid Switch, exec, uwsm app -- ${lib.getExe pkgs.hyprlock}" # Lock when closing Lid
     ];
 
     bindlep = [
-      ",XF86AudioRaiseVolume, exec, sound-up" # Sound Up
-      ",XF86AudioLowerVolume, exec, sound-down" # Sound Down
-      ",XF86MonBrightnessUp, exec, brightness-up" # Brightness Up
-      ",XF86MonBrightnessDown, exec, brightness-down" # Brightness Down
+      ",XF86AudioRaiseVolume, exec, uwsm app -- sound-up" # Sound Up
+      ",XF86AudioLowerVolume, exec, uwsm app -- sound-down" # Sound Down
+      ",XF86MonBrightnessUp, exec, uwsm app -- brightness-up" # Brightness Up
+      ",XF86MonBrightnessDown, exec, uwsm app -- brightness-down" # Brightness Down
     ];
   };
 }
