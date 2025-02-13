@@ -11,7 +11,6 @@
     ../../../hm/programs/git
     ../../../hm/programs/kitty
     ../../../hm/programs/lazygit
-    ../../../hm/programs/nerdfetch
     ../../../hm/programs/spicetify
     ../../../hm/programs/fantasia
     ../../../hm/programs/yazi

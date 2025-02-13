@@ -12,6 +12,7 @@
     ripgrep
     tldr
     thefuck
+    microfetch
   ];
 
   home.sessionPath = [ "$HOME/go/bin" ];
@@ -26,7 +27,7 @@
     initExtraFirst = ''
       bindkey -e
       bindkey "^[[3~" delete-char
-      nerdfetch
+      microfetch
 
     '';
 
