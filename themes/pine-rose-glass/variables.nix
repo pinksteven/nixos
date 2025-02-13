@@ -1,6 +1,6 @@
 {
   rounding = 15;
-  gaps-in = 10;
+  gaps-in = 7;
   gaps-out = 5;
   blur = true;
   border-size = 2;

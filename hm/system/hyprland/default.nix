@@ -34,6 +34,7 @@ in
     ./plugins
     ./env.nix
     ./layout.nix
+    ./wallpaper.nix
   ];
 
   home.packages = with pkgs; [
@@ -59,8 +60,6 @@ in
   ];
 
   stylix.targets.hyprland.enable = false;
-  services.hyprpaper.enable = true;
-  stylix.targets.hyprpaper.enable = true;
 
   # gtk.iconTheme = {
   #   package = pkgs.tela-circle-icon-theme;
