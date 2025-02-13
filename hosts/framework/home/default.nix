@@ -13,7 +13,6 @@
     ../../../hm/programs/lazygit
     ../../../hm/programs/nerdfetch
     ../../../hm/programs/spicetify
-    ../../../hm/programs/trayscale
     ../../../hm/programs/fantasia
     ../../../hm/programs/yazi
     ../../../hm/programs/nvim
@@ -46,6 +45,7 @@
       syncthing
       moonlight-qt
       gdlauncher-carbon
+      trayscale
 
       libreoffice-fresh
       hunspell
