@@ -33,6 +33,7 @@ in
     ./startup.nix
     ./plugins
     ./env.nix
+    ./layout.nix
   ];
 
   home.packages = with pkgs; [
@@ -65,7 +66,6 @@ in
   #   package = pkgs.tela-circle-icon-theme;
   #   name = "Tela-circle-dark";
   # };
-  #
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -106,15 +106,6 @@ in
           size = 12;
           passes = 3;
         };
-      };
-
-      dwindle = {
-        pseudotile = true; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
-        preserve_split = true; # You probably want this
-      };
-
-      master = {
-        new_status = "master";
       };
 
       group = {
