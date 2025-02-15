@@ -33,7 +33,7 @@ in
     ./startup.nix
     ./plugins
     ./env.nix
-    ./layout.nix
+    # ./dwindle.nix # Backup if hy3 breaks or smth
   ];
 
   home.packages = with pkgs; [
