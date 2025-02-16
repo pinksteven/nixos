@@ -10,7 +10,7 @@
       "$shiftMod, grave, exec, uwsm app -- ${lib.getExe pkgs.kitty} --class floatTerm" # Floating Kitty
       "$mod, F, exec, uwsm app -- ${lib.getExe pkgs.kitty} yazi" # File Manager
       "$mod, B, exec, uwsm app -- ${lib.getExe pkgs.firefox}" # Firefox
-      "$mod ,XF86AudioPlay, exec, uwsm app -- spotify" # Spotify
+      "$mod ,XF86AudioPlay, exec, uwsm app -- spotify --enable-features=UseOzonePlatform --ozone-platform=wayland" # Spotify
       "$ctrl ALT_L, Delete, exec, uwsm app -- ${lib.getExe pkgs.hyprlock}" # Lock
       "$mod, SPACE, exec, uwsm app -- menu" # Launcher
       "$shiftMod, SPACE, exec, uwsm app -- hyprfocus-toggle" # Toggle HyprFocus

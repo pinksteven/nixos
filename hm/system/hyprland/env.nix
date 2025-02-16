@@ -6,7 +6,6 @@
 
   home.file.".config/uwsm/env".text = ''
     export TERMINAL = ${lib.getExe pkgs.kitty}
-    export NIXOS_OZONE_WL = 1
 
     export XDG_SESSION_TYPE=wayland
     export XDG_CURRENT_DESKTOP=Hyprland
@@ -21,6 +20,7 @@
     export QT_WAYLAND_DECORATION=adwaita
     export QT_QUICK_CONTROLS_STYLE=org.kde.desktop
     export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+    export ELECTRON_OZONE_PLATFORM_HINT=auto
 
     export WLR_DRM_NO_ATOMIC=1
     export WLR_BACKEND=vulkan
