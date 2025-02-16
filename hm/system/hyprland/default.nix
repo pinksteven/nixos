@@ -122,7 +122,7 @@ in
       misc = {
         disable_hyprland_logo = true; # If true disables the random hyprland logo / anime girl background.
         disable_splash_rendering = true;
-        disable_autoreload = true;
+        disable_autoreload = false;
         new_window_takes_over_fullscreen = 2;
         background_color = background;
       };

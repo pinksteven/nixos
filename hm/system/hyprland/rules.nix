@@ -33,6 +33,7 @@
       "float, class:^(xdg-desktop-portal-kde)$"
       "float, class:^(xdg-desktop-portal-hyprland)$"
       "float, class:^(com.github.Aylur.ags)$"
+      "float, class:^(zenity)$"
 
       # File Manager.
       "float, class:^(yazi)$"
@@ -57,9 +58,9 @@
       "size 854 480, title:^(Picture-in-Picture)$"
 
       # Kitty terminal.
-      "float, class:^(kitty)$"
-      "size 820 540, class:^(kitty)$"
-      "minsize 800 500, class:^(kitty)$"
+      "float, class:^(floatTerm)$"
+      "size 820 540, class:^(floatTerm)$"
+      "minsize 800 500, class:^(floatTerm)$"
 
       # Browsers.
       "opaque, class:^(firefox)$"
