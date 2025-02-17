@@ -1,21 +1,6 @@
 { config, ... }:
 let
   animationSpeed = config.var.theme.animation-speed;
-
-  animationDuration =
-    if animationSpeed == "slow" then
-      "4"
-    else if animationSpeed == "medium" then
-      "2.5"
-    else
-      "1.5";
-  borderDuration =
-    if animationSpeed == "slow" then
-      "10"
-    else if animationSpeed == "medium" then
-      "6"
-    else
-      "3";
 in
 {
   wayland.windowManager.hyprland.settings = {
@@ -39,17 +24,17 @@ in
       ];
 
       animation = [
-        "windows, 1, ${animationDuration}, md3_decel, popin 60%"
-        "windowsIn, 1, ${animationDuration}, md3_decel, popin 60%"
-        "windowsOut, 1, ${animationDuration}, md3_accel, popin 60%"
-        "border, 1, ${borderDuration}, default"
-        "fade, 1, ${animationDuration}, md3_decel"
-        "layersIn, 1, ${animationDuration}, menu_decel, slide top"
-        "layersOut, 1, ${animationDuration}, menu_accel, slide top"
-        "fadeLayersIn, 1, ${borderDuration}, linear"
-        "fadeLayersOut, 1, ${borderDuration}, linear"
-        "workspaces, 1, ${animationDuration}, menu_decel, slide"
-        "specialWorkspace, 1, ${animationDuration}, md3_decel, slidevert"
+        "windows, 1, ${toString animationSpeed}, md3_decel, popin 60%"
+        "windowsIn, 1, ${toString animationSpeed}, md3_decel, popin 60%"
+        "windowsOut, 1, ${toString animationSpeed}, md3_accel, popin 60%"
+        "border, 1, ${toString (animationSpeed * 2)}, default"
+        "fade, 1, ${toString animationSpeed}, md3_decel"
+        "layersIn, 1, ${toString animationSpeed}, menu_decel, slide top"
+        "layersOut, 1, ${toString animationSpeed}, menu_accel, slide top"
+        "fadeLayersIn, 1, ${toString (animationSpeed * 2)}, linear"
+        "fadeLayersOut, 1, ${toString (animationSpeed * 2)}, linear"
+        "workspaces, 1, ${toString animationSpeed}, menu_decel, slide"
+        "specialWorkspace, 1, ${toString animationSpeed}, md3_decel, slidevert"
       ];
     };
   };

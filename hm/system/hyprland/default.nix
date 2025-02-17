@@ -6,23 +6,12 @@
   ...
 }:
 let
-  border-size = config.var.theme.border-size;
-  gaps-in = config.var.theme.gaps-in;
-  gaps-out = config.var.theme.gaps-out;
-  active-opacity = config.stylix.opacity.applications;
-  inactive-opacity = config.stylix.opacity.applications * 0.66;
-  rounding = config.var.theme.rounding;
-  blur = config.var.theme.blur;
-  keyboardLayout = config.var.keyboardLayout;
+  inherit (config) var stylix;
+  inherit (config.var) theme;
 
   rgb = color: "rgb(${color})";
   rgba = color: alpha: "rgba(${color}${lib.toHexString (builtins.ceil (alpha * 255))})";
-  shadow-color = rgba config.lib.stylix.colors.base00 0.8;
-  border-active = rgb config.lib.stylix.colors.base0D;
-  border-inactive = rgb config.lib.stylix.colors.base03;
-  border-locked = rgb config.lib.stylix.colors.base0C;
-  text-color = rgb config.lib.stylix.colors.base05;
-  background = rgb config.lib.stylix.colors.base00;
+  inherit (config.lib.stylix) colors;
 in
 {
   imports = [
@@ -75,47 +64,45 @@ in
 
     settings = {
       monitor = ", preferred, auto, 1.566667";
-      xwayland = {
-        force_zero_scaling = true;
-      };
+      xwayland.force_zero_scaling = true;
       exec-once = [ "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP" ];
 
       general = {
-        gaps_in = gaps-in;
-        gaps_out = gaps-out;
-        border_size = border-size;
-        "col.active_border" = border-active;
-        "col.inactive_border" = border-inactive;
+        gaps_in = theme.gaps-in;
+        gaps_out = theme.gaps-out;
+        border_size = theme.border-size;
+        "col.active_border" = "${rgb colors.base0C} ${rgb colors.base0D} ${rgb colors.base0E} 45deg";
+        "col.inactive_border" = rgb colors.base03;
 
         resize_on_border = true;
         extend_border_grab_area = 15;
       };
 
       decoration = {
-        active_opacity = active-opacity;
-        inactive_opacity = inactive-opacity;
-        rounding = rounding;
+        active_opacity = stylix.opacity.applications;
+        inactive_opacity = stylix.opacity.applications * 0.66;
+        rounding = theme.rounding;
         shadow = {
           enabled = true;
           range = 20;
           render_power = 3;
-          color = shadow-color;
+          color = rgba colors.base00 0.8;
         };
         blur = {
-          enabled = if blur then "true" else "false";
+          enabled = if theme.blur then "true" else "false";
           size = 12;
           passes = 3;
         };
       };
 
       group = {
-        "col.border_inactive" = border-active;
-        "col.border_active" = border-inactive;
-        "col.border_locked_active" = border-locked;
+        "col.border_inactive" = rgb colors.base03;
+        "col.border_active" = "${rgb colors.base0A} ${rgb colors.base09} ${rgb colors.base08} 45deg";
+        "col.border_locked_active" = rgb colors.base08;
         groupbar = {
-          text_color = text-color;
-          "col.active" = border-active;
-          "col.inactive" = border-inactive;
+          text_color = rgb colors.base05;
+          "col.active" = rgb colors.base09;
+          "col.inactive" = rgb colors.base03;
         };
       };
 
@@ -124,11 +111,11 @@ in
         disable_splash_rendering = true;
         disable_autoreload = false;
         new_window_takes_over_fullscreen = 2;
-        background_color = background;
+        background_color = rgb colors.base00;
       };
 
       input = {
-        kb_layout = keyboardLayout;
+        kb_layout = var.keyboardLayout;
 
         repeat_delay = 300;
         repeat_rate = 50;

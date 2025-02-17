@@ -35,11 +35,6 @@
       "float, class:^(com.github.Aylur.ags)$"
       "float, class:^(zenity)$"
 
-      # File Manager.
-      "float, class:^(yazi)$"
-      "size 760 500, class:^(yazi)$"
-      "minsize 760 500, class:^(yazi)$"
-
       # GTK and QT Settings.
       "float, class:^(nwg-look)$"
       "float, class:^(dconf-editor)$"

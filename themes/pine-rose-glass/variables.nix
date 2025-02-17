@@ -4,7 +4,7 @@
   gaps-out = 5;
   blur = true;
   border-size = 2;
-  animation-speed = "medium"; # "fast" | "medium" | "slow"
+  animation-speed = 2;
 
   bar = {
     position = "top"; # "top" | "bottom"

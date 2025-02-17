@@ -67,7 +67,7 @@ in
           "$mod, a, hy3:changefocus, raise"
           "$shiftMod, a, hy3:changefocus, lower"
 
-          "$mod, Q, killactive," # Close window
+          "$mod, Q, hy3:warpcursor" # Warp cursor to focused window
           "$shiftMod, Q, hy3:killactive," # Close node
 
           "$mod, h, hy3:movefocus, l"
