@@ -51,10 +51,10 @@ in
   services.hyprpaper.enable = true;
   stylix.targets.hyprpaper.enable = true;
 
-  # gtk.iconTheme = {
-  #   package = pkgs.tela-circle-icon-theme;
-  #   name = "Tela-circle-dark";
-  # };
+  gtk.iconTheme = {
+    package = pkgs.tela-circle-icon-theme;
+    name = "Tela-circle-dark";
+  };
 
   wayland.windowManager.hyprland = {
     enable = true;

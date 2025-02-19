@@ -4,7 +4,7 @@
   stylix = {
     enable = true;
 
-    base16Scheme = "${inputs.tinted-theming}/base16/" + "rose-pine.yaml";
+    base16Scheme = "${inputs.tinted-theming}/base16/" + "selenized-black.yaml";
     polarity = "dark";
 
     cursor = {
@@ -45,6 +45,6 @@
       };
     };
 
-    image = "${inputs.wallpapers}/" + "more_dandadan.jpeg";
+    image = "${inputs.wallpapers}/" + "green-girl.jpg";
   };
 }

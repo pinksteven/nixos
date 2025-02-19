@@ -36,7 +36,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixvim.url = "github:pinksteven/nixvim";
+    nixvim = {
+      url = "github:pinksteven/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     stylix.url = "github:danth/stylix";
     tinted-theming = {
