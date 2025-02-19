@@ -17,6 +17,8 @@
 
   home.sessionPath = [ "$HOME/go/bin" ];
 
+  home.shell.enableZshIntegration = true;
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
