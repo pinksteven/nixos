@@ -51,6 +51,7 @@
       moonlight-qt
       gdlauncher-carbon
       trayscale
+      oterm
 
       libreoffice-fresh
       hunspell
