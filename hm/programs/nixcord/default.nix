@@ -7,14 +7,8 @@
   stylix.targets.nixcord.enable = false;
   programs.nixcord = {
     enable = true;
-    discord = {
-      enable = true;
-      vencord = {
-        enable = true;
-        unstable = false;
-      };
-      openASAR.enable = true;
-    };
+    discord.enable = false;
+    vesktop.enable = true;
     config = {
       useQuickCss = true;
       frameless = true;
