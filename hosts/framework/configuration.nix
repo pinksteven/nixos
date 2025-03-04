@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
@@ -21,6 +21,7 @@
     ../../nixos/sudo.nix
     ../../nixos/printing.nix
     ../../nixos/uwsm.nix
+    ../../nixos/ollama.nix
 
     ./hardware-configuration.nix
     ./variables.nix
@@ -48,6 +49,16 @@
   environment.variables = {
     VDPAU_DRIVER = "radeonsi";
   };
+
+  hardware = {
+    graphics.enable = true;
+    amdgpu = {
+      opencl.enable = true;
+      amdvlk.enable = true;
+    };
+  };
+
+  environment.systemPackages = [ pkgs.framework-tool ];
 
   home-manager.users."${config.var.user}" = import ./home;
   home-manager.sharedModules = [ { stylix.enable = true; } ];

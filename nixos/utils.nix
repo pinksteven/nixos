@@ -58,9 +58,6 @@
     xdg-utils
     wget
     curl
-
-    # I'm pretty sure this is an official tool to manage my laptop
-    framework-tool
   ];
 
   services.logind.extraConfig = ''

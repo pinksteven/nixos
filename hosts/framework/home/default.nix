@@ -1,4 +1,9 @@
-{ pkgs, config, ... }:
+{
+  pkgs,
+  config,
+  inputs,
+  ...
+}:
 
 {
   imports = [
@@ -18,7 +23,6 @@
     ../../../hm/programs/nixcord
     ../../../hm/programs/dungeondraft
     ../../../hm/programs/termscp
-    ../../../hm/programs/alpaca
 
     # Scripts
     ../../../hm/scripts # All script courtesy of Hadi
@@ -40,6 +44,7 @@
     # Import packages without setting their options in nix files (1 line installs only)
     packages = with pkgs; [
       firefox
+      inputs.zen-browser.packages."${system}".default
       clapper
       easyeffects
       syncthing
