@@ -18,6 +18,7 @@
     ../../../hm/programs/nixcord
     ../../../hm/programs/dungeondraft
     ../../../hm/programs/termscp
+    ../../../hm/programs/alpaca
 
     # Scripts
     ../../../hm/scripts # All script courtesy of Hadi
