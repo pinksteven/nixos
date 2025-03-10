@@ -44,14 +44,13 @@
     # Import packages without setting their options in nix files (1 line installs only)
     packages = with pkgs; [
       firefox
-      inputs.zen-browser.packages."${system}".default
       clapper
       easyeffects
       syncthing
       moonlight-qt
       gdlauncher-carbon
       trayscale
-      oterm
+      alpaca
 
       libreoffice-fresh
       hunspell

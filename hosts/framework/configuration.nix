@@ -21,7 +21,6 @@
     ../../nixos/sudo.nix
     ../../nixos/printing.nix
     ../../nixos/uwsm.nix
-    ../../nixos/ollama.nix
 
     ./hardware-configuration.nix
     ./variables.nix
