@@ -1,10 +1,21 @@
-{ pkgs, inputs, ... }:
-
+{
+  pkgs,
+  inputs,
+  config,
+  ...
+}:
+let
+  theme = pkgs.runCommand "reewal-theme" { } ''
+    mkdir $out
+    cd $out
+    ${inputs.reewal.defaultPackage."${pkgs.system}"}/bin/reewal ${config.stylix.image} theme.yaml
+  '';
+in
 {
   stylix = {
     enable = true;
 
-    base16Scheme = "${inputs.tinted-theming}/base16/" + "selenized-black.yaml";
+    base16Scheme = "${theme}/theme.yaml";
     polarity = "dark";
 
     cursor = {
@@ -45,6 +56,6 @@
       };
     };
 
-    image = "${inputs.wallpapers}/" + "green-girl.jpg";
+    image = "${inputs.wallpapers}/" + "dandadan_yes.jpg";
   };
 }
