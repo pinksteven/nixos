@@ -97,6 +97,11 @@
       url = "github:ndtoan96/ouch.yazi";
       flake = false;
     };
+
+    reewal = {
+      url = "github:pinksteven/reewal";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
