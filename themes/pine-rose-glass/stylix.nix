@@ -8,7 +8,7 @@ let
   theme = pkgs.runCommand "reewal-theme" { } ''
     mkdir $out
     cd $out
-    ${inputs.reewal.defaultPackage."${pkgs.system}"}/bin/reewal ${config.stylix.image} theme.yaml
+    ${inputs.reewal.defaultPackage."${pkgs.system}"}/bin/reewal -v 1 ${config.stylix.image} theme.yaml
   '';
 in
 {
