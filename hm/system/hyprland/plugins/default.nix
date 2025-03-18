@@ -1,7 +1,7 @@
 {
   imports = [
     ./hy3.nix
-    # ./dynamicCursors.nix # Borked
+    ./dynamicCursors.nix
     ./hyprbars.nix
     ./hyprspace.nix
   ];
