@@ -15,6 +15,7 @@ in
       hashedPasswordFile = config.sops.secrets."passwords/steven".path;
       extraGroups = [
         "networkmanager"
+        "bluetooth"
         "wheel"
         "gamemode"
       ];

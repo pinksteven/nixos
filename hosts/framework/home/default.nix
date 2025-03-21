@@ -43,25 +43,30 @@
     homeDirectory = "/home/" + config.var.user;
 
     # Import packages without setting their options in nix files (1 line installs only)
-    packages = with pkgs; [
-      clapper
-      easyeffects
-      syncthing
-      moonlight-qt
-      gdlauncher-carbon
-      trayscale
-      alpaca
+    packages =
+      with pkgs;
+      let
+        alpaca = pkgs.alpaca.override { ollama = pkgs.ollama-rocm; };
+      in
+      [
+        clapper
+        easyeffects
+        syncthing
+        moonlight-qt
+        gdlauncher-carbon
+        trayscale
+        alpaca
 
-      libreoffice-fresh
-      hunspell
-      hunspellDicts.pl_PL
+        libreoffice-fresh
+        hunspell
+        hunspellDicts.pl_PL
 
-      zip
-      unzip
-      btop
-      cloc
-      sshfs
-    ];
+        zip
+        unzip
+        btop
+        cloc
+        sshfs
+      ];
 
     # Don't touch
     stateVersion = "24.05";
