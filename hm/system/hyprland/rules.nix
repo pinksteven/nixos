@@ -23,6 +23,8 @@
       "float, class:^()$, title:^(Save File)$"
       "float, class:^()$, title:^(Open File)$"
       "float, class:^()$, title:^(Open Folder)$"
+      "float, class:^(yazi-xdg)$"
+      "float, class:^(zenity)$"
 
       "float, class:^(.*Overskride.*)$"
       "size 500 700, class:^(.*Overskride.*)$"
@@ -33,7 +35,6 @@
       "float, class:^(xdg-desktop-portal-kde)$"
       "float, class:^(xdg-desktop-portal-hyprland)$"
       "float, class:^(com.github.Aylur.ags)$"
-      "float, class:^(zenity)$"
 
       # GTK and QT Settings.
       "float, class:^(nwg-look)$"
@@ -87,7 +88,7 @@
       # Disable hyprbars
       "plugin:hyprbars:nobar, class:(Fantasia Archive)"
 
-      # Supress windows self maximising
+      # Suppress windows self maximising
       "suppressevent maximize, class:.*"
 
     ];
