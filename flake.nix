@@ -65,7 +65,10 @@
       url = "github:outfoxxed/hy3";
       inputs.hyprland.follows = "hyprland";
     };
-    hyprsunset.url = "github:hyprwm/hyprsunset";
+    hyprsunset = {
+      url = "github:hyprwm/hyprsunset";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     hyprpanel = {
       url = "github:Jas-SinghFSU/Hyprpanel";
       inputs.nixpkgs.follows = "nixpkgs";
