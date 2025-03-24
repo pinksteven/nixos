@@ -15,14 +15,14 @@
         default = "Brave";
         privateDefault = "Brave";
         engines = {
-          Brave = {
+          "brave" = {
             name = "Brave";
             urls = [ { template = "https://search.brave.com/search?q={searchTerms}"; } ];
             iconMapObj."16" = "https://upload.wikimedia.org/wikipedia/commons/d/da/Brave_search_logo.png";
             definedAliases = [ "@b" ];
           };
-          "Bing".metaData.hidden = true;
-          "Google".metaData.alias = "@g";
+          "bing".metaData.hidden = true;
+          "google".metaData.alias = "@g";
         };
       };
       userChrome = ''
