@@ -1326,11 +1326,11 @@
         "yuck_vim": "yuck_vim"
       },
       "locked": {
-        "lastModified": 1742606302,
-        "narHash": "sha256-VQDI1UUMjQaNAolyR76AMfNQFHARVg5t4kgVeRVH1Wo=",
+        "lastModified": 1742830630,
+        "narHash": "sha256-yuCROWHez79268YYkwXyLO/SuPDD2UexHTPBFO+Q1Qg=",
         "owner": "pinksteven",
         "repo": "nixvim",
-        "rev": "d7473f151aa9153e573f8383dfe69a4cdb2eb38e",
+        "rev": "e4238053126ea7952ea1e587e8a03dd1ba15bb6f",
         "type": "github"
       },
       "original": {
@@ -1461,6 +1461,26 @@
         "type": "github"
       }
     },
+    "quickshell": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1742550407,
+        "narHash": "sha256-92UpZ40jjBafN4I1lGxa8yyBvCiKXO5kUp0if6qSpI0=",
+        "ref": "refs/heads/master",
+        "rev": "1a20c39fbaff05988dcc510a294fb8078a600e8b",
+        "revCount": 492,
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+      }
+    },
     "reewal": {
       "inputs": {
         "flake-utils": "flake-utils_3",
@@ -1502,6 +1522,7 @@
         "nixpkgs": "nixpkgs_4",
         "nixvim": "nixvim",
         "ouch-yazi": "ouch-yazi",
+        "quickshell": "quickshell",
         "reewal": "reewal",
         "sops-nix": "sops-nix",
         "spicetify-comfy": "spicetify-comfy",

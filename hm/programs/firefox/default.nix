@@ -11,20 +11,6 @@
         "browser.tabs.closeWindowWithLastTab" = false;
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
-      search = {
-        default = "Brave";
-        privateDefault = "Brave";
-        engines = {
-          "brave" = {
-            name = "Brave";
-            urls = [ { template = "https://search.brave.com/search?q={searchTerms}"; } ];
-            iconMapObj."16" = "https://upload.wikimedia.org/wikipedia/commons/d/da/Brave_search_logo.png";
-            definedAliases = [ "@b" ];
-          };
-          "bing".metaData.hidden = true;
-          "google".metaData.alias = "@g";
-        };
-      };
       userChrome = ''
         .titlebar-buttonbox-container {
           display: none;
