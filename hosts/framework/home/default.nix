@@ -13,6 +13,7 @@
     # Programs imports
     ../../../hm/programs/shell
     ../../../hm/programs/git
+    ../../../hm/programs/ssh
     ../../../hm/programs/kitty
     ../../../hm/programs/lazygit
     ../../../hm/programs/spicetify

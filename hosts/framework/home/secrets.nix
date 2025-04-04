@@ -10,8 +10,11 @@ in
     defaultSopsFile = "${secretsPath}/secrets.yaml";
     age.keyFile = "/home/${user}/.config/sops/age/keys.txt";
     secrets = {
-      "private_keys/github" = {
+      "private_keys/ssh" = {
         path = "/home/${user}/.shh/id_ed25519";
+      };
+      "private_keys/github" = {
+        path = "/home/${user}/.ssh/github";
       };
     };
   };
