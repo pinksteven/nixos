@@ -37,31 +37,31 @@ in
     enable = true;
     overwrite.enable = true;
 
-    layout = {
-      "bar.layouts" = {
-        "0" = {
-          left = [
-            "hypridle"
-            "hyprsunset"
-            "workspaces"
-          ];
-          middle = [ "media" ];
-          right = [
-            "systray"
-            "network"
-            "bluetooth"
-            "volume"
-            "battery"
-            "clock"
-            "notifications"
-            "power"
-          ];
-        };
-      };
-    };
-
     settings = {
       scalingPriority = "hyprland";
+
+      layout = {
+        "bar.layouts" = {
+          "0" = {
+            left = [
+              "hypridle"
+              "hyprsunset"
+              "workspaces"
+            ];
+            middle = [ "media" ];
+            right = [
+              "systray"
+              "network"
+              "bluetooth"
+              "volume"
+              "battery"
+              "clock"
+              "notifications"
+              "power"
+            ];
+          };
+        };
+      };
 
       bar = {
         clock.format = "%a %d %b  %H:%M";
