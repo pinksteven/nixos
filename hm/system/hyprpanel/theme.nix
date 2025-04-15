@@ -1,15 +1,50 @@
 { config, ... }:
 let
+  font = config.stylix.fonts.serif.name;
+  fontSize = config.stylix.fonts.sizes.desktop;
+
+  rounding = config.var.theme.rounding;
+  border-size = config.var.theme.border-size;
+
+  gaps-out = config.var.theme.gaps-out;
+
+  floating = config.var.theme.bar.floating;
+  transparent = config.var.theme.bar.transparent;
+  opacity = config.stylix.opacity.desktop;
+  position = config.var.theme.bar.position;
+
   colors = config.lib.stylix.colors.withHashtag;
 in
 {
   programs.hyprpanel.override = {
-    # test
     theme = {
+      tooltip.scaling = 75;
       bar = {
+        inherit transparent floating;
+        location = position;
+        outer_spacing = "${if floating && transparent then "0" else "8"}px";
+        border_radius = "${toString rounding}px";
+        opacity = if transparent then 0 else (builtins.floor (opacity * 100));
+        dropdownGap = "${toString (gaps-out + (fontSize * 2))}px";
+
+        margin_top = "0px";
+        margin_bottom = "0px";
+        margin_sides = "${toString gaps-out}px";
+
         background = colors.base00;
-        border.color = colors.base0D;
+
+        border = {
+          location = "none";
+          width = "${toString border-size}px";
+          color = colors.base0D;
+        };
         buttons = {
+          spacing = "0.3em";
+          y_margins = "0";
+          padding_x = "0.6em";
+          padding_y = "0.2em";
+          radius = "${toString rounding}px";
+
           background = colors.base0D;
           hover = colors.base0E;
           icon = colors.base00;
@@ -78,14 +113,24 @@ in
           };
         };
         menus = {
+          card_radius = "${toString rounding}px";
+
           background = colors.base02;
           text = colors.base05;
-          border.color = colors.base0D;
+          border = {
+            radius = "${toString rounding}px";
+            size = "${toString border-size}px";
+            color = colors.base0D;
+          };
           popover = {
+            radius = "${toString rounding}px";
+            scaling = 75;
+
             background = colors.base02;
             text = colors.base05;
           };
           tooltip = {
+            radius = "${toString rounding}px";
             background = colors.base02;
             text = colors.base05;
           };
@@ -245,7 +290,10 @@ in
             };
             media = {
               background.color = colors.base00;
-              card.color = colors.base02;
+              card = {
+                color = colors.base02;
+                tint = 50;
+              };
               border.color = colors.base0D;
               album = colors.base0D;
               artist = colors.base0C;
@@ -307,6 +355,8 @@ in
         };
       };
       notification = {
+        border_radius = "${toString rounding}px";
+
         background = colors.base02;
         border = colors.base05;
         text = colors.base05;
@@ -322,6 +372,16 @@ in
         };
       };
       osd = {
+        enable = true;
+        active_monitor = true;
+        duration = 2000;
+        location = "bottom";
+        orientation = "horizontal";
+        margins = "0px 0px ${toString (gaps-out * 3)}px 0px";
+        muted_zero = false;
+        radius = "${toString rounding}px";
+        border.size = "${toString border-size}px";
+
         label = colors.base0D;
         icon = colors.base00;
         bar_overflow_color = colors.base0B;
@@ -330,6 +390,10 @@ in
         icon_container = colors.base0D;
         bar_container = colors.base01;
         border.color = colors.base0D;
+      };
+      font = {
+        name = font;
+        size = "${toString fontSize}";
       };
     };
   };
