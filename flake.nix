@@ -73,10 +73,6 @@
       url = "github:Jas-SinghFSU/Hyprpanel";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    quickshell = {
-      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     hyprpolkitagent = {
       url = "github:hyprwm/hyprpolkitagent";
       inputs.nixpkgs.follows = "nixpkgs";

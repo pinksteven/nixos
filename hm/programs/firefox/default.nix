@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   programs.firefox = {
     enable = true;
@@ -10,6 +11,45 @@
       settings = {
         "browser.tabs.closeWindowWithLastTab" = false;
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+        "widget.use-xdg-desktop-portal.file-picker" = 1;
+      };
+      search = {
+        force = true;
+        default = "brave";
+        privateDefault = "brave";
+        engines = {
+          "Nix Packages" = {
+            urls = [
+              {
+                template = "https://search.nixos.org/packages";
+                params = [
+                  {
+                    name = "type";
+                    value = "packages";
+                  }
+                  {
+                    name = "query";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
+            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+            definedAliases = [ "@np" ];
+          };
+
+          brave = {
+            name = "Brave";
+            urls = [ { template = "https://brave.com/search?q={searchTerms}"; } ];
+            icon = "https://brave.com/favicon.ico";
+            updateInterval = 24 * 60 * 60 * 1000; # every day
+            definedAliases = [
+              "@b"
+              "@brave"
+            ];
+          };
+          bing.metaData.hidden = true;
+        };
       };
       userChrome = ''
         .titlebar-buttonbox-container {

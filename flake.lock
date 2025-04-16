@@ -450,11 +450,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1744663884,
-        "narHash": "sha256-a6QGaZMDM1miK8VWzAITsEPOdmLk+xTPyJSTjVs3WhI=",
+        "lastModified": 1744812667,
+        "narHash": "sha256-2AJZwXMO82YGw6B/RRCPz8Wz2zSRCZIdjhdFuiw7Ymg=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "d5cdf55bd9f19a3debd55b6cb5d38f7831426265",
+        "rev": "5d48f3ded3b55ef32d5853c9022fb4df29b3fc45",
         "type": "github"
       },
       "original": {
@@ -599,11 +599,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1744646317,
-        "narHash": "sha256-Vs5vKsYOtUBdUyHZ9zmKZxhcEnwm9KM8LUhww44JKtE=",
+        "lastModified": 1744807781,
+        "narHash": "sha256-zwLztVgpc0Txwvy662USwYVEKkNZiJd5GdqacnKyp18=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "8b7b169043de2a9d95f8505edb8b6576fac586fd",
+        "rev": "1ae7e2164c25ad4c22698b0ac12969f1e2a1b8ca",
         "type": "github"
       },
       "original": {
@@ -1445,26 +1445,6 @@
         "type": "github"
       }
     },
-    "quickshell": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1743928855,
-        "narHash": "sha256-6skFnvfLbslUOieffviT+XNH/M1HOQDQJhJLsG0UM2o=",
-        "ref": "refs/heads/master",
-        "rev": "ed528268e0c0a2f6be2b5aca7089ebc3e214d446",
-        "revCount": 505,
-        "type": "git",
-        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
-      },
-      "original": {
-        "type": "git",
-        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
-      }
-    },
     "reewal": {
       "inputs": {
         "flake-utils": "flake-utils_3",
@@ -1506,7 +1486,6 @@
         "nixpkgs": "nixpkgs_3",
         "nixvim": "nixvim",
         "ouch-yazi": "ouch-yazi",
-        "quickshell": "quickshell",
         "reewal": "reewal",
         "sops-nix": "sops-nix",
         "spicetify-comfy": "spicetify-comfy",
