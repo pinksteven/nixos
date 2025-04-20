@@ -18,24 +18,37 @@
         default = "brave";
         privateDefault = "brave";
         engines = {
-          "Nix Packages" = {
+          nix-packages = {
+            name = "Nix Packages";
             urls = [
-              {
-                template = "https://search.nixos.org/packages";
-                params = [
-                  {
-                    name = "type";
-                    value = "packages";
-                  }
-                  {
-                    name = "query";
-                    value = "{searchTerms}";
-                  }
-                ];
-              }
+              { template = "https://searchix.alanpearce.eu/packages/nixpkgs/search?query={searchTerms}"; }
             ];
             icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
             definedAliases = [ "@np" ];
+          };
+          homemanager = {
+            name = "Home Manager Options";
+            urls = [
+              { template = "https://searchix.alanpearce.eu/options/home-manager/search?query={searchTerms}"; }
+            ];
+            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+            definedAliases = [ "@hm" ];
+          };
+          nix-options = {
+            name = "NixOS Options";
+            urls = [
+              { template = "https://searchix.alanpearce.eu/options/nixos/search?query={searchTerms}"; }
+            ];
+            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+            definedAliases = [ "@no" ];
+          };
+          nur-packages = {
+            name = "NUR Packages";
+            urls = [
+              { template = "https://searchix.alanpearce.eu/packages/nur/search?query={searchTerms}"; }
+            ];
+            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+            definedAliases = [ "@nur" ];
           };
 
           brave = {
