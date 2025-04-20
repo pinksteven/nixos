@@ -47,34 +47,8 @@
       flake = false;
     };
 
-    # Hyprland related stuff
-    hyprland.url = "github:hyprwm/Hyprland";
-    hyprspace = {
-      url = "github:KZDKM/Hyprspace";
-      inputs.hyprland.follows = "hyprland";
-    };
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
-    hypr-dynamic-cursors = {
-      url = "github:VirtCode/hypr-dynamic-cursors";
-      inputs.hyprland.follows = "hyprland";
-    };
-    hy3 = {
-      url = "github:outfoxxed/hy3";
-      inputs.hyprland.follows = "hyprland";
-    };
-    hyprsunset = {
-      url = "github:hyprwm/hyprsunset";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     hyprpanel = {
       url = "github:Jas-SinghFSU/Hyprpanel";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    hyprpolkitagent = {
-      url = "github:hyprwm/hyprpolkitagent";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

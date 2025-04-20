@@ -20,7 +20,6 @@
     ../../nixos/xdg-portal.nix
     ../../nixos/sudo.nix
     ../../nixos/printing.nix
-    ../../nixos/uwsm.nix
 
     ./hardware-configuration.nix
     ./variables.nix
@@ -29,8 +28,14 @@
     ../../themes/pine-rose-glass
   ];
 
-  # some programs don't work with home manager
+  # some software doesn't work well/at all with home-manager
   programs = {
+    # Enable Hyprland managed by UWSM; Configured via home-manager
+    hyprland = {
+      enable = true;
+      withUWSM = true;
+    };
+    # Steam apparently uses a lot of linking magick that doesn't work with hm
     steam = {
       enable = true;
       remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play

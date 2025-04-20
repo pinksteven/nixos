@@ -1,6 +1,6 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 {
-  home.packages = [ inputs.hyprpolkitagent.packages."${pkgs.system}".hyprpolkitagent ];
+  home.packages = [ pkgs.hyprpolkitagent ];
 
   wayland.windowManager.hyprland.settings.exec-once = [ "systemctl --user start hyprpolkitagent" ];
 }

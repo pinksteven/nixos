@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  inputs,
   pkgs,
   ...
 }:
@@ -12,7 +11,7 @@ let
 in
 {
   wayland.windowManager.hyprland = {
-    plugins = [ inputs.hyprspace.packages.${pkgs.system}.Hyprspace ];
+    plugins = [ pkgs.hyprlandPlugins.hyprspace ];
     settings = {
       plugin.overview = {
         # BEHAVIOR

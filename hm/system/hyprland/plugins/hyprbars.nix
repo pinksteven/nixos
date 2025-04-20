@@ -15,9 +15,7 @@ let
 in
 {
   wayland.windowManager.hyprland = {
-    plugins = [
-      inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
-    ];
+    plugins = [ pkgs.hyprlandPlugins.hyprbars ];
     settings.plugin.hyprbars = {
       bar_height = 20;
       bar_part_of_window = true;

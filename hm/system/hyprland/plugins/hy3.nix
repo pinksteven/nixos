@@ -1,5 +1,4 @@
 {
-  inputs,
   pkgs,
   config,
   ...
@@ -11,7 +10,7 @@ let
 in
 {
   wayland.windowManager.hyprland = {
-    plugins = [ inputs.hy3.packages.${pkgs.system}.hy3 ];
+    plugins = [ pkgs.hyprlandPlugins.hy3 ];
     settings = {
       general.layout = "hy3";
       plugin.hy3 = {

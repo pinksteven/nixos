@@ -1,11 +1,7 @@
-{
-  inputs,
-  pkgs,
-  ...
-}:
+{ pkgs, ... }:
 {
   wayland.windowManager.hyprland = {
-    plugins = [ inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors ];
+    plugins = [ pkgs.hyprlandPlugins.hypr-dynamic-cursors ];
     settings.plugin.dynamic-cursors = {
       enabled = true;
       mode = "tilt";

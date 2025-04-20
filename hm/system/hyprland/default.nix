@@ -60,7 +60,6 @@ in
     enable = true;
     xwayland.enable = true;
     systemd.enable = false;
-    package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 
     settings = {
       monitor = ", preferred, auto, 1.566667";
