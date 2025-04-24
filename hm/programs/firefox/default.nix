@@ -53,7 +53,7 @@
 
           brave = {
             name = "Brave";
-            urls = [ { template = "https://brave.com/search?q={searchTerms}"; } ];
+            urls = [ { template = "https://search.brave.com/search?q={searchTerms}"; } ];
             icon = "https://brave.com/favicon.ico";
             updateInterval = 24 * 60 * 60 * 1000; # every day
             definedAliases = [
