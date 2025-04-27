@@ -26,7 +26,7 @@
     syntaxHighlighting.enable = true;
     historySubstringSearch.enable = true;
 
-    initExtraFirst = ''
+    initContent = lib.mkBefore ''
       bindkey -e
       bindkey "^[[3~" delete-char
       microfetch
