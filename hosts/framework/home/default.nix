@@ -33,6 +33,7 @@
     ../../../hm/system/hypridle
     ../../../hm/system/hyprlock
     ../../../hm/system/hyprpanel
+    ../../../hm/system/ignis
     ../../../hm/system/tofi
     ../../../hm/system/udiskie
     ../../../hm/system/cliphist

@@ -51,6 +51,11 @@
       url = "github:Jas-SinghFSU/Hyprpanel";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Hopefully will be able to do the switch
+    ignis = {
+      url = "github:linkfrg/ignis";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Yazi and plugins
     yazi = {
