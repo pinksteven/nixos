@@ -1,26 +1,25 @@
 {
-  lib,
   stdenv,
+  lib,
   requireFile,
   dpkg,
-  xorg,
-  libGL,
-  udev,
-  pulseaudio,
-  libkrb5,
-  zenity,
-  zlib,
+  autoPatchelfHook,
   makeWrapper,
+  libGL,
+  libkrb5,
+  xorg,
+  zlib,
+  alsa-lib,
+  udev,
+  zenity,
 }:
 
-stdenv.mkDerivation (finalAttrs: {
+stdenv.mkDerivation rec {
   pname = "Dungeondraft";
   version = "1.1.0.6";
 
-  nativeBuildInputs = [ makeWrapper ];
-
   src = requireFile {
-    name = "Dungeondraft-${finalAttrs.version}-Linux64.deb";
+    name = "Dungeondraft-${version}-Linux64.deb";
     url = "https://dungeondraft.net/";
     hash = "sha256-ffT2zOQWKb6W6dQGuKbfejNCl6dondo4CB6JKTReVDs=";
   };
@@ -29,6 +28,22 @@ stdenv.mkDerivation (finalAttrs: {
 
   dontConfigure = true;
   dontBuild = true;
+
+  nativeBuildInputs = [
+    autoPatchelfHook
+    makeWrapper
+  ];
+  buildInputs = [
+    libGL
+    libkrb5
+    xorg.libXcursor
+    xorg.libX11
+    xorg.libXext
+    xorg.libXrandr
+    xorg.libXi
+    xorg.libXinerama
+    zlib
+  ];
 
   installPhase = ''
     runHook preInstall
@@ -44,41 +59,12 @@ stdenv.mkDerivation (finalAttrs: {
     wrapProgram $out/bin/Dungeondraft.x86_64 \
       --prefix PATH : ${lib.makeBinPath [ zenity ]}
   '';
-  preFixup =
-    let
-      binaryLibPath = lib.makeLibraryPath [
-        xorg.libXcursor
-        xorg.libXinerama
-        xorg.libXext
-        xorg.libXrandr
-        xorg.libXrender
-        xorg.libX11
-        xorg.libXi
-        libGL
-        udev
-        pulseaudio
-        zenity
-      ];
-      libmonoNativeLibPath = lib.makeLibraryPath [ libkrb5 ];
-      libmonoPosixHelperLibPath = lib.makeLibraryPath [ zlib ];
-    in
-    ''
-      patchelf \
-        --set-interpreter "$(cat $NIX_CC/nix-support/dynamic-linker)" \
-        --set-rpath "${binaryLibPath}" \
-        $out/opt/Dungeondraft/Dungeondraft.x86_64
-
-      chmod +x \
-        $out/opt/Dungeondraft/data_Dungeondraft/Mono/lib/*
-
-      patchelf \
-        --set-rpath "${libmonoNativeLibPath}" \
-        $out/opt/Dungeondraft/data_Dungeondraft/Mono/lib/libmono-native.so
-
-      patchelf \
-        --set-rpath "${libmonoPosixHelperLibPath}" \
-        $out/opt/Dungeondraft/data_Dungeondraft/Mono/lib/libMonoPosixHelper.so
-    '';
+  postFixup = ''
+    patchelf \
+      --add-needed ${udev}/lib/libudev.so.1 \
+      --add-needed ${alsa-lib}/lib/libasound.so.2 \
+      $out/opt/Dungeondraft/Dungeondraft.x86_64
+  '';
 
   meta = {
     homepage = "https://dungeondraft.net/";
@@ -87,4 +73,4 @@ stdenv.mkDerivation (finalAttrs: {
     platforms = [ "x86_64-linux" ];
     sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
   };
-})
+}
