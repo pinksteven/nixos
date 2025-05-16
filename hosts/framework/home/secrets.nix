@@ -11,10 +11,14 @@ in
     age.keyFile = "/home/${user}/.config/sops/age/keys.txt";
     secrets = {
       "private_keys/ssh" = {
-        path = "/home/${user}/.shh/id_ed25519";
+        path = "/home/${user}/.ssh/id_ed25519";
       };
       "private_keys/github" = {
         path = "/home/${user}/.ssh/github";
+      };
+      "ssh-config" = {
+        path = "/home/${user}/.ssh/config";
+        mode = "0600";
       };
     };
   };
