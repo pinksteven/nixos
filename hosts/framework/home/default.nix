@@ -37,6 +37,7 @@
     ../../../hm/system/udiskie
     ../../../hm/system/cliphist
     ../../../hm/system/batsignal
+    ../../../hm/system/wluma
   ];
   home = {
     username = config.var.user;
