@@ -1,6 +1,5 @@
 { inputs, ... }:
 {
-  programs.git-credential-oauth.enable = true;
   programs.git = {
     inherit (inputs.nixos-secrets.git.steven) userName userEmail;
     enable = true;
@@ -19,6 +18,7 @@
     extraConfig = {
       init.defaultBranch = "main";
       push.autoSetupRemote = true;
+      merge.tool = "nvimdiff";
     };
     aliases = {
       essa = "push --force";
