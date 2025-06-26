@@ -26,10 +26,6 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    spicetify-comfy = {
-      url = "github:Comfy-Themes/Spicetify";
-      flake = false;
-    };
 
     nixcord = {
       url = "github:KaylorBen/nixcord";

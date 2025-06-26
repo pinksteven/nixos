@@ -14,22 +14,9 @@ in
 
   programs.spicetify = {
     enable = true;
-    theme = {
-      name = "Comfy";
-      src = "${inputs.spicetify-comfy}/Comfy";
-      injectCss = true;
-      injectThemeJs = true;
-      replaceColors = true;
-      overwriteAssets = true;
+    theme = spicePkgs.themes.flow;
 
-      extraCommands = ''
-        # remove the auto-update functionality
-        echo "\n" >> ./Extensions/theme.js
-        cat ./Themes/Comfy/theme.script.js >> ./Extensions/theme.js
-      '';
-    };
-
-    colorScheme = "custom";
+    colorScheme = "Violet";
 
     customColorScheme = with config.lib.stylix.colors; {
       text = base05;
