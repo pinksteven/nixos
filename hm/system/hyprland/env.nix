@@ -16,9 +16,6 @@
 
     export QT_AUTO_SCREEN_SCALE_FACTOR=1
     export QT_QPA_PLATFORM=wayland
-    export QT_QPA_PLATFORMTHEME=gtk3
-    export QT_WAYLAND_DECORATION=adwaita
-    export QT_QUICK_CONTROLS_STYLE=org.kde.desktop
     export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
     export ELECTRON_OZONE_PLATFORM_HINT=auto
 

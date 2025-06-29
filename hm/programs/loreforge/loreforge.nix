@@ -11,18 +11,17 @@
   systemd,
   libglvnd,
   vulkan-loader,
-  pciutils,
   autoPatchelfHook,
   wrapGAppsHook,
 }:
 
 stdenv.mkDerivation rec {
   pname = "Lore Forge";
-  version = "1.2.0";
+  version = "1.2.1";
 
   src = fetchurl {
-    url = "https://storage.googleapis.com/lore-forge-downloads/lore-forge_1.2.0_amd64.deb";
-    hash = "sha256-Z+40i+JqRDt11ZaD1m/NvkTo4KuLqXiDx+nGw6jHjNc=";
+    url = "https://storage.googleapis.com/lore-forge-downloads/lore-forge_1.2.1_amd64.deb";
+    hash = "sha256-nCDzpmzlWV+srXvIlie+CnVgWhR/iLstOM+1WbPZpd4=";
   };
   unpackCmd = "${dpkg}/bin/dpkg-deb -x $curSrc .";
 

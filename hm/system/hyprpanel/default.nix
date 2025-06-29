@@ -9,6 +9,7 @@
   home.packages = with pkgs; [
     libnotify
     hypridle
+    inputs.caelestia-shell.packages.${pkgs.system}.default
   ];
 
   imports = [

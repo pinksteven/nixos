@@ -1,7 +1,6 @@
 {
   pkgs,
   config,
-  inputs,
   lib,
   ...
 }:
@@ -26,10 +25,10 @@ in
   ];
 
   home.packages = with pkgs; [
-    qt5.qtwayland
-    qt6.qtwayland
-    qadwaitadecorations-qt6
-    qadwaitadecorations
+    # qt5.qtwayland
+    # qt6.qtwayland
+    # qadwaitadecorations-qt6
+    # qadwaitadecorations
     hyprpicker
     imv
     wf-recorder
@@ -51,10 +50,14 @@ in
   services.hyprpaper.enable = true;
   stylix.targets.hyprpaper.enable = true;
 
-  gtk.iconTheme = {
-    package = pkgs.tela-circle-icon-theme;
-    name = "Tela-circle-dark";
+  stylix.iconTheme = {
+    enable = true;
+    package = pkgs.tela-circle-icon-theme.override { circularFolder = true; };
+    dark = "Tela-circle-dark";
+    light = "Tela-circle-light";
   };
+  stylix.targets.gtk.enable = true;
+  stylix.targets.qt.enable = true;
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -64,7 +67,7 @@ in
     settings = {
       monitor = ", preferred, auto, 1.566667";
       xwayland.force_zero_scaling = true;
-      # exec-once = [ "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP" ];
+      exec-once = [ "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP" ];
 
       general = {
         gaps_in = theme.gaps-in;

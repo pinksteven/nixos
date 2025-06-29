@@ -11,7 +11,6 @@
     bat
     ripgrep
     tldr
-    thefuck
     microfetch
   ];
 
@@ -46,7 +45,6 @@
     oh-my-zsh = {
       enable = true;
       plugins = [
-        "thefuck"
         "tailscale"
         "docker"
         "docker-compose"

@@ -32,8 +32,8 @@
     ../../../hm/system/hyprland
     ../../../hm/system/hypridle
     ../../../hm/system/hyprlock
-    ../../../hm/system/hyprpanel
-    ../../../hm/system/quickshell
+    # ../../../hm/system/hyprpanel
+    ../../../hm/system/caelestia-shell
     ../../../hm/system/tofi
     ../../../hm/system/udiskie
     ../../../hm/system/cliphist
