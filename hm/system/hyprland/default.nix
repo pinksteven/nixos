@@ -43,7 +43,7 @@ in
     glib
     direnv
     meson
-    papers
+    # papers
   ];
 
   stylix.targets.hyprland.enable = false;

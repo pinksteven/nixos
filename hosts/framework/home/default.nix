@@ -24,6 +24,7 @@
     ../../../hm/programs/termscp
     ../../../hm/programs/firefox
     ../../../hm/programs/loreforge
+    ../../../hm/programs/zathura
 
     # Scripts
     ../../../hm/scripts # All script courtesy of Hadi
@@ -32,7 +33,6 @@
     ../../../hm/system/hyprland
     ../../../hm/system/hypridle
     ../../../hm/system/hyprlock
-    # ../../../hm/system/hyprpanel
     ../../../hm/system/caelestia-shell
     ../../../hm/system/tofi
     ../../../hm/system/udiskie
