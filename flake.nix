@@ -103,6 +103,24 @@
             ./hosts/framework/configuration.nix # Set the host
           ];
         };
+
+        steven-puter = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = {
+            flake-self = self;
+          };
+          modules = [
+            {
+              _module.args = {
+                inherit inputs self;
+              };
+            }
+            inputs.sops-nix.nixosModules.sops # Handling secrets
+            inputs.home-manager.nixosModules.home-manager
+            inputs.stylix.nixosModules.stylix
+            ./hosts/puter/configuration.nix # Set the host
+          ];
+        };
       };
     };
 }

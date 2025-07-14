@@ -34,7 +34,6 @@
       "float, class:^(.*desktop-portal-gtk.*)$"
       "float, class:^(xdg-desktop-portal-kde)$"
       "float, class:^(xdg-desktop-portal-hyprland)$"
-      "float, class:^(com.github.Aylur.ags)$"
 
       # GTK and QT Settings.
       "float, class:^(nwg-look)$"
