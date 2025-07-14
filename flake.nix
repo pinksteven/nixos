@@ -43,11 +43,6 @@
       flake = false;
     };
 
-    hyprpanel = {
-      url = "github:Jas-SinghFSU/Hyprpanel";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # Yazi and plugins
     yazi = {
       url = "github:sxyazi/yazi";
@@ -97,7 +92,6 @@
           };
           modules = [
             {
-              nixpkgs.overlays = [ inputs.hyprpanel.overlay ];
               _module.args = {
                 inherit inputs self;
               };

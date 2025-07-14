@@ -17,11 +17,11 @@
 
 stdenv.mkDerivation rec {
   pname = "Lore Forge";
-  version = "1.2.1";
+  version = "1.2.2";
 
   src = fetchurl {
-    url = "https://storage.googleapis.com/lore-forge-downloads/lore-forge_1.2.1_amd64.deb";
-    hash = "sha256-nCDzpmzlWV+srXvIlie+CnVgWhR/iLstOM+1WbPZpd4=";
+    url = "https://storage.googleapis.com/lore-forge-downloads/lore-forge_1.2.2_amd64.deb";
+    hash = "sha256-K8hF1t0KqApD7FqMe9iZYp0cQdgd/JPpn+oD83Mj9k8=";
   };
   unpackCmd = "${dpkg}/bin/dpkg-deb -x $curSrc .";
 

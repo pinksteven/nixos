@@ -79,5 +79,6 @@
     imagemagick
 
     ouch
+    dragon-drop
   ];
 }

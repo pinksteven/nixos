@@ -5,7 +5,7 @@
   };
 
   home.file.".config/uwsm/env".text = ''
-    export TERMINAL = ${lib.getExe pkgs.kitty}
+    export TERMINAL=${lib.getExe pkgs.kitty}
 
     export XDG_SESSION_TYPE=wayland
     export XDG_CURRENT_DESKTOP=Hyprland

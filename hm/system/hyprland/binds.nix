@@ -12,7 +12,7 @@
       "$mod, B, exec, uwsm app -- ${lib.getExe pkgs.firefox}" # Firefox
       "$mod ,XF86AudioPlay, exec, uwsm app -- spotify --enable-features=UseOzonePlatform --ozone-platform=wayland" # Spotify
       "$ctrl ALT_L, Delete, exec, uwsm app -- ${lib.getExe pkgs.hyprlock}" # Lock
-      "$mod, SPACE, exec, uwsm app -- menu" # Launcher
+      "$mod, SPACE, exec, caelestia shell drawers toggle launcher" # Launcher
       "$shiftMod, SPACE, exec, uwsm app -- hyprfocus-toggle" # Toggle HyprFocus
 
       ",PRINT, exec, uwsm app -- screenshot region" # Screenshot region
@@ -23,7 +23,7 @@
       "$mod ALT, PRINT, exec, uwsm app -- screenshot window satty" # Screenshot window then edit
       "$mod $ctrl, PRINT, exec, uwsm app -- screenshot monitor satty" # Screenshot monitor then edit
 
-      "$mod, V, exec, uwsm app -- clipboard" # Clipboard picker with wofi
+      # "$mod, V, exec, uwsm app -- clipboard" # Clipboard picker with wofi
     ];
 
     bindlp = [

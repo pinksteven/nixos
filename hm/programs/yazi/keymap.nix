@@ -12,6 +12,11 @@
         desc = "Close tab";
       }
       {
+        on = "<C-n>";
+        run = ''shell 'dragon -x -i -T "$1"' --confirm'';
+        desc = "Drag and drop selected files";
+      }
+      {
         on = [
           "T"
           "m"
