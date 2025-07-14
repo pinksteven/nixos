@@ -1,6 +1,6 @@
 {
   imports = [
-    ../../nixos/variables-config.nix
+    ../../system/variables-config.nix
     ./stylix.nix
   ];
 

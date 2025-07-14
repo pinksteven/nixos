@@ -1,0 +1,21 @@
+{
+  imports = [
+    ./audio.nix
+    ./auto-upgrade.nix
+    ./bluetooth.nix
+    ./docker.nix
+    ./fonts.nix
+    ./fprint.nix
+    ./greetd.nix
+    ./home-manager.nix
+    ./network-manager.nix
+    ./nix.nix
+    ./printing.nix
+    ./sudo.nix
+    ./systemd-boot.nix
+    ./timezone.nix
+    ./users.nix
+    ./utils.nix
+    ./xdg-portal.nix
+  ];
+}

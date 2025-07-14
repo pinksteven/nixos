@@ -11,34 +11,34 @@
     ../../../themes/pine-rose-glass
 
     # Programs imports
-    ../../../hm/programs/shell
-    ../../../hm/programs/git
-    ../../../hm/programs/kitty
-    ../../../hm/programs/lazygit
-    ../../../hm/programs/spicetify
-    ../../../hm/programs/fantasia
-    ../../../hm/programs/yazi
-    ../../../hm/programs/nvim
-    ../../../hm/programs/nixcord
-    ../../../hm/programs/dungeondraft
-    ../../../hm/programs/termscp
-    ../../../hm/programs/firefox
-    ../../../hm/programs/loreforge
-    ../../../hm/programs/zathura
+    ../../../programs/shell
+    ../../../programs/git
+    ../../../programs/kitty
+    ../../../programs/lazygit
+    ../../../programs/spicetify
+    ../../../programs/fantasia
+    ../../../programs/yazi
+    ../../../programs/nvim
+    ../../../programs/nixcord
+    ../../../programs/dungeondraft
+    ../../../programs/termscp
+    ../../../programs/firefox
+    ../../../programs/loreforge
+    ../../../programs/zathura
 
     # Scripts
-    ../../../hm/scripts # All script courtesy of Hadi
+    ../../../programs/scripts # All script courtesy of Hadi
 
     # DE experience imports
-    ../../../hm/system/hyprland
-    ../../../hm/system/hypridle
-    ../../../hm/system/hyprlock
-    ../../../hm/system/caelestia-shell
-    ../../../hm/system/tofi
-    ../../../hm/system/udiskie
-    ../../../hm/system/cliphist
-    ../../../hm/system/batsignal
-    ../../../hm/system/wluma
+    ../../../system/home-manager/hyprland
+    ../../../system/home-manager/hypridle
+    ../../../system/home-manager/hyprlock
+    ../../../system/home-manager/caelestia-shell
+    ../../../system/home-manager/tofi
+    ../../../system/home-manager/udiskie
+    ../../../system/home-manager/cliphist
+    ../../../system/home-manager/batsignal
+    ../../../system/home-manager/wluma
   ];
   home = {
     username = config.var.user;

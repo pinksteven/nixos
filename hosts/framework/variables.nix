@@ -1,7 +1,7 @@
 { config, inputs, ... }:
 
 {
-  imports = [ ../../nixos/variables-config.nix ];
+  imports = [ ../../system/variables-config.nix ];
 
   config.var = {
     inherit (inputs.nixos-secrets.hosts.framework) hostname user;
