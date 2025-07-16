@@ -76,7 +76,11 @@
     };
 
     caelestia-shell = {
-      url = "github:pinksteven/caelestia-shell";
+      url = "github:pinksteven/caelestia-shell?ref=enabled-option";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    caelestia-cli = {
+      url = "github:caelestia-dots/cli";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

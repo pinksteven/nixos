@@ -2,7 +2,23 @@
 
 {
   imports = [
-    ../../system/nixos
+    ../../system/nixos/audio.nix
+    ../../system/nixos/auto-upgrade.nix
+    ../../system/nixos/bluetooth.nix
+    ../../system/nixos/docker.nix
+    ../../system/nixos/fonts.nix
+    ../../system/nixos/fprint.nix
+    ../../system/nixos/greetd.nix
+    ../../system/nixos/home-manager.nix
+    ../../system/nixos/network-manager.nix
+    ../../system/nixos/nix.nix
+    ../../system/nixos/printing.nix
+    ../../system/nixos/sudo.nix
+    ../../system/nixos/systemd-boot.nix
+    ../../system/nixos/timezone.nix
+    ../../system/nixos/users.nix
+    ../../system/nixos/utils.nix
+    ../../system/nixos/xdg-portal.nix
 
     ./hardware-configuration.nix
     ./variables.nix
