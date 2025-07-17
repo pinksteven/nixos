@@ -55,7 +55,7 @@
         easyeffects
         syncthing
         moonlight-qt
-        gdlauncher-carbon
+        # gdlauncher-carbon
         trayscale
         alpaca
 
