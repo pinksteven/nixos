@@ -8,6 +8,7 @@
   imports = [
     ../variables.nix
     ./secrets.nix
+    ./hyprland.nix # System specific hyprland settings
     ../../../themes/pine-rose-glass
 
     # Programs imports

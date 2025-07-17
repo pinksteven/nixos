@@ -13,7 +13,6 @@
       "$mod ,XF86AudioPlay, exec, uwsm app -- spotify --enable-features=UseOzonePlatform --ozone-platform=wayland" # Spotify
       "$ctrl ALT_L, Delete, exec, uwsm app -- ${lib.getExe pkgs.hyprlock}" # Lock
       "$mod, SPACE, exec, caelestia shell drawers toggle launcher" # Launcher
-      "$shiftMod, SPACE, exec, uwsm app -- hyprfocus-toggle" # Toggle HyprFocus
 
       ",PRINT, exec, uwsm app -- screenshot region" # Screenshot region
       "ALT, PRINT, exec, uwsm app -- screenshot window" # Screenshot window
@@ -28,9 +27,9 @@
 
     bindlp = [
       ",XF86AudioMute, exec, uwsm app -- sound-toggle" # Toggle Mute
-      ",XF86AudioPlay, exec, uwsm app -- ${pkgs.playerctl}/bin/playerctl play-pause" # Play/Pause Song
-      ",XF86AudioNext, exec, uwsm app -- ${pkgs.playerctl}/bin/playerctl next" # Next Song
-      ",XF86AudioPrev, exec, uwsm app -- ${pkgs.playerctl}/bin/playerctl previous" # Previous Song
+      ",XF86AudioPlay, exec, uwsm app -- ${lib.getExe pkgs.playerctl} play-pause" # Play/Pause Song
+      ",XF86AudioNext, exec, uwsm app -- ${lib.getExe pkgs.playerctl} next" # Next Song
+      ",XF86AudioPrev, exec, uwsm app -- ${lib.getExe pkgs.playerctl} previous" # Previous Song
       ",switch:Lid Switch, exec, uwsm app -- ${lib.getExe pkgs.hyprlock}" # Lock when closing Lid
     ];
 
