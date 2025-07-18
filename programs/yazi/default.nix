@@ -10,7 +10,6 @@
 
   programs.yazi = {
     enable = true;
-    package = inputs.yazi.packages.${pkgs.system}.default;
     enableZshIntegration = true;
     shellWrapperName = "y";
 
@@ -46,16 +45,17 @@
     };
 
     plugins = {
-      chmod = "${inputs.yazi-plugins}/chmod.yazi";
-      full-border = "${inputs.yazi-plugins}/full-border.yazi";
-      max-preview = "${inputs.yazi-plugins}/max-preview.yazi";
-      hide-preview = "${inputs.yazi-plugins}/hide-preview.yazi";
-      mount = "${inputs.yazi-plugins}/mount.yazi";
-      git = "${inputs.yazi-plugins}/git.yazi";
-      starship = inputs.starship-yazi;
-      eza-preview = inputs.eza-preview;
-      lazygit = inputs.lazygit-yazi;
-      ouch = inputs.ouch-yazi;
+      chmod = pkgs.yaziPlugins.chmod;
+      full-border = pkgs.yaziPlugins.full-border;
+      max-preview = pkgs.yaziPlugins.toggle-pane;
+      mount = pkgs.yaziPlugins.mount;
+      git = pkgs.yaziPlugins.git;
+      lazygit = pkgs.yaziPlugins.lazygit;
+      vcs-files = pkgs.yaziPlugins.vcs-files;
+      starship = pkgs.yaziPlugins.starship;
+      piper = pkgs.yaziPlugins.piper;
+      smart-enter = pkgs.yaziPlugins.smart-enter;
+      wl-clipboard = pkgs.yaziPlugins.wl-clipboard;
     };
 
     initLua = ''
@@ -78,7 +78,9 @@
     zoxide
     imagemagick
 
+    # For custom settings and plugins
     ouch
+    eza
     dragon-drop
   ];
 }

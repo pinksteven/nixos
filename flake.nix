@@ -43,33 +43,6 @@
       flake = false;
     };
 
-    # Yazi and plugins
-    yazi = {
-      url = "github:sxyazi/yazi";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    yazi-plugins = {
-      url = "github:yazi-rs/plugins";
-      flake = false;
-    };
-    starship-yazi = {
-      url = "github:Rolv-Apneseth/starship.yazi";
-      flake = false;
-    };
-    eza-preview = {
-      # use an up to date fork
-      url = "github:pinksteven/eza-preview.yazi";
-      flake = false;
-    };
-    lazygit-yazi = {
-      url = "github:Lil-Dank/lazygit.yazi";
-      flake = false;
-    };
-    ouch-yazi = {
-      url = "github:ndtoan96/ouch.yazi";
-      flake = false;
-    };
-
     reewal = {
       url = "github:pinksteven/reewal";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -209,22 +209,6 @@
         "type": "github"
       }
     },
-    "eza-preview": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1739184138,
-        "narHash": "sha256-RwJu79bjdgmKbRaDH++y8wreBKdGGwbyGOx4G/px2PE=",
-        "owner": "pinksteven",
-        "repo": "eza-preview.yazi",
-        "rev": "d958bb6a847e643a31cf584a9a1ec27594018e6c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "pinksteven",
-        "repo": "eza-preview.yazi",
-        "type": "github"
-      }
-    },
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
@@ -370,24 +354,6 @@
         "type": "github"
       }
     },
-    "flake-utils_4": {
-      "inputs": {
-        "systems": "systems_7"
-      },
-      "locked": {
-        "lastModified": 1731533236,
-        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "type": "github"
-      }
-    },
     "fromYaml": {
       "flake": false,
       "locked": {
@@ -468,22 +434,6 @@
         "owner": "NuschtOS",
         "ref": "v0.0.8",
         "repo": "ixx",
-        "type": "github"
-      }
-    },
-    "lazygit-yazi": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1743429988,
-        "narHash": "sha256-OJJPgpSaUHYz8a9opVLCds+VZsK1B6T+pSRJyVgYNy8=",
-        "owner": "Lil-Dank",
-        "repo": "lazygit.yazi",
-        "rev": "7a08a0988c2b7481d3f267f3bdc58080e6047e7d",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Lil-Dank",
-        "repo": "lazygit.yazi",
         "type": "github"
       }
     },
@@ -746,22 +696,6 @@
         "type": "github"
       }
     },
-    "ouch-yazi": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1752401966,
-        "narHash": "sha256-C0wG8NQ+zjAMfd+J39Uvs3K4U6e3Qpo1yLPm2xcsAaI=",
-        "owner": "ndtoan96",
-        "repo": "ouch.yazi",
-        "rev": "0742fffea5229271164016bf96fb599d861972db",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ndtoan96",
-        "repo": "ouch.yazi",
-        "type": "github"
-      }
-    },
     "quickshell": {
       "inputs": {
         "nixpkgs": [
@@ -831,45 +765,18 @@
       "inputs": {
         "caelestia-cli": "caelestia-cli",
         "caelestia-shell": "caelestia-shell_2",
-        "eza-preview": "eza-preview",
         "home-manager": "home-manager",
-        "lazygit-yazi": "lazygit-yazi",
         "nixcord": "nixcord",
         "nixos-hardware": "nixos-hardware",
         "nixos-secrets": "nixos-secrets",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
-        "ouch-yazi": "ouch-yazi",
         "reewal": "reewal",
         "sops-nix": "sops-nix",
         "spicetify-nix": "spicetify-nix",
-        "starship-yazi": "starship-yazi",
         "stylix": "stylix",
         "tinted-theming": "tinted-theming",
-        "wallpapers": "wallpapers",
-        "yazi": "yazi",
-        "yazi-plugins": "yazi-plugins"
-      }
-    },
-    "rust-overlay": {
-      "inputs": {
-        "nixpkgs": [
-          "yazi",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1752633862,
-        "narHash": "sha256-Bj7ozT1+5P7NmvDcuAXJvj56txcXuAhk3Vd9FdWFQzk=",
-        "owner": "oxalica",
-        "repo": "rust-overlay",
-        "rev": "8668ca94858206ac3db0860a9dec471de0d995f8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "oxalica",
-        "repo": "rust-overlay",
-        "type": "github"
+        "wallpapers": "wallpapers"
       }
     },
     "sops-nix": {
@@ -910,22 +817,6 @@
       "original": {
         "owner": "Gerg-L",
         "repo": "spicetify-nix",
-        "type": "github"
-      }
-    },
-    "starship-yazi": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1751987592,
-        "narHash": "sha256-PYeR6fiWDbUMpJbTFSkM57FzmCbsB4W4IXXe25wLncg=",
-        "owner": "Rolv-Apneseth",
-        "repo": "starship.yazi",
-        "rev": "a63550b2f91f0553cc545fd8081a03810bc41bc0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Rolv-Apneseth",
-        "repo": "starship.yazi",
         "type": "github"
       }
     },
@@ -1051,21 +942,6 @@
         "type": "github"
       }
     },
-    "systems_7": {
-      "locked": {
-        "lastModified": 1681028828,
-        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
-        "owner": "nix-systems",
-        "repo": "default",
-        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-systems",
-        "repo": "default",
-        "type": "github"
-      }
-    },
     "tinted-foot": {
       "flake": false,
       "locked": {
@@ -1176,44 +1052,6 @@
       "original": {
         "owner": "pinksteven",
         "repo": "wallpapers",
-        "type": "github"
-      }
-    },
-    "yazi": {
-      "inputs": {
-        "flake-utils": "flake-utils_4",
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "rust-overlay": "rust-overlay"
-      },
-      "locked": {
-        "lastModified": 1752677170,
-        "narHash": "sha256-AngxiWiSauIys1S1+s448uYvQ5Z2nWdFnQU/2RYCzn0=",
-        "owner": "sxyazi",
-        "repo": "yazi",
-        "rev": "5f8a1496fefa77a87e7c28f838dd7a287ceaf49a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "sxyazi",
-        "repo": "yazi",
-        "type": "github"
-      }
-    },
-    "yazi-plugins": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1751806373,
-        "narHash": "sha256-29K8PmBoqAMcQhDIfOVnbJt2FU4BR6k23Es9CqyEloo=",
-        "owner": "yazi-rs",
-        "repo": "plugins",
-        "rev": "b8860253fc44e500edeb7a09db648a829084facd",
-        "type": "github"
-      },
-      "original": {
-        "owner": "yazi-rs",
-        "repo": "plugins",
         "type": "github"
       }
     },
