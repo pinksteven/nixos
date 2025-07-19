@@ -9,6 +9,7 @@
     ../variables.nix
     ./secrets.nix
     ./hyprland.nix # System specific hyprland settings
+    ./wluma.nix
     ../../../themes/pine-rose-glass
 
     # Programs imports
@@ -38,7 +39,6 @@
     ../../../system/home-manager/udiskie
     ../../../system/home-manager/cliphist
     ../../../system/home-manager/batsignal
-    ../../../system/home-manager/wluma
   ];
   home = {
     username = config.var.user;

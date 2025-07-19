@@ -1,5 +1,0 @@
-{
-  services.wluma = {
-    enable = true;
-  };
-}
