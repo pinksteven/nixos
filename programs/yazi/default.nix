@@ -61,9 +61,10 @@
     initLua = ''
       require("full-border"):setup()
       require("git"):setup()
+      require("starship"):setup()
 
       if os.getenv("NVIM") then
-      	require("hide-preview"):entry()
+      	require("toggle-pane"):entry("min-preview")
       end
     '';
   };
@@ -77,10 +78,12 @@
     fzf
     zoxide
     imagemagick
+    exiftool
 
     # For custom settings and plugins
-    ouch
     eza
     dragon-drop
+    wl-clipboard
+    glow
   ];
 }

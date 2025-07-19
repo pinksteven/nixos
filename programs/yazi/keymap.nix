@@ -13,7 +13,7 @@
       }
       {
         on = "<C-n>";
-        run = ''shell 'dragon -x -i -T "$1"' --confirm'';
+        run = ''shell 'dragon-drop -x -i -a -T "$1"' --confirm'';
         desc = "Drag and drop selected files";
       }
       {
@@ -31,6 +31,20 @@
         ];
         run = "plugin lazygit";
         desc = "lazygit";
+      }
+      {
+        on = "<C-c>";
+        run = "plugin wl-clipboard";
+        desc = "Copy to clipboard";
+      }
+      {
+        on = "<C-y>";
+        run = "plugin wl-clipboard";
+        desc = "Copy to clipboard";
+      }
+      {
+        on = "<Enter>";
+        run = "plugin smart-enter";
       }
     ];
   };
