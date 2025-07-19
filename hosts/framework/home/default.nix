@@ -25,7 +25,6 @@
     ../../../programs/termscp
     ../../../programs/firefox
     ../../../programs/loreforge
-    ../../../programs/zathura
 
     # Scripts
     ../../../programs/scripts # All script courtesy of Hadi
@@ -56,7 +55,7 @@
         easyeffects
         syncthing
         moonlight-qt
-        # gdlauncher-carbon
+        gdlauncher-carbon
         trayscale
         alpaca
 
