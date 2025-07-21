@@ -13,9 +13,11 @@
     ../../system/nixos/network-manager.nix
     ../../system/nixos/nix.nix
     ../../system/nixos/printing.nix
+    ../../system/nixos/secure-boot.nix
     ../../system/nixos/sudo.nix
     ../../system/nixos/systemd-boot.nix
     ../../system/nixos/timezone.nix
+    ../../system/nixos/tpm.nix
     ../../system/nixos/users.nix
     ../../system/nixos/utils.nix
     ../../system/nixos/xdg-portal.nix
