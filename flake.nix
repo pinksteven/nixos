@@ -56,6 +56,11 @@
       url = "github:caelestia-dots/cli";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v0.4.2";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -77,6 +82,7 @@
             inputs.sops-nix.nixosModules.sops # Handling secrets
             inputs.home-manager.nixosModules.home-manager
             inputs.stylix.nixosModules.stylix
+            inputs.lanzaboote.nixosModules.lanzaboote
             ./hosts/framework/configuration.nix # Set the host
           ];
         };
@@ -95,6 +101,7 @@
             inputs.sops-nix.nixosModules.sops # Handling secrets
             inputs.home-manager.nixosModules.home-manager
             inputs.stylix.nixosModules.stylix
+            inputs.lanzaboote.nixosModules.lanzaboote
             ./hosts/puter/configuration.nix # Set the host
           ];
         };

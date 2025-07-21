@@ -18,6 +18,7 @@ in
         "bluetooth"
         "wheel"
         "gamemode"
+        "tss"
       ];
     };
   };
