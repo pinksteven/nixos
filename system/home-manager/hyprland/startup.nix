@@ -5,7 +5,6 @@
       "uwsm app -- syncthing --no-browser"
       "sleep 3; uwsm app -- vesktop --start-minimized"
       "uwsm app -- steam -silent"
-      "uwsm app -s b -- trayscale --hide-window"
     ];
   };
 }

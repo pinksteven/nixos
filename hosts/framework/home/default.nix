@@ -18,7 +18,6 @@
     ../../../programs/kitty
     ../../../programs/lazygit
     ../../../programs/spicetify
-    ../../../programs/fantasia
     ../../../programs/yazi
     ../../../programs/nvim
     ../../../programs/nixcord
@@ -26,6 +25,7 @@
     ../../../programs/termscp
     ../../../programs/firefox
     ../../../programs/loreforge
+    ../../../programs/trayscale
 
     # Scripts
     ../../../programs/scripts # All script courtesy of Hadi
@@ -56,7 +56,6 @@
         syncthing
         moonlight-qt
         gdlauncher-carbon
-        trayscale
         alpaca
 
         libreoffice-fresh

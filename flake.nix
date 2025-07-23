@@ -38,10 +38,6 @@
     };
 
     stylix.url = "github:danth/stylix";
-    tinted-theming = {
-      url = "github:tinted-theming/schemes";
-      flake = false;
-    };
 
     reewal = {
       url = "github:pinksteven/reewal";
