@@ -14,7 +14,7 @@
     shellWrapperName = "y";
 
     settings = {
-      manager = {
+      mgr = {
         ratio = [
           2
           5

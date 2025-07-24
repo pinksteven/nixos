@@ -1,6 +1,6 @@
 {
   programs.yazi.keymap = {
-    manager.prepend_keymap = [
+    mgr.prepend_keymap = [
       {
         on = "<C-q>";
         run = "quit";
